@@ -1,0 +1,204 @@
+module
+
+public import Freely290.GeneratedCandidate22UpgradeLookup00
+public import Freely290.GeneratedCandidate22UpgradeLookup01
+public import Freely290.GeneratedCandidate22UpgradeLookup02
+public import Freely290.GeneratedCandidate22UpgradeLookup03
+public import Freely290.GeneratedCandidate22UpgradeLookup04
+public import Freely290.GeneratedCandidate22UpgradeLookup05
+public import Freely290.GeneratedCandidate22UpgradeLookup06
+public import Freely290.GeneratedCandidate22UpgradeLookup07
+public import Freely290.GeneratedCandidate22UpgradeLookup08
+public import Freely290.GeneratedCandidate22UpgradeLookup09
+public import Freely290.GeneratedCandidate22UpgradeLookup10
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+def oneTwoFiveNeighborTwentyTwoUpgradeLookup : Fin 11 → Fin 15 → Fin 23 → OneTwoFiveNeighborTwentyTwoUpgradeSubformWitness :=
+  ![oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock00, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock01, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock02, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock03, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock04, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock05, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock06, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock07, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock08, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock09, oneTwoFiveNeighborTwentyTwoUpgradeLookupBlock10]
+
+theorem oneTwoFiveNeighborTwentyTwoUpgradeLookup_checked (a : Fin 11) (b : Fin 15) : ∀ c : Fin 23,
+    OneTwoFiveNeighborTwentyTwoUpgradeValid (a, b, c) → oneTwoFiveNeighborTwentyTwoUpgradeSubformCheck (a, b, c) (oneTwoFiveNeighborTwentyTwoUpgradeLookup a b c) = true := by
+  fin_cases a
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup00_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup01_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup02_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup03_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup04_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup05_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup06_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup07_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup08_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup09_14_checked
+  · fin_cases b
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_00_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_01_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_02_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_03_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_04_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_05_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_06_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_07_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_08_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_09_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_10_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_11_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_12_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_13_checked
+    · exact oneTwoFiveNeighborTwentyTwoUpgradeLookup10_14_checked
+
+end Freely290

@@ -1,0 +1,75 @@
+module
+
+public import Freely290.Candidate21FastMaskGroup004
+public import Freely290.Candidate21FastMaskGroup005
+public import Freely290.Candidate21FastMaskGroup006
+public import Freely290.Candidate21FastMaskGroup008
+public import Freely290.Candidate21FastMaskGroup014
+public import Freely290.Candidate21FastMaskGroup019
+public import Freely290.Candidate21FastMaskGroup062
+public import Freely290.Candidate21FastMaskGroup064
+public import Freely290.Candidate21FastMaskGroup065
+public import Freely290.Candidate21FastMaskGroup066
+public import Freely290.Candidate21FastMaskGroup067
+public import Freely290.Candidate21FastMaskGroup068
+public import Freely290.Candidate21FastMaskGroup069
+public import Freely290.Candidate21FastMaskGroup070
+public import Freely290.Candidate21FastMaskGroup071
+public import Freely290.Candidate21FastMaskGroup072
+public import Freely290.Candidate21FastMaskGroup075
+public import Freely290.Candidate21FastMaskGroup081
+public import Freely290.Candidate21FastMaskGroup083
+public import Freely290.Candidate21FastMaskGroup084
+public import Freely290.Candidate21FastMaskGroup085
+public import Freely290.Candidate21FastMaskGroup088
+public import Freely290.Candidate21FastShiftMask155
+public import Freely290.Candidate21FastShiftMask515
+public import Freely290.Candidate21FastShiftMask526
+public import Freely290.Candidate21FastShiftMask536
+public import Freely290.Candidate21FullUpgradeTargets
+public import Freely290.Candidate21QuaternaryInclusions10
+public import Freely290.Candidate21QuaternaryInclusions11
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+theorem candidate21EmbeddedBlock04 (t : Fin 32) (h : 128+t.val < 540) :
+    Universal (candidate21FullUpgradeQuadTarget ⟨128+t.val,h⟩).toQuadraticForm' := by
+  fin_cases t
+  · exact matrixSubformCheck_universal candidate21QuaternaryInclusion128Check candidate21FastShiftMask515_target_universal
+  · exact matrixSubformCheck_universal candidate21QuaternaryInclusion129Check candidate21GroupedFastMask516_target_universal
+  · exact matrixSubformCheck_universal candidate21QuaternaryInclusion130Check candidate21GroupedFastMask523_target_universal
+  · exact matrixSubformCheck_universal candidate21QuaternaryInclusion131Check candidate21FastShiftMask526_target_universal
+  · exact matrixSubformCheck_universal candidate21QuaternaryInclusion132Check candidate21GroupedFastMask527_target_universal
+  · exact matrixSubformCheck_universal candidate21QuaternaryInclusion133Check candidate21GroupedFastMask530_target_universal
+  · exact matrixSubformCheck_universal candidate21QuaternaryInclusion134Check candidate21GroupedFastMask532_target_universal
+  · exact matrixSubformCheck_universal candidate21QuaternaryInclusion135Check candidate21FastShiftMask536_target_universal
+  · exact candidate21GroupedFastMask136_target_universal
+  · exact candidate21GroupedFastMask137_target_universal
+  · exact candidate21GroupedFastMask138_target_universal
+  · exact candidate21GroupedFastMask139_target_universal
+  · exact candidate21GroupedFastMask140_target_universal
+  · exact candidate21GroupedFastMask141_target_universal
+  · exact candidate21GroupedFastMask142_target_universal
+  · exact candidate21GroupedFastMask143_target_universal
+  · exact candidate21GroupedFastMask144_target_universal
+  · exact candidate21GroupedFastMask145_target_universal
+  · exact candidate21GroupedFastMask146_target_universal
+  · exact candidate21GroupedFastMask147_target_universal
+  · exact candidate21GroupedFastMask148_target_universal
+  · exact candidate21GroupedFastMask149_target_universal
+  · exact candidate21GroupedFastMask150_target_universal
+  · exact candidate21GroupedFastMask151_target_universal
+  · exact candidate21GroupedFastMask152_target_universal
+  · exact candidate21GroupedFastMask153_target_universal
+  · exact candidate21GroupedFastMask154_target_universal
+  · exact candidate21FastShiftMask155_target_universal
+  · exact candidate21GroupedFastMask156_target_universal
+  · exact candidate21GroupedFastMask157_target_universal
+  · exact candidate21GroupedFastMask158_target_universal
+  · exact candidate21GroupedFastMask159_target_universal
+
+end Freely290

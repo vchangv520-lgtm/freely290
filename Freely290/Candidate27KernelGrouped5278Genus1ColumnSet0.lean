@@ -1,0 +1,130 @@
+module
+
+public import Freely290.Candidate27KernelGrouped5278Genus1Classes
+public import Freely290.GroupedCosetColumnWitness
+public import Freely290.TiledFiniteBool
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+def candidate27KernelGrouped5278Genus1ColumnSet0Base : ℕ := 0x4000000000001f80000001ffffffff
+def candidate27KernelGrouped5278Genus1ColumnSet0Cols : List ℕ := [0x200000000,0x200000000000000400000000,0x100000008000000000800000000,0x10000800200000000001000000000,0x40010000000002000000000,0x80000101000000000004000000000,0x410000000000008000000000,0x10000000000,0x20000000000,0x20000000000000040000000000,0x1000000080000000000,0x800000100000000000,0x400000200000000000,0x4200000020000000400000000000,0x2000000800000000000,0x2008000800000001000000000000,0x200004020000000002000000000000,0x4000000000000,0x40000000000008000000000000,0x80000040000010000000000000,0x20000084000000020000000000000,0xc00000100000040000000000000,0x200080000000000000,0x1010008000000100000000000000,0x1000080000200000000000000,0x4000400000000000000,0x140000000400000800000000000000,0x8002002000001000000000000000,0x2000000000000000,0x4000000000000000]
+def candidate27KernelGrouped5278Genus1ColumnSet0C (i : Fin 30) : ℕ :=
+  (#[
+0x4000000000001f80000003ffffffff,
+0x4000000000001f80000101ffffffff,
+0x4000000000001f80000201ffffffff,
+0x4000000000001f80040001ffffffff,
+0x4000000000001fa0000001ffffffff,
+0x4000000000001fc0000001ffffffff,
+0x4000000000003f80800001ffffffff,
+0x4000000000005f80002001ffffffff,
+0x4000000000009f80001001ffffffff,
+0x4000000000011f80000801ffffffff,
+0x4000000000021f80008001ffffffff,
+0x4000000000041f84000001ffffffff,
+0x4000002000001f80000005ffffffff,
+0x4000200000001f80000401ffffffff,
+0x4000400000001f80080001ffffffff,
+0x4000000400101f80000021ffffffff,
+0x4000004100001f80000081ffffffff,
+0x4000010000801f82000001ffffffff,
+0x4000800000401f80100001ffffffff,
+0x4001000000081f80000009ffffffff,
+0x400c000001001f80400001ffffffff,
+0x4010100080001f81000001ffffffff,
+0x4020080008001f80010001ffffffff,
+0x4042000000201f80004001ffffffff,
+0x4080020020001f90000001ffffffff,
+0x4100008002001f80000011ffffffff,
+0x4200000840001f80200001ffffffff,
+0x4800001010001f80000041ffffffff,
+0x5400000004001f88000001ffffffff,
+0x6000040200001f80020001ffffffff] : Array (ℕ)).getD i.val 0
+
+def candidate27KernelGrouped5278Genus1ColumnSet0V (i : Fin 30) : ℕ :=
+  (#[
+0x200000000,
+0x200000000000000400000000,
+0x100000008000000000800000000,
+0x10000800200000000001000000000,
+0x40010000000002000000000,
+0x80000101000000000004000000000,
+0x410000000000008000000000,
+0x10000000000,
+0x20000000000,
+0x20000000000000040000000000,
+0x1000000080000000000,
+0x800000100000000000,
+0x400000200000000000,
+0x4200000020000000400000000000,
+0x2000000800000000000,
+0x2008000800000001000000000000,
+0x200004020000000002000000000000,
+0x4000000000000,
+0x40000000000008000000000000,
+0x80000040000010000000000000,
+0x20000084000000020000000000000,
+0xc00000100000040000000000000,
+0x200080000000000000,
+0x1010008000000100000000000000,
+0x1000080000200000000000000,
+0x4000400000000000000,
+0x140000000400000800000000000000,
+0x8002002000001000000000000000,
+0x2000000000000000,
+0x4000000000000000] : Array (ℕ)).getD i.val 0
+
+def candidate27KernelGrouped5278Genus1ColumnSet0Code (i : Fin 30) : ℕ :=
+  (#[
+0,
+217,
+248,
+527,
+868,
+899,
+682,
+372,
+341,
+310,
+434,
+775,
+31,
+279,
+558,
+124,
+186,
+744,
+589,
+62,
+651,
+713,
+465,
+403,
+837,
+93,
+620,
+155,
+806,
+496] : Array (ℕ)).getD i.val 0
+
+def candidate27KernelGrouped5278Genus1ColumnSet0L (i : Fin 30) : Fin 30 := ⟨(candidate27KernelGrouped5278Genus1ColumnSet0Code i/30)%30,Nat.mod_lt _ (by decide)⟩
+def candidate27KernelGrouped5278Genus1ColumnSet0R (i : Fin 30) : Fin 30 := ⟨candidate27KernelGrouped5278Genus1ColumnSet0Code i%30,Nat.mod_lt _ (by decide)⟩
+private def candidate27KernelGrouped5278Genus1ColumnSet0Test (i : Fin 30) := groupedColumnPairCheck 1 (candidate27KernelGrouped5278Genus1ColumnSet0C i) (candidate27KernelGrouped5278Genus1ColumnSet0V (candidate27KernelGrouped5278Genus1ColumnSet0L i)) (candidate27KernelGrouped5278Genus1ColumnSet0V (candidate27KernelGrouped5278Genus1ColumnSet0R i))
+private theorem candidate27KernelGrouped5278Genus1ColumnSet0Tile0 : finiteBoolTile candidate27KernelGrouped5278Genus1ColumnSet0Test 5 0 = true := by decide +kernel
+
+private theorem candidate27KernelGrouped5278Genus1ColumnSet0Valid : ∀ r : Fin 30, candidate27KernelGrouped5278Genus1ColumnSet0Test r = true := by
+  apply forall_fin_of_bool_tiles (depth := 5) (count := 1) (by decide)
+  intro i
+  fin_cases i
+  · exact candidate27KernelGrouped5278Genus1ColumnSet0Tile0
+
+theorem candidate27KernelGrouped5278Genus1ColumnSet0Common : (candidate27KernelGrouped5278Genus1Factor29ClassesGroup 0).all (fun c ↦ (candidate27KernelGrouped5278Genus1ColumnSet0Base &&& c) == candidate27KernelGrouped5278Genus1ColumnSet0Base) = true := by decide +kernel
+theorem candidate27KernelGrouped5278Genus1ColumnSet0Enough : (candidate27KernelGrouped5278Genus1Factor29ClassesGroup 0).all (fun c ↦ decide (1≤groupedContainedColumns candidate27KernelGrouped5278Genus1ColumnSet0Cols c)) = true :=
+  groupedColumnCount_of_witnesses (by decide) (candidate27KernelGrouped5278Genus1Factor29ClassesGroup 0) candidate27KernelGrouped5278Genus1ColumnSet0Cols candidate27KernelGrouped5278Genus1ColumnSet0C candidate27KernelGrouped5278Genus1ColumnSet0V
+    (by decide +kernel) (by decide +kernel) candidate27KernelGrouped5278Genus1ColumnSet0L candidate27KernelGrouped5278Genus1ColumnSet0R candidate27KernelGrouped5278Genus1ColumnSet0Valid
+
+end Freely290

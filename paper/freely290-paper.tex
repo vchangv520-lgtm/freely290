@@ -1,0 +1,322 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[margin=29mm,top=25mm,bottom=26mm]{geometry}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!50!black]{hyperref}
+\usepackage{xcolor}
+\hypersetup{pdftitle={A Lean 4 formalization of the Bhargava--Hanke 290 theorem},pdfauthor={Chang Su}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\rep}{\operatorname{Rep}}
+\newcommand{\code}[1]{\texttt{#1}}
+\title{A Lean 4 formalization of the\\ Bhargava--Hanke 290 theorem}
+\author{Chang Su}
+\date{27 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The Bhargava--Hanke 290 theorem characterizes universal positive-definite
+quadratic forms with integer coefficients by representation of 29 specified
+integers. We give a Lean 4 proof for forms of arbitrary finite rank over
+$\ZZ$. Representations of the test integers force the ambient form to
+contain one of 34 ternary models as a pullback. The remaining argument
+combines escalation, explicit maps between lattices, and representation
+theorems for squarefree integers. For a typical quaternary model a finite
+table chooses a shift for each admissible residue class. A ternary
+representation theorem turns that choice into a representation of every
+squarefree integer in the class above an explicit threshold. We describe
+two such branches and the use of the ambient hypotheses for exceptions.
+The accompanying source and proof-term archive support a replay of the two
+public theorems in an empty Lean environment.
+\end{abstract}
+
+\section{The theorem and its formal statement}
+A quadratic form $Q$ on $\ZZ^d$ represents $n$ if $Q(x)=n$ for some
+$x\in\ZZ^d$. Write $\rep_Q(n)$ for this assertion. The coefficients of
+the polynomial $\sum_{i\leq j}a_{ij}x_ix_j$ are integers. In particular,
+an odd coefficient of $x_ix_j$ is allowed, even though the corresponding
+entry of its symmetric Gram matrix is then a half-integer.
+Let
+\[
+\begin{split}
+S=\{&1,2,3,5,6,7,10,13,14,15,17,19,21,22,23,26,\\
+    &29,30,31,34,35,37,42,58,93,110,145,203,290\}.
+\end{split}
+\]
+\begin{theorem}[Bhargava--Hanke {\cite[Theorem~1]{BH}}]\label{thm:main}
+Let $d\in\NN$ and let $Q$ be a positive-definite quadratic form on
+$\ZZ^d$ with integer coefficients. If $\rep_Q(s)$ for all $s\in S$, then
+$\rep_Q(n)$ for every positive integer $n$.
+\end{theorem}
+In Lean the ambient type is \code{QuadraticForm} over the integers on
+the module of functions from $\operatorname{Fin}(d)$ to $\ZZ$. The
+hypothesis \code{Q.PosDef} means that $Q(x)>0$ whenever $x\ne 0$.
+The predicates \code{Represents}, \code{Checks}, and \code{Universal}
+in \code{Freely290.Core} respectively express representation, representation
+on a finite set, and representation of all positive integers. The public
+declaration \code{Freely290.strong290} proves Theorem~\ref{thm:main}.
+Since every member of $S$ lies in $[1,290]$, testing this entire interval
+suffices as well. This corollary is \code{Freely290.weak290}. The reverse
+implication of each test follows immediately from universality.
+
+The original preprint also proves that every member of $S$ is indispensable
+and classifies the universal quaternary forms \cite[Theorems~2 and~4]{BH}.
+The two Lean declarations here concern the universality criterion. A related
+LeanEval problem, submitted by Bolton Bailey/Project Numina, gives a
+matrix-based statement of the same mathematical problem \cite{LeanEval}.
+On 14 November 2026, LeanEval recorded a successful solution by the
+submitter \code{plby} \cite{plby}. The public result records a comparator
+pass and identifies the submission as private at the time. The checked declarations in this article use mathlib's integral
+quadratic-form interface \cite{Mathlib}.
+
+\section{Forcing a finite list of subforms}
+Suppose that $Q$ represents all of $S$. A convenient way to keep track of
+chosen vectors is an integral linear map $f\colon\ZZ^k\to\ZZ^d$ with
+$A=Q\circ f$. Every representation $A(y)=n$ then supplies the witness
+$f(y)$ for $Q$. This implication holds for maps of arbitrary rank, which
+matters when adjoining a witness leaves the rational span unchanged.
+
+To see the first escalation explicitly, choose $u,v$ of norms $1,2$.
+Their pullback is $x^2+cxy+2y^2$. Replacing $v$ by $-v$ makes $c\geq0$.
+Nonnegativity of the pullback gives $c^2\leq8$, so $c\in\{0,1,2\}$.
+In the last case $v-u$ has norm $1$ and is orthogonal to $u$.
+The resulting binary forms and their least omitted positive integers
+(their \emph{truants}) are
+\[
+\begin{array}{c|ccc}
+ A & x^2+y^2 & x^2+xy+2y^2 & x^2+2y^2\\ \hline
+ \text{truant} &3&3&5.
+\end{array}
+\]
+Both truants belong to $S$. Thus $Q$ supplies a third vector with the
+required norm, even when its binary pullback cannot represent that norm.
+
+At ternary rank the coefficient bounds give 351 parameter choices.
+The admissibility tests retain 173. For each retained choice a certificate
+gives points for the integers preceding its truant and bounds the search
+for a point of the missing norm. Integral coordinate changes reduce the
+list to 35 representatives. One of these already contains a retained
+model on an index-two sublattice. Pullback along that inclusion gives a
+cover by 34 ternary models. Only the forward implication about
+representation is needed for this last reduction.
+
+Denote the models by $T_i$. The obligation for model $i$ is an
+\emph{ambient} assertion: if $Q$ is nonnegative, $Q$ represents $S$, and
+$Q\circ f=T_i$ for some integral $f$, then $Q$ is universal. This
+distinction explains how a ternary model that misses its truant can
+still be part of the proof. One may adjoin a witness supplied by $Q$ for
+a member of $S$, classify the resulting pullback, and pass its
+representations back to $Q$. One may also embed a previously treated model
+and invoke its ambient assertion. In the assembly for models 26 and 28,
+both transfers use conclusions already established for the other 32
+models. The final assembly is in \code{FourFreelySeeds} and its successors.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Ternary model index & 23 & 25 & 27 & 32\\
+Quaternary representatives in its branch & 963 & 848 & 950 & 481\\
+\bottomrule
+\end{tabular}
+\caption{Four case lists in the final reduction. Indices and counts refer
+to the formal development. A representative in a list may be discharged
+by transfer from another representative.}\label{tab:cases}
+\end{table}
+For example, of the 950 targets for model 27, 800 have direct proofs.
+The other 150 have checked integral maps from already treated forms.
+The finite list establishes coverage of possible pullbacks. Universality
+for such a pullback, or for its ambient form, still requires an argument
+valid for arbitrarily large integers.
+
+\section{From residues to integer witnesses}
+Every positive integer has the form $a b^2$ with $a$ positive and
+squarefree. If $Q(x)=a$, then $Q(bx)=a b^2$. It therefore suffices
+throughout this section to produce points of squarefree norm.
+The following elementary lemma isolates one way that finitely many
+checks give infinitely many such points.
+
+\begin{lemma}[Shifts in a represented residue class]\label{lem:shift}
+Suppose $A$ and $B$ are integral quadratic forms and an integral linear
+map $E$ satisfies
+\[
+ A(E(y,z))=s B(y)+d z^2,\qquad s>0,\quad d\geq0 .
+\]
+Let $m>0$, and let $G$ be a set of residues modulo $m$ such that $B$
+represents every nonnegative integer in those classes. Fix a multiple
+$P>0$ of $sm$ and a threshold $H$. For every residue $r$ modulo $P$
+that occurs for a positive squarefree integer, suppose there are integers
+$z_r,g_r$ with $g_r\bmod m\in G$ and
+\[
+ d z_r^2\leq H,\qquad
+ r-d z_r^2\equiv s g_r \pmod{sm}.
+\]
+Then $A$ represents every squarefree $n\geq H$ with $n>0$.
+\end{lemma}
+\begin{proof}
+Choose the row $r=n\bmod P$. The congruence implies that
+$t=(n-dz_r^2)/s$ is an integer congruent to $g_r$ modulo $m$.
+The bound gives $t\geq0$. Choose $y$ with $B(y)=t$.
+Substitution gives $A(E(y,z_r))=n$.
+\end{proof}
+
+Thus a table entry specifies how to construct a witness from a ternary
+representation theorem. That theorem must supply an actual integral
+point. A local congruence on its own supplies no such point.
+The implementation in \code{FinitePeriodicTernaryTail} permits the
+embedding and its coefficients to vary by row. Other branches use
+rational transformations. If integral matrices $M,N,T$ and an integer
+$e>0$ satisfy $T^{\mathsf t}MT=e^2N$, a vector $x$ for $N$ gives a
+vector $Tx/e$ for $M$ whenever $Tx\equiv0\pmod e$ coordinatewise.
+Consequently a transfer certificate checks both the identity and
+coverage of the input vector classes on which some transformation is
+integral. This use of residue classes to transfer between ternary forms
+has a precedent in Oh's method \cite[Lemma~2.2 and Theorem~2.3]{Oh}.
+
+\subsection{A four-variable example that can be checked by hand}
+Consider $F=x^2+y^2+z^2+7w^2$. For squarefree $n$, one has $4\nmid n$.
+By the three-square theorem, $n$ is a sum of three squares if
+$n\not\equiv7\pmod8$. Take $w=0$ then. If $n\equiv7\pmod8$ and $n>28$,
+take $w=2$. Now $n-28>0$ is $3$ modulo $8$, so it too is a sum of
+three squares. The remaining values $7,15,23$ are represented by taking
+$w=1$ and using $0$, $2^2+2^2$, and $4^2$, respectively. This proves
+universality by homogeneity. For example the same shift gives
+$391=11^2+11^2+11^2+7\cdot2^2$. The formal argument treats a family
+of fourth coefficients in \code{ThreeSquaresTail}. Bhargava and Hanke
+already use three-square sublattices and squarefree reduction
+\cite[\S4.1]{BH}.
+
+\subsection{A periodic tail and an ambient exception}
+Target 113 in the branch for model 27 has polynomial
+\[
+ x^2+2y^2+5z^2+29w^2-xz-7xw-yz-9yw+9zw .
+\]
+The certificate uses
+period 260 and the guard $r\not\equiv0\pmod4$.
+A squarefree input satisfies that guard. It leaves 195 possible rows.
+The tail threshold is $872$, and the allowed shifts are
+\[
+                   w\in\{1,2,3,4,5,6,11,12\}.
+\]
+For a chosen $w$ set $k=37n-224w^2$. The inequality
+$224\cdot12^2=32256<37\cdot872$ ensures $k>0$ throughout the tail.
+A checked ternary criterion and transfers supply a representation of
+$37k$. For instance, when $n\equiv3\pmod4$, take $w=1$.
+Then $k\equiv35\pmod{37}$ is a quadratic nonresidue and
+$37k\equiv3\pmod4$, as required by one of the two ternary criteria.
+The other supplies admissible residues modulo 65. The joint test uses
+$\operatorname{lcm}(4,65)=260$. A coset-lifting identity then gives an integral point of the
+target of norm $n$. The finite test covers all the guarded rows.
+Separate checked representations and ambient exceptions handle the
+initial interval $1\le n<872$. The file \code{Candidate27ShortBinaryFrom113}
+combines the two ranges into the assertion about $Q$.
+
+Target 847 in the branch for model 25 illustrates what an ambient
+exception means. Its polynomial is $x^2+2y^2+5z^2+29w^2-xz-3yz$.
+Its finite computation leaves seven values to discharge:
+\[
+                 145,\ 203,\ 290,\ 4205,\ 5887,\ 8410,\ 10933.
+\]
+The last four are $29^2$ times $5,7,10,13$, respectively, and cannot be
+squarefree. The first three belong to $S$, so the original
+hypothesis supplies points in $Q$ for them. The certificate therefore
+closes this branch without requiring points of those three norms in
+the quaternary pullback. The corresponding declaration is in
+\code{Candidate25BinaryWindow847}.
+
+\section{Relation to the original proof}
+Both arguments use escalation to extract low-rank forms from an
+arbitrary ambient lattice. Both use subforms, finite computations, and
+arithmetic information valid for all sufficiently large inputs. In their
+treatment of difficult quaternary lattices, Bhargava and Hanke study
+the weight-two theta series: its coefficients count representations.
+Bounds on the cuspidal part, estimates for the Eisenstein coefficients,
+and explicit local-density calculations leave a finite range to check
+\cite[\S\S4.2--4.4]{BH}. Their finite check also uses split local
+covers and a compact table of ternary representations
+\cite[\S4.3.2]{BH}. The formal branches described above obtain the
+large-input implication from ternary representations, congruence
+coverage, and coordinate maps. They record enough arithmetic data for
+Lean to prove that the witnesses lift. This provides a route to the same
+universality criterion using a different proof of the required
+quaternary implications.
+
+\section{Checking the artifact}
+The public entry module is \code{Freely290.Completed290}. The release
+pins Lean~4.35.0-rc3 \cite{Lean} and mathlib commit
+\code{2a885768dae569d938bb9ff3474da6a8753bb90a}.
+The source manifest records the SHA-256 digests of 4,803 local Lean
+files in the public dependency closure. The archived proof-term stream
+also contains imported declarations needed to type-check its two roots.
+It contains 374,653 declarations, including 255,769 theorem declarations.
+These counts include dependencies from Lean and mathlib.
+
+The recorded run built the targets, exported their dependencies, and
+replayed the serialized declarations with Lean's kernel in an empty
+environment. The three axioms in the export are \code{propext},
+\code{Classical.choice}, and \code{Quot.sound}. The audit found zero
+unsafe or partial declarations. Search programs can suggest shifts,
+matrices and vectors. Their suggestions enter the proof through checked
+identities, congruences and coverage statements. The saved stream lets a
+reader check the resulting terms without running the search.
+
+With Elan, the specified Lean toolchain, and the compressed proof file
+in the current directory, the following commands replay the archive on
+a POSIX system with \code{/dev/stdin}. The pipefail setting is available
+in Bash and Zsh.
+\begin{verbatim}
+elan toolchain install leanprover/lean4:v4.35.0-rc3
+set -o pipefail
+gzip -dc freely290-proof.ndjson.gz | \
+  elan run leanprover/lean4:v4.35.0-rc3 \
+  leanchecker --from-export /dev/stdin
+\end{verbatim}
+The SHA-256 digest of the compressed stream is\\
+{\small\ttfamily 076e02f482d7fbc353bc11b86013e740c72e24245e75b60b62f823daafb641e7}.
+The source archive gives instructions for building the Lean files against
+the pinned dependencies. The kernel replay checks the exported terms;
+the source manifest and the build record identify the source development
+that produced them.
+
+\paragraph{Availability and licensing.}
+The source, proof terms, and reproducibility instructions accompany
+this preprint. The version DOI reserved for the deposit is \href{https://doi.org/10.5281/zenodo.24570786}{10.5281/zenodo.24570786}.
+The manuscript is licensed under
+\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+The author's project code is licensed under
+\href{https://www.apache.org/licenses/LICENSE-2.0}{Apache-2.0}.
+Third-party components retain their own licenses.
+
+\paragraph{Use of AI tools.}
+OpenAI Codex assisted in developing the Lean proofs, generating
+certificates, and preparing the manuscript. The archived verification
+record identifies the declarations checked by the Lean kernel.
+
+\begin{thebibliography}{9}
+\bibitem{BH} M. Bhargava and J. Hanke.
+\emph{Universal quadratic forms and the 290-Theorem}. Preprint.
+\href{https://math.stanford.edu/~vakil/files/290-Theorem-preprint.pdf}{Author manuscript}.
+\bibitem{LeanEval} B. Bailey/Project Numina.
+\emph{The 290 theorem}. LeanEval problem statement, revision~1.
+\href{https://github.com/leanprover/lean-eval/blob/f03b744959aac50ab1dd8ee2d4dd4397df5d4e6f/LeanEval/NumberTheory/TwoNinetyTheorem.lean}{Lean source, revision f03b744}.
+\bibitem{plby} \code{plby}. LeanEval submission 2186, \emph{The 290 theorem}.
+14 November 2026.
+\href{https://github.com/leanprover/lean-eval-submissions/issues/2186}{Submission and comparator result}.
+\href{https://github.com/leanprover/lean-eval-submissions/commit/48c742b7c39ecb339fe37ec91b7f8ad81fc9e645}{Permanent result record}.
+\bibitem{Lean} L. de Moura and S. Ullrich.
+\emph{The Lean 4 Theorem Prover and Programming Language}.
+CADE 28, 625--635 (2021).
+\href{https://doi.org/10.1007/978-3-030-79876-5_37}{doi:10.1007/978-3-030-79876-5\_37}.
+\bibitem{Mathlib} The mathlib Community.
+\emph{The Lean Mathematical Library}.
+CPP 2020, 367--381 (2020).
+\href{https://doi.org/10.1145/3372885.3373824}{doi:10.1145/3372885.3373824}.
+\bibitem{Oh} B.-K. Oh.
+\emph{Regular positive ternary quadratic forms}.
+\emph{Acta Arithmetica} \textbf{147}(3), 233--243 (2011).
+\href{https://doi.org/10.4064/aa147-3-3}{doi:10.4064/aa147-3-3}.
+\end{thebibliography}
+\end{document}

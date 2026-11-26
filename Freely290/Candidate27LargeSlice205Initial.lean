@@ -1,0 +1,17 @@
+module
+
+public import Freely290.Candidate27LargeSlice205Slices00
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+theorem candidate27LargeSlice205Finite : ∀ k : Fin 2, SplitPrimeSliceCovered candidate27LargeSlice205C false 1048576 1731658 k.val := by
+  intro k
+  fin_cases k
+  · exact candidate27LargeSlice205Slice000
+  · exact candidate27LargeSlice205Slice001
+
+end Freely290

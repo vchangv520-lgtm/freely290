@@ -1,0 +1,84 @@
+module
+
+public import Freely290.SplitPrimeWindowCatalogue
+public import Freely290.SplitPrime28Depth16D5D9AllMask
+public import Freely290.Candidate28FullUpgradeTargets
+public import Freely290.SharedBinaryWindowBasisR512
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+private noncomputable def splitPrime28Depth16D5D9AllMaskWindowR512Group00Rows : Fin 8 → SplitPrimeWindowRow :=
+  ![⟨⟨-1,-4,0,-2,5,-4,10⟩,5206,![![1, 0, 0, 88], ![0, 1, 0, 19], ![0, 0, 1, 24], ![0, 0, 0, 38]],130150,[(0,0), (1,0), (1,1), (0,1), (2,1), (1,2), (2,2), (-1,1), (2,0), (0,2), (3,2), (3,1), (2,3), (-2,1), (1,3), (-1,2), (3,3), (3,0), (4,2), (0,3), (4,3), (4,1), (2,4), (3,4), (-2,2), (4,4), (4,0), (0,4)],[⟨0,0x6a6e82cca8e24ae4a2ec6a8acaa4a26a68c6e82caa4ae2a6e86ccace20ae4a6ec2e8a8ea4a66a2cc6ac2caa4aa6a6a86c8ace24ae0a6e86e8acea0a66a6cc2ec28aa4ae6a2e868caca24aa4a6ac6e8acea4a62a6c86ec2caa0ae⟩, ⟨1,0x84002c020204a0080c020424040a04808428020204840c00028024200e00848024020004a4080c028424200804840428020204a00c08020024000a0080802c020604840804028424240a04848420020004a40c08028024200800⟩, ⟨2,0x4400000040000000004040000000004000000040000000004000000000004400000000000000004040000000004000000040040000004440000000004000000040000000004000000000004000000000040000004040⟩, ⟨3,0x400⟩, ⟨5,0x40000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩]⟩,
+   ⟨⟨-1,-4,0,-2,5,-2,10⟩,6726,![![1, 0, 0, 84], ![0, 1, 0, 19], ![0, 0, 1, 16], ![0, 0, 0, 38]],168150,[(0,0), (1,0), (0,1), (1,1), (-1,1), (2,1), (2,0), (1,2), (0,2), (2,2), (-2,1), (-1,2), (3,1), (3,2), (3,0), (1,3), (2,3), (0,3), (-2,2), (-3,1), (4,2), (4,1), (2,4), (4,0), (4,3), (0,4), (-2,3), (2,5), (4,5)],[⟨0,0x6a6e82cca8e24ae4a2ec6a8acaa4a26a68c6e82caa4ae2a6e86ccace20ae4a6ec2e8a8ea4a66a2cc6ac2caa4aa6a6a86c8ace24ae0a6e86e8acea0a66a6cc2ec28aa4ae6a2e868caca24aa4a6ac6e8acea4a62a6c86ec2caa0ae⟩, ⟨1,0x84002c020604a00808020424040a00808428060204840c00028024200e00848024020404a40808028424200800840428020204a00c08060024000e0080802c020604840800028424240a00848420020004a40c08028024200c00⟩, ⟨2,0x4000000040000000004044000000004000000040000000004000000000004000000000000000004044000000004000000040000000004040000000004000000040000000004004000000004000000000040000004040⟩, ⟨5,0x4000000000000000000000000000000000000000000000000000000000004000000000000000000040000000000000000000000000000000000000004000000000000000000000000000000000000000000⟩]⟩,
+   ⟨⟨-1,-3,0,0,5,-1,10⟩,2679,![![1, 0, 0, 31], ![0, 1, 0, 0], ![0, 0, 1, 5], ![0, 0, 0, 19]],66975,[(0,0), (1,0), (0,1), (1,1), (-1,1), (2,0), (2,1), (0,2), (1,2), (-2,1), (2,2), (-1,2), (3,1), (3,0), (-3,1), (3,2), (-2,2), (1,3), (0,3), (2,3), (4,0), (-1,3), (-3,2), (3,3), (1,4), (2,4)],[⟨0,0x6a6e82cca8e24ae4a2ec6a8acaa4a26a68c6e82caa4ae2a6e86ccace20ae4a6ec2e8a8ea4a66a2cc6ac2caa4aa6a6a86c8ace24ae0a6e86e8acea0a66a6cc2ec28aa4ae6a2e868caca24aa4a6ac6e8acea4a62a6c86ec2caa0ae⟩, ⟨1,0x40028004604200848000424044844000428024004040c40020024204e00040020004404240808000424204844040428064004200c48060024004e40000028004604040840000424204804040420024004240c08060024204c40⟩, ⟨2,0x800004020000800000020000000200808000000200800000008000000000808004020000800000028000000000800000000200800000000000000000808004020000800000028000040200808000000000800000008000000000⟩, ⟨5,0x4000000000000000000040000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000⟩]⟩,
+   ⟨⟨-1,-2,0,0,5,-4,10⟩,2774,![![1, 0, 0, 24], ![0, 1, 0, 0], ![0, 0, 1, 10], ![0, 0, 0, 19]],69350,[(0,0), (1,0), (0,1), (1,1), (2,1), (2,0), (-1,1), (1,2), (2,2), (0,2), (3,1), (-2,1), (3,0), (3,2), (-1,2), (4,1), (-3,1), (2,3), (4,2), (-2,2), (4,0), (0,3), (4,3), (-4,1), (2,4), (-2,3), (4,4), (0,4), (6,2), (-4,2), (2,5)],[⟨0,0x6a6e82cca8e24ae4a2ec6a8acaa4a26a68c6e82caa4ae2a6e86ccace20ae4a6ec2e8a8ea4a66a2cc6ac2caa4aa6a6a86c8ace24ae0a6e86e8acea0a66a6cc2ec28aa4ae6a2e868caca24aa4a6ac6e8acea4a62a6c86ec2caa0ae⟩, ⟨1,0x840028020604a0080c020424040a04808428060204840800028024200a00848020020404a40808028424200804840428060204a00808060024000a0080802c020604840800028424240a04848420020004a40808068024200800⟩, ⟨2,0x4004000000040000000004040000000004000000440000000004000000004004000000000000000004040000000004000000440000000004040000000004000000044000000004000000000004000000400000000004040⟩, ⟨3,0x400000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000400⟩, ⟨5,0x4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩]⟩,
+   ⟨⟨-1,0,0,-4,5,-1,10⟩,2869,![![1, 0, 0, 1], ![0, 1, 0, 19], ![0, 0, 1, 2], ![0, 0, 0, 19]],71725,[(0,0), (1,0), (0,1), (1,1), (-1,1), (2,0), (2,1), (-2,1), (0,2), (1,2), (-1,2), (3,0), (2,2), (3,1), (-3,1), (-2,2), (3,2), (0,3), (1,3), (4,0), (-1,3), (-3,2), (2,3), (-2,3), (4,2), (3,3), (-4,2), (5,0), (1,4), (-1,4)],[⟨0,0x6a6e82cca8e24ae4a2ec6a8acaa4a26a68c6e82caa4ae2a6e86ccace20ae4a6ec2e8a8ea4a66a2cc6ac2caa4aa6a6a86c8ace24ae0a6e86e8acea0a66a6cc2ec28aa4ae6a2e868caca24aa4a6ac6e8acea4a62a6c86ec2caa0ae⟩, ⟨1,0x4000c02460400084c020404004a44800408024204840c40028004004a0004800402440404080c020404004844840408024204800848060004004e4000800c024604040844020404004a04840400024004840808068004004840⟩, ⟨2,0x800020000000a00000000020040000008020000000000000000020200000800020000000a00000008020200000000020000000200400000020000000800020000000800000008020240000008020000000200400000020200400⟩, ⟨3,0x400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩, ⟨5,0x40000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩]⟩,
+   ⟨⟨-1,0,0,0,5,-6,10⟩,2926,![![1, 0, 0, 6], ![0, 1, 0, 0], ![0, 0, 1, 12], ![0, 0, 0, 19]],73150,[(0,0), (1,0), (1,1), (0,1), (2,1), (2,0), (-1,1), (1,2), (2,2), (3,1), (0,2), (-2,1), (3,0), (3,2), (-1,2), (4,1), (4,2), (-3,1), (2,3), (4,0), (-2,2), (0,3), (4,3), (-4,1), (2,4), (6,2), (4,4), (-2,3), (6,3), (0,4), (-4,2), (6,0), (6,4), (4,5), (2,5), (-6,1), (6,5), (0,5)],[⟨0,0x6a6e82cca8e24ae4a2ec6a8acaa4a26a68c6e82caa4ae2a6e86ccace20ae4a6ec2e8a8ea4a66a2cc6ac2caa4aa6a6a86c8ace24ae0a6e86e8acea0a66a6cc2ec28aa4ae6a2e868caca24aa4a6ac6e8acea4a62a6c86ec2caa0ae⟩, ⟨1,0x84002c020204a0080c020424040a04808428020204840c00028024200a00848024020404a4080c028424200804840428020204a00c08020024000a0080802c020204840804028424240a04848420020004a40c08028024200c00⟩, ⟨2,0x4400000040000000004040000000004000000040000000004400000000004000000000000000004040000000004000000040040000004040000000004400000040000000004000000000004000000000040000004040⟩, ⟨3,0x400000000000000000000000000000000000000000000000000000000000000⟩, ⟨5,0x40000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩]⟩,
+   ⟨⟨-1,-1,0,0,5,-2,10⟩,3401,![![1, 0, 0, 12], ![0, 1, 0, 0], ![0, 0, 1, 5], ![0, 0, 0, 19]],85025,[(0,0), (1,0), (0,1), (1,1), (-1,1), (2,0), (2,1), (-2,1), (0,2), (1,2), (3,0), (3,1), (2,2), (-1,2), (-3,1), (3,2), (-2,2), (4,0), (4,1), (1,3), (0,3), (2,3), (4,2), (-4,1), (-3,2), (5,0), (5,2), (1,4)],[⟨0,0x6a6e82cca8e24ae4a2ec6a8acaa4a26a68c6e82caa4ae2a6e86ccace20ae4a6ec2e8a8ea4a66a2cc6ac2caa4aa6a6a86c8ace24ae0a6e86e8acea0a66a6cc2ec28aa4ae6a2e868caca24aa4a6ac6e8acea4a62a6c86ec2caa0ae⟩, ⟨1,0x84002c004004a00048000424044044808420044004840c40008024204800848024004004a40008008424204040840420044004a00c4004002400484080802c004004840044008424244000848420004004a40c00048024204840⟩, ⟨2,0x20600000800020000000a00000008020200000000020000000200000000020400000804020000000804000008020200000008020000000200000000020600000800020000000a04000000020000000008020000000000⟩, ⟨3,0x400000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000400⟩, ⟨5,0x4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩]⟩,
+   ⟨⟨-1,0,0,0,5,-3,10⟩,3439,![![1, 0, 0, 3], ![0, 1, 0, 0], ![0, 0, 1, 6], ![0, 0, 0, 19]],85975,[(0,0), (1,0), (0,1), (1,1), (-1,1), (2,0), (2,1), (-2,1), (1,2), (0,2), (3,0), (3,1), (2,2), (-1,2), (-3,1), (3,2), (-2,2), (4,1), (4,0), (1,3), (0,3), (2,3), (4,2), (-3,2), (-1,3), (5,0), (-2,3), (5,2), (2,4)],[⟨0,0x6a6e82cca8e24ae4a2ec6a8acaa4a26a68c6e82caa4ae2a6e86ccace20ae4a6ec2e8a8ea4a66a2cc6ac2caa4aa6a6a86c8ace24ae0a6e86e8acea0a66a6cc2ec28aa4ae6a2e868caca24aa4a6ac6e8acea4a62a6c86ec2caa0ae⟩, ⟨1,0x4002c02440420084c020424004a4400042800420404084000002420480004002402440424080c020424204844040428004204200c4804002400484000002c024404040844020424204a04040420004004240808040024204c40⟩, ⟨2,0x800000000200800000000000040000808000020000800400028000000600808000000000800000008000000000800000020000800000020000000200808000000200800000008000040000808000020000800400028000000000⟩, ⟨3,0x400000000000000000000000000000000000000000000000000000000000000⟩, ⟨5,0x40000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000⟩]⟩]
+
+private def splitPrime28Depth16D5D9AllMaskWindowR512Group00Index : Fin 8 → Fin 259 := ![94, 123, 194, 203, 208, 213, 245, 249]
+
+private theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00Valid : ∀ i, (splitPrime28Depth16D5D9AllMaskWindowR512Group00Rows i).check (candidate28FullUpgradeQuadTarget (splitPrime28Depth16D5D9AllMaskWindowR512Group00Index i))
+    candidate28FullSeedMatrix 720 splitPrime28Depth16D5D9AllMaskRequired splitPrime28Depth16D5D9AllMaskDoubled sharedBinaryWindowBasisR512 false=true := by decide +kernel
+
+private theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00Guard (n : ℕ) (hs : Squarefree n) (hz : false=true → n%16=14) :
+    splitPrime28Depth16D5D9AllMaskRequired.testBit (n%720)=true := by
+  let r : Fin 720 := ⟨n%720,Nat.mod_lt _ (by decide)⟩
+  have hsf : Squarefree (Nat.gcd r.val 720) := by
+    dsimp [r]
+    rw [← Nat.gcd_rec]
+    exact hs.squarefree_of_dvd (Nat.gcd_dvd_right 720 n)
+  exact (splitPrime28Depth16D5D9AllMaskGuardValid r).trans (splitPrime28Depth16D5D9AllMaskGuard_of_squarefree r hsf)
+
+private theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00Rep (i : Fin 8) (n : ℕ) (hs : Squarefree n)
+    (hz : false=true → n%16=14) (he : n∉critical) :
+    Represents (candidate28FullUpgradeQuadTarget (splitPrime28Depth16D5D9AllMaskWindowR512Group00Index i)).toQuadraticForm' n :=
+  SplitPrimeWindowRow.represents splitPrime28Depth16D5D9 splitPrime28Depth16D5D9AllMaskRequired splitPrime28Depth16D5D9AllMaskDoubled false
+    splitPrime28Depth16D5D9AllMaskWindowR512Group00Guard splitPrime28Depth16D5D9AllMaskValues sharedBinaryWindowBasisR512 (splitPrime28Depth16D5D9AllMaskWindowR512Group00Rows i) (splitPrime28Depth16D5D9AllMaskWindowR512Group00Valid i) hs hz he
+
+theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00At094 {M : Type*} [AddCommGroup M] {Q : QuadraticForm ℤ M}
+    (hc : Checks Q critical) (f : (Fin 4 → ℤ) →ₗ[ℤ] M)
+    (hf : Q.comp f=(candidate28FullUpgradeQuadTarget 94).toQuadraticForm') : Universal Q :=
+  SplitPrimeWindowRow.universal_of_represents (fun n hs he ↦ splitPrime28Depth16D5D9AllMaskWindowR512Group00Rep 0 n hs (by simp) he) hc f hf
+
+theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00At123 {M : Type*} [AddCommGroup M] {Q : QuadraticForm ℤ M}
+    (hc : Checks Q critical) (f : (Fin 4 → ℤ) →ₗ[ℤ] M)
+    (hf : Q.comp f=(candidate28FullUpgradeQuadTarget 123).toQuadraticForm') : Universal Q :=
+  SplitPrimeWindowRow.universal_of_represents (fun n hs he ↦ splitPrime28Depth16D5D9AllMaskWindowR512Group00Rep 1 n hs (by simp) he) hc f hf
+
+theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00At194 {M : Type*} [AddCommGroup M] {Q : QuadraticForm ℤ M}
+    (hc : Checks Q critical) (f : (Fin 4 → ℤ) →ₗ[ℤ] M)
+    (hf : Q.comp f=(candidate28FullUpgradeQuadTarget 194).toQuadraticForm') : Universal Q :=
+  SplitPrimeWindowRow.universal_of_represents (fun n hs he ↦ splitPrime28Depth16D5D9AllMaskWindowR512Group00Rep 2 n hs (by simp) he) hc f hf
+
+theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00At203 {M : Type*} [AddCommGroup M] {Q : QuadraticForm ℤ M}
+    (hc : Checks Q critical) (f : (Fin 4 → ℤ) →ₗ[ℤ] M)
+    (hf : Q.comp f=(candidate28FullUpgradeQuadTarget 203).toQuadraticForm') : Universal Q :=
+  SplitPrimeWindowRow.universal_of_represents (fun n hs he ↦ splitPrime28Depth16D5D9AllMaskWindowR512Group00Rep 3 n hs (by simp) he) hc f hf
+
+theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00At208 {M : Type*} [AddCommGroup M] {Q : QuadraticForm ℤ M}
+    (hc : Checks Q critical) (f : (Fin 4 → ℤ) →ₗ[ℤ] M)
+    (hf : Q.comp f=(candidate28FullUpgradeQuadTarget 208).toQuadraticForm') : Universal Q :=
+  SplitPrimeWindowRow.universal_of_represents (fun n hs he ↦ splitPrime28Depth16D5D9AllMaskWindowR512Group00Rep 4 n hs (by simp) he) hc f hf
+
+theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00At213 {M : Type*} [AddCommGroup M] {Q : QuadraticForm ℤ M}
+    (hc : Checks Q critical) (f : (Fin 4 → ℤ) →ₗ[ℤ] M)
+    (hf : Q.comp f=(candidate28FullUpgradeQuadTarget 213).toQuadraticForm') : Universal Q :=
+  SplitPrimeWindowRow.universal_of_represents (fun n hs he ↦ splitPrime28Depth16D5D9AllMaskWindowR512Group00Rep 5 n hs (by simp) he) hc f hf
+
+theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00At245 {M : Type*} [AddCommGroup M] {Q : QuadraticForm ℤ M}
+    (hc : Checks Q critical) (f : (Fin 4 → ℤ) →ₗ[ℤ] M)
+    (hf : Q.comp f=(candidate28FullUpgradeQuadTarget 245).toQuadraticForm') : Universal Q :=
+  SplitPrimeWindowRow.universal_of_represents (fun n hs he ↦ splitPrime28Depth16D5D9AllMaskWindowR512Group00Rep 6 n hs (by simp) he) hc f hf
+
+theorem splitPrime28Depth16D5D9AllMaskWindowR512Group00At249 {M : Type*} [AddCommGroup M] {Q : QuadraticForm ℤ M}
+    (hc : Checks Q critical) (f : (Fin 4 → ℤ) →ₗ[ℤ] M)
+    (hf : Q.comp f=(candidate28FullUpgradeQuadTarget 249).toQuadraticForm') : Universal Q :=
+  SplitPrimeWindowRow.universal_of_represents (fun n hs he ↦ splitPrime28Depth16D5D9AllMaskWindowR512Group00Rep 7 n hs (by simp) he) hc f hf
+
+end Freely290

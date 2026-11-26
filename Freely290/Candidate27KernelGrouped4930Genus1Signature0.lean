@@ -1,0 +1,26 @@
+module
+
+public import Freely290.Candidate27KernelGrouped4930Genus1ColumnSet2
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+private def candidate27KernelGrouped4930Genus1Pruned0A : List ℕ := [0x1fff47ffff05b02100000084c104200020320898541005400340,0x1adcfb00dfffffe30808c684c104200020320898541005400340,0x12901200426bca8fbfb9ffe6c904a818b73608f8dc1925e16340,0x1290020042018019d26700bffffffd5df7f608f8dc1925e16340,0x1290020042018009922100a6c904aababf3fffffffffffffffc0]
+private def candidate27KernelGrouped4930Genus1Pruned0B : List ℕ := [0x6815ffe01fffc00000ffe0003ff80102000000fe4701cffc3f,0xa80dffe01fffc00000ffe0003ff80110000000fe4701cffc3f,0x22825ffe01fffc00000ffe0003ff80101000000fe4701cffc3f,0x42885ffe01fffc00000ffe0003ff80104000000fe4701cffc3f,0x2805ffe01fffe00080ffe0003ff80100422200ff6701cffc3f,0x12805ffe05fffd04043ffe0003ff80108000000fe4701cffc3f,0x102805ffe01fffc00008ffe0003ffc0100110860fe4701cffc3f,0x2805ffe91fffc00010fff2493ff80100000002fe4701cffc3f,0x2805fff01fffc08200ffe924bff80100000001fe4701cffc3f,0x2845ffe01fffc10400ffe0007ff80100088510fe4701cffc3f,0x82805ffe03fffc81024ffe0003ffaab00000000fe4701cffc3f,0x2a05ffe49fffc40800ffe0003ff955e0000004fe4701cffc3f,0x3c07ffe01fffc00100ffe4923ff80100045088fe4701cffc3f,0x2905ffe21fffc22000ffe0003ff80100800000fedffffffc3f]
+private def candidate27KernelGrouped4930Genus1Pruned0CA : ℕ := 0x129002004201800100000084c104200020320898541005400340
+private def candidate27KernelGrouped4930Genus1Pruned0CB : ℕ := 0x2805ffe01fffc00000ffe0003ff80100000000fe4701cffc3f
+private theorem candidate27KernelGrouped4930Genus1Pruned0Bounded : (candidate27KernelGrouped4930Genus1Factor10ClassesGroup 0).all (fun a ↦ decide (a < 2^205)) = true := by decide +kernel
+private theorem candidate27KernelGrouped4930Genus1Pruned0CommonA : (candidate27KernelGrouped4930Genus1Factor10ClassesGroup 0).all (fun a ↦ (candidate27KernelGrouped4930Genus1Pruned0CA &&& a) == candidate27KernelGrouped4930Genus1Pruned0CA) = true := by decide +kernel
+private theorem candidate27KernelGrouped4930Genus1Pruned0CommonB : (candidate27KernelGrouped4930Genus1Factor17ClassesGroup 0).all (fun b ↦ (candidate27KernelGrouped4930Genus1Pruned0CB &&& b) == candidate27KernelGrouped4930Genus1Pruned0CB) = true := by decide +kernel
+private theorem candidate27KernelGrouped4930Genus1Pruned0FilterA : candidate27KernelGrouped4930Genus1Pruned0A = (candidate27KernelGrouped4930Genus1Factor10ClassesGroup 0).filter (fun a ↦ (a &&& candidate27KernelGrouped4930Genus1Pruned0CB &&& candidate27KernelGrouped4930Genus1ColumnSet2Base) == 0) := by decide +kernel
+private theorem candidate27KernelGrouped4930Genus1Pruned0FilterB : candidate27KernelGrouped4930Genus1Pruned0B = (candidate27KernelGrouped4930Genus1Factor17ClassesGroup 0).filter (fun b ↦ (candidate27KernelGrouped4930Genus1Pruned0CA &&& b &&& candidate27KernelGrouped4930Genus1ColumnSet2Base) == 0) := by decide +kernel
+private theorem candidate27KernelGrouped4930Genus1Pruned0Reduced : candidate27KernelGrouped4930Genus1Pruned0A.all (fun a ↦ candidate27KernelGrouped4930Genus1Pruned0B.all (fun b ↦ (a &&& b &&& candidate27KernelGrouped4930Genus1ColumnSet2Base != 0) ||
+    decide (groupedMissedColumns candidate27KernelGrouped4930Genus1ColumnSet2Cols (a &&& b) < 2))) = true := by decide +kernel
+theorem candidate27KernelGrouped4930Genus1Key0 : groupedCosetKeyValid 205 candidate27KernelGrouped4930Genus1Factor10ClassesGroup candidate27KernelGrouped4930Genus1Factor17ClassesGroup candidate27KernelGrouped4930Genus1Factor29ClassesGroup (0, 0, 2) = true :=
+  groupedJointSet_of_pruned_columns (count := 205) candidate27KernelGrouped4930Genus1ColumnSet2Base 2 candidate27KernelGrouped4930Genus1Pruned0CA candidate27KernelGrouped4930Genus1Pruned0CB candidate27KernelGrouped4930Genus1ColumnSet2Cols
+    (candidate27KernelGrouped4930Genus1Factor10ClassesGroup 0) (candidate27KernelGrouped4930Genus1Factor17ClassesGroup 0) (candidate27KernelGrouped4930Genus1Factor29ClassesGroup 2) candidate27KernelGrouped4930Genus1Pruned0A candidate27KernelGrouped4930Genus1Pruned0B candidate27KernelGrouped4930Genus1ColumnSet2Common candidate27KernelGrouped4930Genus1ColumnSet2Enough candidate27KernelGrouped4930Genus1Pruned0Bounded candidate27KernelGrouped4930Genus1Pruned0CommonA candidate27KernelGrouped4930Genus1Pruned0CommonB candidate27KernelGrouped4930Genus1Pruned0FilterA candidate27KernelGrouped4930Genus1Pruned0FilterB candidate27KernelGrouped4930Genus1Pruned0Reduced
+
+end Freely290

@@ -1,0 +1,59 @@
+module
+
+public import Freely290.Candidate25BundledGrouped1426Genus1Q31CoverageTileBatch0
+public import Freely290.Candidate25BundledGrouped1426Genus1Q31CoverageTileBatch1
+public import Freely290.Candidate25BundledGrouped1426Genus1Q31CoverageTileBatch2
+public import Freely290.Candidate25BundledGrouped1426Genus1Q31CoverageTileBatch3
+public import Freely290.Candidate25BundledGrouped1426Genus1Q31CoverageTileBatch4
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+theorem candidate25BundledGrouped1426Genus1Q31KernelsCoverageAll (i : Fin 529) : candidate25BundledGrouped1426Genus1Q31KernelsCoverageCheck i = true := by
+  apply forall_fin_of_bool_tiles (p := candidate25BundledGrouped1426Genus1Q31KernelsCoverageCheck) (depth := 4) (count := 34) (by decide)
+  intro t
+  fin_cases t
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile0
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile1
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile2
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile3
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile4
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile5
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile6
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile7
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile8
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile9
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile10
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile11
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile12
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile13
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile14
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile15
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile16
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile17
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile18
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile19
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile20
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile21
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile22
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile23
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile24
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile25
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile26
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile27
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile28
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile29
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile30
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile31
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile32
+  · exact candidate25BundledGrouped1426Genus1Q31KernelsCoverageTile33
+
+def candidate25BundledGrouped1426Genus1Q31KernelsM : GroupedKernelMasks candidate25BundledGrouped1426Genus1Q31KernelsK 529 where
+  mask := candidate25BundledGrouped1426Genus1Q31KernelsVal
+  active := candidate25BundledGrouped1426Genus1Q31KernelsActive
+  covered i := beq_iff_eq.mp (candidate25BundledGrouped1426Genus1Q31KernelsCoverageAll i)
+
+end Freely290

@@ -1,0 +1,268 @@
+module
+
+public import Freely290.Candidate22Natural49Core
+public import Freely290.BitPlaneSquarefreeRows
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+private def candidate22Natural49PackedTail := candidate22Natural49Tail.toPeriodicShiftTail
+
+private def candidate22Natural49PackedCoeff : CompactQuaternaryCoefficients := ⟨1,2,5,7,0,-2,-1,-2,0,0⟩
+
+private def candidate22Natural49PackedStep : List Bool := [false,false,true,true,false,false,true,false,false,true]
+
+private def candidate22Natural49PackedB000 : BitPlane.InitialBatch :=
+  ⟨⟨⟨[0xd23728ccccfff7ac241e9996ccd04874df95181c8b3e6d2a330e8e984000032499e8ab2e884a325a292b1b19b0a2cc6a06169f99daf3fa1fa048bb907c3fffeffffcc019f36180fab024afab6b7cfc1da0b7c2be13bd29125c329e2d2238183006ab71c775cba0384171fe,0x26fffff61e8a8008e21aab4ffd29546a60a0d43882a7fffffa499c58c4aaaa84714d2825452521cd3319b24287fffffffbfffdfb5618c001f05614ff7ff3d410eb2411100c80382af65027e57c58c5029733798dd5f554545b9da80a18ddca93b50fff520f45bd0852b24dc,0x13c5e71cca5d555a27683b4949ce5bd714edb4540ac439d91ca6aeae8eca0b3650b18352d593a52bba1edf41e198a9db34aa504babd5948ba7605be1247198c73e9811006aaaaef0823285a1d397ffe18a150e36b995bb38b49c688bfab01235c36e9f13dfc527f0aa6540,0x3d864acdaa8664a9a7146503ca4735416d3253182a419c4a9e2fbd5d4e410431020f67f8cc1446ef7fe22839c479888eb8cf8cacc2e625a0871bbaa4f301d088ccd88000ccdcd4889212480331231f830c11eaf648371f22feb01aa59cbab908beeb09a296639034c840dc,0xe5dc7b9afa0c853eb1f6848f84903dc1b03bf3d009b5a1e26ae3fa328eaa8809884878ed0a9f11a2b2a050d33a7f703f01f9935541f831104228a6b7ce2d1d432610801564073681575c074210b00a057bca08e1a2665cc32f65f74d8320d32504c22db4d6125586f345ea,0x20900f400006007c03c01000c2002bfa7106c01e0000a01e40002426d0a20a03e00497dade7a945c5cc92560025d1a0f4bc0bdc0004403e03f0000066f021662ae24019000182c00df86edabd03008585f8fa120aaa04c6ba0005e7ca0bd4000000fc400009034800fc0980,0xefb000000fff800000000200000bff66f800400000fbe000000b580154400c000068e04c888d4b7fe29800002c960f2bf90000007bfc00400000d90001d2f65100000007e700013500000016e01af06c2d634645588100a0005f7c7d4000000000000001e5c0000000000,0x1400000000000000000000000000000000000007ff1fb35762a00000000004d241f00000000000000000000000000000000000000000000000001e10806414e00bb83ff397afb17df83e5ffda0000000000000000000000000000000000,0x1e06f6f9be90fe4078000000000000000000000000000000000000000000000000000000],[0x20000000000000440000000000000000000000000000000000000000000000000000004000200000000000088400000000001000000000000000000001000000000000000001000000000000000010000104400000000000000000008200,0x1000000400000000000000800000001040000000000000020000000200000000000000000000004000000000000000000000040000000080080000000000442000000000000000000000000000000000000000000000000000000000000000800000000000000,0x100000000000000000000000000000000000000001400000000000000201010000000000000000000000000000000000040000000000000000004000000000010000022a0000001000000000000000000000000000000000000000000000000c00000000000000000000000,0x4000000000000000000000000004000000000000000000000000000000000000001000020440000000000000000000000000000000000000000000000000000000000000000000000000000000,0x2000000000000000020101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]⟩,
+   ⟨[0x80000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000],[0x3c16123ffffa808df45fe7fff3fed0edad5907c6bfef90cdffffcb4eaffffff63ffba297ada182e8918b03f7fff102eba15cd067fbb7ffa7f5bff39cdd1ffffffffffffffc49dfff5d526d1fcaef0ac34d3805a634ce86c57e5e81e8cafe4ffff7e417fffe18071ff95fff6,0x3392b474972b4cfe918fddae2717d835b500268b7dbd16de802e235808cd4ec8508ad810a8894d80d9084ec8307b043e1cc01d353c477bc949332915f02bdd62972dea05497e44dcee4710b66973838db68d15904756269c65a62a8d77a5efddf081bfa93f04dfb7b7e550c,0x1b7cc7843a0cb40211ace1b1c1baddd1a8e334a2ff1820579e09acf2a992b4235557a19e8c3b45b60e8c20744d9ad1071e41367511523d056a88127b36dbafa46ed8012141461ec2b83bc49fd79ebc59c350f7c82c027b74ce3e263d0388cde8c031d084ed12710b4b04028,0x178a0bcf53a2878e50b4c2e1ed5c074394a611e07548733af1f9f6bf2d3fb212c2286e5fe286749cab5377478769cc7ea030fa1f62c1f2b38206c457908e0897c870b41bf2f1486828281dfb410474e89b3c0863a43210735c35749507c89d86020f72d22176dc4143108c2,0x8354082205d80002da0051430a2812553e0601b8a22193888002dc2e229012b05571ed3237bc335e0094410435ca59cf72958a0016c0084088820848bc30f18a0820204011ea204bd6ddf4d3ceb501537eda2c97bc0f1493f90789a0208a0249b4b00004196b1120c6210c,0x724800000930200c000005000022a7150500200000c001000024a5019bb400000346d85ea01a887729e2800323686f2830e60000340000300000d6f000a2a4eed803e007b8d00048ccab64b0207de07780c8bd914d01619d0ade4046b600000000000000120a000000030,0x280088000000000004000000100002000000000791c56dac9d578014000007adbe00d4060000000000000000002000036d090000000000000000c3fb12101a3488b03ba082a9b0253955e00201838000000000000000000800000000000,0x200000000000000000000000000000000000000000000000000000000000000000000000001f90906406d01348405e7c504e820680000000000000000000000000000000000000000]⟩,
+   ⟨[0x240800000000000000000400000000000000000008004000000000000000000000000000000000000000000c0052821204008000000000000000900400000000000000000000000000000000000000000000000000000000000000000000000001000040000000000000,0x800200000000040000010000080000000000000002004100000000000000000000000000000000000002000000000000000800000000000000000000000000000080000400000000000000000000000000000000000000000000000001000000100000000000,0x800000000000000000000000000004000000000000000000000000200000000000000000000000000000000000000000000020400000000200001000000000000000000000000000000000000000000000000000000],[0xfdbf700000000000000007bc0300000000000000007ffbf000000000000000000000000000000000000000073ffad7dedfbff006000000000000f6ffb000000000000000000000000000000000000000000000000000000000000000000000000fe8000a0000000000200,0x1644002849733bcfa56d2d0818b49b8af6bd60ebd86208d24d269eb8aef278dbd10de7d691adec627e7fb9534e08a00154c21091ab47f33cec8a5e80c88155555555688cf296f5fadd9bf9af517c5f956e119fff707c379c17b5e5c9d77bb0851d520236a90a5fcaafba55c,0xac0000000000502400028404000001400050c00000001000003fbf9d100202c000010200d00081404000080000400000010800000038960000009f5d4dd57633210400014032804000820182009080100c412c84220000282010808cc620000034060201060040a2,0x100000000000000000000400000000000000000000400000021080000004060002000000000001000000000040000000000000000000000000000000000a0a2a22a8a0c40000000000000000000000000080400000010000000000000000000080200000000000000000114,0x200000000000000003a9810000000000000000000000000000000000000000000000000000000000000060908c0200480000000000000000000000000000000000000000000000000000000000000000000000000000040,0x8001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]⟩,
+   ⟨[],[0x3fffff0000fffff0ff81807fc033ffffffff87fc030fffff0003ffffc00000ff807fffffffffffffffffff807fffffffffffff8867ffff87fc00cfffff000000000000007ffff81fffffffffffffffffffffffffffffffffffffffffffff0001c1ff8000fffffe00ff8209]⟩⟩,
+   [0xf00000ccccfffffcff9f99800cc3ffffffff9ffccf300000330fffffc00003ff99ffffffffffffffffffff9980000000000000199fffff9ffcccf000003ffffffffcc019fffff8ffffffffffffffffffffffffffffffffffffffffffffff1c71c70071c71ffffe38fff1ff,0x3cfffffffff00000ffffffffffffffffffffff803fcfffffffffc00003ffffffffffffffffffffffffffffffffffffffffffffffffffffff803ff3fffffffffffffffffff800007ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff007fff,0x2555555a5a555555aaab334d55a65555555554d55a66aaaaa969aaaaaaaaaa95534aaaaaaaaaaaaaaaaaaaab4d555555555555534b2aaaacaa9a56555559555555555954b2aaaaab555555555555555555555555555555555555555555555a95a95aaa56a555554adaaa555,0x10333336c9333333699916dccc92cccccccccdccc92d99999b276666659999bcc9219999999999999999999edcccccccccccccc926e66665e6493dccccc8cccccccccb326e666666ccccccccccccccccccccccccccccccccccccccccccccc98c6736663192ccccd9c6662cc,0x2a5a5a57a16a5a5a8d2bc2f16a179696969690e95e85d2d2de868b4b492d2d196bd52d2d2d2d2d2d2d2d2d2af6969696969696942d34b4b0cb5e9596969e96969696a25ad34b4b4a9696969696969696969696969696969696969696969692d6b5a4b4a5249696929b4b496,0x9c6397fe8c639c01cbfd067017d8e718e71f71a0051ce31ff8338c7231ce118bf9ce31ce31ce31ce31ce3500e718e718e718e02fb8c73f73a01518e71ce718e718ff9d04738c0318e718e718e718e718e718e718e718e718e718e718e712dfda48c025b6e718ff6c74918,0x15b52942aaa5294aab5eaaaad542b5ad4a52b554aaaf4a56b555695ad694a544a1535a94a56b5a94a56b5a9555ad4a52b5ad4a557a95ad6aa95540b5ad49ad4a52b5aab552d6a5274a52b5ad4a52b5ad4a52b5ad4a52b5ad4a52b5ad4a52b64db6d5ad936dad4a492ad254a,0x2ad9b2680009b26c026aaaab6557e6c99364dfe6fffa6c9b2aaab26c9b26c9a934059326c9b26cd9364d932001366c9b26c993602ad9364ab2555526c99d366c9b26ff27fb64c9b59364d9366c9b26c99364d9366c9b26c99364d9366c9b2496db6936da49366c92436486c,0xe1c380000e3c70038aaaab8557f8f1e3871ff8ffff8f1c3fffc38f1c38f1fe3ff9e3c70e3c70e1c78e1c3ffe3870e3c70e1c7fd51e387543aaaa38f1e23870e3c7003803870e49e3871e3870e3c70e1c78e1c78f1c38f1e3871e3870e3c9200001c00001c78f000380070,0x1554a95555556ad556a000015002aa54a952b555aaaa5ab56aaa96a5496a54aa9554a952a56ad5ab52a54a95556ad5a952a54ad555356ad556aaaa6a54a96ad5a952aa955152a524a952b56ad5a952a54ad5ab52a54a95ab56ad4a952a56a492492b52492552a549295252a,0x2a99326aaaa9b366ab3555559aa83366cd9b201900009326400024c9924c99032006cd9b364c993264c99320064c993264c993600059b3601b0000b366c1b366cd9b00d8059b36493264d9b366cd9b366c993264c99326cd9b366cd9b364c924924264924864c992426484c,0xe1c380000e3c7803c00001e0003c78f1e3c01e0000e3c7800038f1e38f1e03c000f1e3c78f1e3c78f1e3c0078f1e3c78f1e3800061c3801c0000c38701c3870e1c00e0061c3801c3871e3c78f1e3c78f1e3c78f1e3c70e1c3870e1c38700000003800001870e000380070,0x1fc0000003f800c0000060000007f01fc0060000003f8000000fe000fe00c000701fc07f01fc07f01fc0007f01fc07f01fc000001fc0060000003f80203f80fe00300001fc001fc07e03f80fe03f80fe03f80fe03f80fe03f80fe03f80000000c00000007f0000c00180,0xfe0000000fc000000000000000007ffe0000000000fc0000003f0003f000000007fe0007ffe0007ffe000007ffe0007ffe0000007e0000000000fc000003fff000000007e000000007ffc000fffc000fffc000fffc000fffc000fffc0000000000000001f800000000000,0x3f80000000000000000000000000000000000000000007ffffff8000000007ffffff8000000000000000000000000003fc0000000000000000000007ffffff0000000fffffff0000000fffffff000000000000000000000000000000000,0x7fffff80000000000000000000000000000000000000000000000000000000000000000000001fff80000000000000ffffffffffffff0000000000000000000000000000000000000000,0x1fffffffffffffffff000000000000000000000000000000000000000000000000000000],0x157ffff55557ffff57faaaabfd555ffffffffabfd5557ffff5555ffffdffffd7faabfffffffffffffffffffaabfffffffffffffaaabffffabfd5557ffff5ffffffffd5feabffffb6fffffffffffffffffffffffffffffffffffffffffffff6db6db7fb6db6ffffedb7fb6ff,[]⟩
+
+private theorem candidate22Natural49PackedB000_checked : candidate22Natural49PackedB000.check candidate22Natural49PackedCoeff candidate22Natural49PackedStep=true := by decide +kernel
+
+private def candidate22Natural49PackedBatches (r : Fin 1) : BitPlane.InitialBatch :=
+  (![candidate22Natural49PackedB000] : Fin 1 → BitPlane.InitialBatch) r
+
+private def candidate22Natural49PackedWhich (r : Fin 588) : Fin 1 :=
+  (if r.val < 294 then
+  (if r.val < 147 then
+  (if r.val < 73 then
+  (if r.val < 36 then
+  (if r.val < 18 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD r.val 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 18) 0)
+else
+  (if r.val < 54 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 36) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 54) 0))
+else
+  (if r.val < 110 then
+  (if r.val < 91 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 73) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 91) 0)
+else
+  (if r.val < 128 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 110) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 128) 0)))
+else
+  (if r.val < 220 then
+  (if r.val < 183 then
+  (if r.val < 165 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 147) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 165) 0)
+else
+  (if r.val < 201 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 183) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 201) 0))
+else
+  (if r.val < 257 then
+  (if r.val < 238 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 220) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 238) 0)
+else
+  (if r.val < 275 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 257) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 275) 0))))
+else
+  (if r.val < 441 then
+  (if r.val < 367 then
+  (if r.val < 330 then
+  (if r.val < 312 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 294) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 312) 0)
+else
+  (if r.val < 348 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 330) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 348) 0))
+else
+  (if r.val < 404 then
+  (if r.val < 385 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 367) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 385) 0)
+else
+  (if r.val < 422 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 404) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 422) 0)))
+else
+  (if r.val < 514 then
+  (if r.val < 477 then
+  (if r.val < 459 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 441) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 459) 0)
+else
+  (if r.val < 495 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 477) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 495) 0))
+else
+  (if r.val < 551 then
+  (if r.val < 532 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 514) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 532) 0)
+else
+  (if r.val < 569 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 551) 0
+else
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] : Array (Fin 1)).getD (r.val - 569) 0)))))
+
+private def candidate22Natural49PackedStart (r : Fin 588) : ℕ :=
+  (if r.val < 294 then
+  (if r.val < 147 then
+  (if r.val < 73 then
+  (if r.val < 36 then
+  (if r.val < 18 then
+  (#[0, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9, 12, 12, 12, 12, 12, 12, 12] : Array (ℕ)).getD r.val 0
+else
+  (#[12, 12, 15, 15, 24, 27, 27, 27, 27, 27, 27, 27, 27, 27, 30, 30, 30, 33] : Array (ℕ)).getD (r.val - 18) 0)
+else
+  (if r.val < 54 then
+  (#[53, 53, 53, 53, 53, 53, 53, 56, 59, 59, 59, 62, 62, 62, 62, 62, 62, 62] : Array (ℕ)).getD (r.val - 36) 0
+else
+  (#[62, 62, 65, 65, 65, 68, 68, 68, 68, 68, 68, 68, 68, 68, 71, 71, 71, 80, 80] : Array (ℕ)).getD (r.val - 54) 0))
+else
+  (if r.val < 110 then
+  (if r.val < 91 then
+  (#[80, 80, 80, 80, 80, 80, 80, 83, 83, 83, 86, 86, 86, 86, 86, 86, 86, 86] : Array (ℕ)).getD (r.val - 73) 0
+else
+  (#[86, 89, 89, 89, 92, 92, 92, 92, 92, 92, 92, 92, 92, 95, 95, 95, 98, 98, 98] : Array (ℕ)).getD (r.val - 91) 0)
+else
+  (if r.val < 128 then
+  (#[98, 98, 98, 98, 98, 98, 101, 101, 101, 104, 285, 285, 285, 285, 285, 285, 285, 285] : Array (ℕ)).getD (r.val - 110) 0
+else
+  (#[288, 288, 288, 291, 291, 291, 311, 311, 311, 311, 311, 311, 313, 313, 313, 315, 315, 315, 315] : Array (ℕ)).getD (r.val - 128) 0)))
+else
+  (if r.val < 220 then
+  (if r.val < 183 then
+  (if r.val < 165 then
+  (#[315, 315, 315, 315, 315, 317, 317, 317, 326, 326, 326, 326, 326, 326, 326, 326, 326, 328] : Array (ℕ)).getD (r.val - 147) 0
+else
+  (#[328, 328, 330, 330, 330, 330, 330, 330, 330, 330, 330, 366, 366, 366, 368, 368, 368, 368] : Array (ℕ)).getD (r.val - 165) 0)
+else
+  (if r.val < 201 then
+  (#[388, 388, 388, 388, 388, 390, 390, 392, 394, 394, 394, 394, 394, 394, 394, 394, 394, 396] : Array (ℕ)).getD (r.val - 183) 0
+else
+  (#[396, 396, 398, 398, 398, 398, 398, 398, 398, 398, 398, 400, 400, 400, 402, 402, 402, 411, 411] : Array (ℕ)).getD (r.val - 201) 0))
+else
+  (if r.val < 257 then
+  (if r.val < 238 then
+  (#[411, 411, 411, 411, 413, 413, 413, 415, 415, 415, 415, 415, 435, 435, 435, 435, 437, 437] : Array (ℕ)).getD (r.val - 220) 0
+else
+  (#[437, 439, 439, 439, 439, 439, 439, 439, 439, 439, 441, 441, 441, 443, 443, 443, 443, 443, 443] : Array (ℕ)).getD (r.val - 238) 0)
+else
+  (if r.val < 275 then
+  (#[443, 443, 443, 445, 445, 445, 447, 447, 447, 447, 503, 503, 503, 503, 503, 505, 505, 505] : Array (ℕ)).getD (r.val - 257) 0
+else
+  (#[507, 507, 507, 507, 507, 507, 507, 507, 507, 509, 509, 509, 511, 591, 591, 591, 591, 591, 591] : Array (ℕ)).getD (r.val - 275) 0))))
+else
+  (if r.val < 441 then
+  (if r.val < 367 then
+  (if r.val < 330 then
+  (if r.val < 312 then
+  (#[591, 591, 593, 593, 593, 595, 595, 595, 595, 595, 595, 595, 595, 595, 597, 597, 597, 599] : Array (ℕ)).getD (r.val - 294) 0
+else
+  (#[599, 599, 599, 599, 608, 608, 608, 608, 610, 610, 610, 630, 630, 630, 630, 630, 630, 630] : Array (ℕ)).getD (r.val - 312) 0)
+else
+  (if r.val < 348 then
+  (#[650, 650, 652, 652, 652, 654, 654, 654, 654, 654, 654, 654, 654, 654, 654, 654, 654, 656] : Array (ℕ)).getD (r.val - 330) 0
+else
+  (#[656, 656, 656, 656, 656, 656, 656, 656, 658, 658, 658, 660, 660, 660, 660, 660, 660, 660, 660] : Array (ℕ)).getD (r.val - 348) 0))
+else
+  (if r.val < 404 then
+  (if r.val < 385 then
+  (#[660, 662, 662, 662, 664, 664, 664, 664, 664, 664, 664, 664, 684, 686, 686, 686, 688, 688] : Array (ℕ)).getD (r.val - 367) 0
+else
+  (#[688, 690, 690, 690, 690, 690, 690, 692, 692, 692, 694, 694, 694, 694, 694, 694, 694, 694, 694] : Array (ℕ)).getD (r.val - 385) 0)
+else
+  (if r.val < 422 then
+  (#[696, 696, 696, 698, 698, 698, 698, 698, 698, 698, 707, 707, 709, 709, 709, 711, 711, 711] : Array (ℕ)).getD (r.val - 404) 0
+else
+  (#[711, 711, 711, 711, 711, 711, 746, 746, 746, 748, 748, 748, 748, 750, 750, 750, 750, 750, 752] : Array (ℕ)).getD (r.val - 422) 0)))
+else
+  (if r.val < 514 then
+  (if r.val < 477 then
+  (if r.val < 459 then
+  (#[752, 752, 754, 754, 754, 754, 754, 754, 754, 754, 754, 756, 756, 756, 758, 758, 758, 758] : Array (ℕ)).getD (r.val - 441) 0
+else
+  (#[758, 758, 758, 758, 767, 769, 769, 769, 771, 771, 771, 771, 771, 771, 771, 771, 771, 773] : Array (ℕ)).getD (r.val - 459) 0)
+else
+  (if r.val < 495 then
+  (#[773, 773, 775, 775, 775, 775, 775, 777, 777, 777, 777, 779, 779, 779, 779, 779, 779, 779] : Array (ℕ)).getD (r.val - 477) 0
+else
+  (#[779, 779, 779, 779, 779, 781, 781, 781, 783, 783, 783, 783, 783, 783, 783, 783, 783, 792, 792] : Array (ℕ)).getD (r.val - 495) 0))
+else
+  (if r.val < 551 then
+  (if r.val < 532 then
+  (#[792, 794, 794, 794, 794, 794, 794, 794, 794, 794, 796, 796, 816, 818, 818, 818, 818, 818] : Array (ℕ)).getD (r.val - 514) 0
+else
+  (#[818, 818, 818, 818, 820, 820, 820, 822, 822, 822, 822, 822, 822, 822, 822, 822, 824, 824, 824] : Array (ℕ)).getD (r.val - 532) 0)
+else
+  (if r.val < 569 then
+  (#[826, 826, 826, 826, 826, 826, 826, 826, 826, 828, 828, 828, 830, 830, 830, 830, 830, 830] : Array (ℕ)).getD (r.val - 551) 0
+else
+  (#[830, 830, 830, 832, 832, 832, 852, 852, 852, 852, 852, 852, 852, 854, 854, 856, 856, 856, 858] : Array (ℕ)).getD (r.val - 569) 0)))))
+
+private theorem candidate22Natural49PackedChecks : ∀ j, (candidate22Natural49PackedBatches j).check candidate22Natural49PackedCoeff candidate22Natural49PackedStep=true := by
+  intro j
+  fin_cases j
+  · exact candidate22Natural49PackedB000_checked
+
+private def candidate22Natural49PackedRow (r : Fin 588) : Prop :=
+  BitPlane.rangeCheck 1 588 (candidate22Natural49PackedTail.cost r) r.val (candidate22Natural49PackedStart r)
+    (candidate22Natural49PackedBatches (candidate22Natural49PackedWhich r)).edges (candidate22Natural49PackedBatches (candidate22Natural49PackedWhich r)).target=true ∨ ¬Squarefree (Nat.gcd r.val 588)
+
+private instance (r : Fin 588) : Decidable (candidate22Natural49PackedRow r) := by unfold candidate22Natural49PackedRow; infer_instance
+
+private theorem candidate22Natural49PackedRows000 : ∀ t : Fin 128, ∀ h : 0+t.val<588, candidate22Natural49PackedRow ⟨0+t.val,h⟩ := by decide +kernel
+
+private theorem candidate22Natural49PackedRows001 : ∀ t : Fin 128, ∀ h : 128+t.val<588, candidate22Natural49PackedRow ⟨128+t.val,h⟩ := by decide +kernel
+
+private theorem candidate22Natural49PackedRows002 : ∀ t : Fin 128, ∀ h : 256+t.val<588, candidate22Natural49PackedRow ⟨256+t.val,h⟩ := by decide +kernel
+
+private theorem candidate22Natural49PackedRows003 : ∀ t : Fin 128, ∀ h : 384+t.val<588, candidate22Natural49PackedRow ⟨384+t.val,h⟩ := by decide +kernel
+
+private theorem candidate22Natural49PackedRows004 : ∀ t : Fin 128, ∀ h : 512+t.val<588, candidate22Natural49PackedRow ⟨512+t.val,h⟩ := by decide +kernel
+
+private theorem candidate22Natural49PackedCover (r : Fin 588) : candidate22Natural49PackedRow r := by
+  let b : Fin 5 := ⟨r.val/128,by omega⟩
+  let t : Fin 128 := ⟨r.val%128,Nat.mod_lt _ (by decide)⟩
+  have he : 128*b.val+t.val=r.val := by dsimp [b,t];omega
+  have allRows : ∀ k : Fin 5, ∀ t : Fin 128, ∀ h : 128*k.val+t.val<588, candidate22Natural49PackedRow ⟨128*k.val+t.val,h⟩ := by
+    intro k
+    fin_cases k
+    · exact candidate22Natural49PackedRows000
+    · exact candidate22Natural49PackedRows001
+    · exact candidate22Natural49PackedRows002
+    · exact candidate22Natural49PackedRows003
+    · exact candidate22Natural49PackedRows004
+  have good := allRows b t (by rw [he]; exact r.isLt)
+  simpa only [he] using good
+
+theorem candidate22Natural49Packed_universal_of_comp {M : Type*} [AddCommGroup M] {Q : QuadraticForm ℤ M}
+    (hc : Checks Q critical) (f : (Fin 4 → ℤ) →ₗ[ℤ] M)
+    (hf : Q.comp f=candidate22Natural49Matrix.toQuadraticForm') : Universal Q := by
+  apply candidate22Natural49PackedTail.universal_of_bitplane_sf_rows_comp candidate22Natural49PackedCoeff (by decide +kernel) candidate22Natural49PackedBatches candidate22Natural49PackedStep
+    (by decide) candidate22Natural49PackedChecks candidate22Natural49PackedWhich candidate22Natural49PackedStart candidate22Natural49PackedCover _ hc f hf
+  have noEx : ∀ j, (candidate22Natural49PackedBatches j).exceptions=[] := by decide +kernel
+  intro j e he
+  rw [noEx j] at he
+  contradiction
+
+end Freely290

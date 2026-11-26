@@ -1,0 +1,349 @@
+Copyright (c) 2014 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, Gabriel Ebner
+
+Copyright (c) 2014 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura, Jeremy Avigad, Floris van Doorn, Mario Carneiro
+
+Copyright (c) 2014 Parikshit Khanna. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Parikshit Khanna, Jeremy Avigad, Leonardo de Moura, Floris van Doorn, Mario Carneiro
+
+Copyright (c) 2014 Robert Lewis. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Robert Lewis, Leonardo de Moura, Johannes Hölzl, Mario Carneiro, Gabriel Ebner
+
+Copyright (c) 2015 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura, Jeremy Avigad, Mario Carneiro
+
+Copyright (c) 2016 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Author: Leonardo de Moura, Mario Carneiro
+
+Copyright (c) 2016 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura
+
+Copyright (c) 2016 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura, Jeremy Avigad, Mario Carneiro
+
+Copyright (c) 2017 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, David Renshaw, François G. Dorais
+
+Copyright (c) 2017 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura
+
+Copyright (c) 2017 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura, Mario Carneiro
+
+Copyright (c) 2017 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Sebastian Ullrich
+
+Copyright (c) 2017 Robert Y. Lewis. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Robert Y. Lewis, Keeley Hoek, Mario Carneiro, François G. Dorais, Quang Dao
+
+Copyright (c) 2018 Kim Morrison. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, Keeley Hoek, Simon Hudon, Kim Morrison
+
+Copyright (c) 2018 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, James Gallicchio
+
+Copyright (c) 2018 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura
+
+Copyright (c) 2018 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura, Mario Carneiro
+
+Copyright (c) 2019 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura, Jannis Limperg, Mario Carneiro
+
+Copyright (c) 2019 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Leonardo de Moura, Mario Carneiro
+
+Copyright (c) 2020 Floris van Doorn. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Floris van Doorn, Robert Y. Lewis, Arthur Paulino, Gabriel Ebner
+
+Copyright (c) 2020 Floris van Doorn. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Floris van Doorn, Robert Y. Lewis, Gabriel Ebner
+
+Copyright (c) 2020 Gabriel Ebner. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Gabriel Ebner
+
+Copyright (c) 2021 Floris van Doorn. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Arthur Paulino, Floris van Doorn, Jannis Limperg
+
+Copyright (c) 2021 Gabriel Ebner. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Gabriel Ebner
+
+Copyright (c) 2021 Kim Morrison. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Kim Morrison
+
+Copyright (c) 2021 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+
+Authors: Mario Carneiro, Gabriel Ebner
+
+Copyright (c) 2021 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro
+
+Copyright (c) 2021 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, François G. Dorais
+
+Copyright (c) 2021 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Gabriel Ebner
+
+Copyright (c) 2021 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro
+
+Copyright (c) 2021 Shing Tak Lam. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Shing Tak Lam, Daniel Selsam, Mario Carneiro
+
+Copyright (c) 2022 Alex J. Best. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Alex J. Best, Kyle Miller
+
+Copyright (c) 2022 Arthur Paulino. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Arthur Paulino, Gabriel Ebner
+
+Copyright (c) 2022 Arthur Paulino. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Arthur Paulino, Mario Carneiro
+
+Copyright (c) 2022 E.W.Ayers. All rights reserved.
+ Released under Apache 2.0 license as described in the file LICENSE.
+ Authors: E.W.Ayers, Mario Carneiro
+
+Copyright (c) 2022 E.W.Ayers. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: E.W.Ayers
+
+Copyright (c) 2022 Gabriel Ebner. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Gabriel Ebner
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg, François G. Dorais
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg, James Gallicchio, F. G. Dorais
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg, Kim Morrison
+
+Copyright (c) 2022 Jeremy Avigad. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jeremy Avigad
+
+Copyright (c) 2022 Kim Morrison. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Kim Morrison, Gabriel Ebner, Floris van Doorn
+
+Copyright (c) 2022 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro
+
+Copyright (c) 2022 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, Jannis Limperg
+
+Copyright (c) 2022 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, Kim Morrison
+
+Copyright (c) 2022 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, Miyahara Kō
+
+Copyright (c) 2022 Microsoft Corporation. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Gabriel Ebner
+
+Copyright (c) 2022 Siddhartha Gadgil. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Siddhartha Gadgil, Mario Carneiro
+
+Copyright (c) 2022 Yuyang Zhao. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Yuyang Zhao
+
+Copyright (c) 2023 Bulhwi Cha. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Bulhwi Cha, Mario Carneiro
+
+Copyright (c) 2023 F. G. Dorais. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: F. G. Dorais
+
+Copyright (c) 2023 François G. Dorais. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: François G. Dorais
+
+Copyright (c) 2023 François G. Dorais. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: François G. Dorais, Eric Wieser
+
+Copyright (c) 2023 François G. Dorais. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: François G. Dorais, Mario Carneiro
+
+Copyright (c) 2023 Joachim Breitner. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joachim Breitner
+
+Copyright (c) 2023 Kim Morrison. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Kim Morrison
+
+Copyright (c) 2023 Kyle Miller. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Kyle Miller
+
+Copyright (c) 2023 Lean FRO, LLC. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: David Thrane Christiansen, Kim Morrison
+
+Copyright (c) 2023 Lean FRO, LLC. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Kim Morrison
+
+Copyright (c) 2023 Mario Carneiro. All rights reserved.
+ Released under Apache 2.0 license as described in the file LICENSE.
+ Authors: Mario Carneiro
+
+Copyright (c) 2023 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro
+
+Copyright (c) 2023 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, Thomas R. Murrills
+
+Copyright (c) 2023 Thomas Murrills. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Thomas Murrills
+
+Copyright (c) 2024 François G. Dorais. All rights reserved.
+Released under Apache 2. license as described in the file LICENSE.
+Authors: François G. Dorais
+
+Copyright (c) 2024 François G. Dorais. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: François G. Dorais
+
+Copyright (c) 2024 François G. Dorais. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: François G. Dorais, Quang Dao
+
+Copyright (c) 2024 Joe Hendrix. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joe Hendrix
+
+Copyright (c) 2024 Johan Commelin. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Johan Commelin, Damiano Testa
+
+Copyright (c) 2024 Kim Morrison. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+
+Authors: Kim Morrison
+
+Copyright (c) 2024 Lean FRO, LLC. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Kim Morrison
+
+Copyright (c) 2024 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro
+
+Copyright (c) 2024 Mario Carneiro. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Mario Carneiro, Edward van de Meent
+
+Copyright (c) 2024 Michael Rothgang. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Michael Rothgang
+
+Copyright (c) 2024 Shreyas Srinivas. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Shreyas Srinivas, François G. Dorais, Chad Sharp
+
+Copyright (c) 2024 Shreyas Srinivas. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Shreyas Srinivas, François G. Dorais, Eric Wieser, Chad Sharp
+
+Copyright (c) 2025 Christopher Bailey. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Christopher Bailey, F. G. Dorais
+
+Copyright (c) 2025 Devon Tuma. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Devon Tuma
+
+Copyright (c) 2025 Devon Tuma. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Devon Tuma, Quang Dao
+
+Copyright (c) 2025 François G. Dorais. All rights reserved.
+Released under Apache 2. license as described in the file LICENSE.
+Authors: François G. Dorais
+
+Copyright (c) 2025 François G. Dorais. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: François G. Dorais
+
+Copyright (c) 2025 Lean FRO, LLC. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Kim Morrison
+
+Copyright (c) 2025 Quang Dao. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Quang Dao
+
+Copyright (c) 2026 Chad Sharp. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Chad Sharp
+
+Copyright (c) 2026 Moritz Roos. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Moritz Roos
+
+Copyright (c) 2026 Robin Arnez. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Robin Arnez
+
+Copyright (c) 2026 Yaël Dillies. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Yaël Dillies

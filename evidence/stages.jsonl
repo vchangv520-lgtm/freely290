@@ -1,0 +1,7 @@
+{"stage": "source verification", "utc": "2026-11-26T13:08:51.807506+00:00"}
+{"stage": "default Lake build", "utc": "2026-11-26T13:08:55.411081+00:00"}
+{"stage": "theorem statements and axioms", "utc": "2026-11-26T13:09:26.033923+00:00"}
+{"stage": "export the two proof terms", "utc": "2026-11-26T13:09:41.935180+00:00"}
+{"stage": "audit exported declarations", "utc": "2026-11-26T14:20:38.796555+00:00"}
+{"stage": "standalone kernel replay from empty environment", "utc": "2026-11-26T14:21:11.576871+00:00"}
+{"stage": "bind result to toolchain and source snapshot", "utc": "2026-11-26T18:14:03.234477+00:00"}

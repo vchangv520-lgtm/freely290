@@ -1,0 +1,5 @@
+def Freely290.Strong290 : Prop :=
+∀ (d : ℕ) (Q : QuadraticForm ℤ (Fin d → ℤ)),
+  QuadraticMap.PosDef Q → Freely290.Checks Q Freely290.critical → Freely290.Universal Q
+'Freely290.strong290' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Freely290.weak290' depends on axioms: [propext, Classical.choice, Quot.sound]

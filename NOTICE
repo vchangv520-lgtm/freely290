@@ -1,0 +1,12 @@
+The 290 theorem in Lean 4 (freely edition)
+Copyright 2026 Chang Su
+
+Chang Su licenses the project-authored Lean proof sources, embedded
+certificate code, and project-authored reproduction and packaging software
+under the Apache License, Version 2.0. See LICENSE.
+
+This distribution includes verification records from Lean and a separate
+proof stream containing declarations from third-party software. The
+upstream contributors retain their copyrights and upstream licenses.
+THIRD_PARTY.md and licenses/ identify the pinned dependencies and preserve
+their notices. Distribute these notices with the exported proof.

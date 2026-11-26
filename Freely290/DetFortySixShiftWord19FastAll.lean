@@ -1,0 +1,47 @@
+module
+
+public import Freely290.DetFortySixShiftWord19
+public import Freely290.PeriodicResidueWord
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+private def detFortySixShiftWord19FastAllTwelveP (x : ℤ) : Bool := decide ((x)%12≠2 ∧ (x)%12≠11)
+private def detFortySixShiftWord19FastAllTwelveWord := repeatResidueWord 12 0x7fb 874
+private theorem detFortySixShiftWord19FastAllTwelveValid (r : Fin 10488) : detFortySixShiftWord19FastAllTwelveWord.testBit r.val = detFortySixShiftWord19FastAllTwelveP (r.val : ℤ) := by
+  refine repeatResidueWord_periodic (width := 12) (word := 0x7fb) (copies := 874) (by decide) (by decide) detFortySixShiftWord19FastAllTwelveP ?_ (by decide +kernel) r.isLt
+  intro x y h
+  change x%(12 : ℤ) = y%12 at h
+  simp only [detFortySixShiftWord19FastAllTwelveP,h]
+private def detFortySixShiftWord19FastAllPrimeP (x : ℤ) : Bool := detFortySixShiftWord19.good (x)
+private def detFortySixShiftWord19FastAllPrimeWord := repeatResidueWord 19 0x4f50d 552
+private theorem detFortySixShiftWord19FastAllPrimeValid (r : Fin 10488) : detFortySixShiftWord19FastAllPrimeWord.testBit r.val = detFortySixShiftWord19FastAllPrimeP (r.val : ℤ) := by
+  refine repeatResidueWord_periodic (width := 19) (word := 0x4f50d) (copies := 552) (by decide) (by decide) detFortySixShiftWord19FastAllPrimeP ?_ (by decide +kernel) r.isLt
+  intro x y h
+  change x%(19 : ℤ) = y%19 at h
+  exact detFortySixShiftWord19.good_mod _ _ h
+private def detFortySixShiftWord19FastAllGateP (x : ℤ) : Bool := decide (x%23≠0)
+private def detFortySixShiftWord19FastAllGateWord := repeatResidueWord 23 0x7ffffe 456
+private theorem detFortySixShiftWord19FastAllGateValid (r : Fin 10488) : detFortySixShiftWord19FastAllGateWord.testBit r.val = detFortySixShiftWord19FastAllGateP (r.val : ℤ) := by
+  refine repeatResidueWord_periodic (width := 23) (word := 0x7ffffe) (copies := 456) (by decide) (by decide) detFortySixShiftWord19FastAllGateP ?_ (by decide +kernel) r.isLt
+  intro x y h
+  change x%(23 : ℤ) = y%23 at h
+  simp only [detFortySixShiftWord19FastAllGateP,h]
+def detFortySixShiftWord19FastAllDoubled : ℕ := 0xffb7f9ffb7fbfffff3ffffeb7ff7dfffffbf7fbf7bfff6ff7fb5ff7ffbfb7fb7fb7fafffff9fffffb7ff7f7ffffef7fbfdbfff7bf7fb77f7ffefb7fbdfb7fbbffffb7ffffa7ff7fdfffffb7fbff3fff7ef7fb7df7fffbb7fbf7b7fbeffffbdffffb3ff7ff7ffffe7fbff9fff7fb7fb7f77fffeb7fbfdb7fbfbfffbf7fffb6ff7ffdfffff3fbffb7ff7fe7fb7fd7ffffb7fbff37fbfefffbfdfffb7bf7fff7ffff6fbffbdff7ff3fb7ff7ffffa7fbff97fbffbffbff7ffb7ef7fffdffff7bbffbf7f7ff6fb7ff5ffffb3fbffb7fbffeffbffdffb7fb7ffff7fff7ebffbfdf7ff7bb7ff77fffb6fbffb5fbfffbfbfff7fb7fe7ffffdfff7fbffbff77ff7eb7ff7dfffb7bbffb77bfffefbfffdfb7ff3fffff7ff7faffbffd7ff7fb7ff7f7ffb7ebffb7dbffffbbffff7b7ff6fffffdff7fbbfbfff7ff7fa7ff7fdffb7fbffb7f3ffffebffffdb7ff7bfffff7f7fbefbfff5ff7fb3ff7ff7fb7faffb7f9fffffbfffff37ff7efffffdf7fbfbbfff77f7fb6ff7ffdfb7fbbfb7fb7ffffafffff97ff7fbfffff77fbfebfff7df7fb7bf7fff7b7fbefb7fbdffffbbffffb7ff7fefffffd7fbffbfff7f77fb7ef7fffdb7fbfbb7fbf7fffbeffffb5ff7ffbfffff7fbffafff7fd7fb7fb7ffff37fbfeb7fbfdfffbfbfffb77f7ffefffff5fbffbbff7ff7fb7fe7ffff97fbffb7fbff7ffbfefffb7df7fffbffff77bffbeff7ff5fb7ff3ffffb7fbffa7fbffdffbffbffb7f77fffeffff7dbffbfbf7ff77b7ff6ffffb5fbffb3fbfff7fbffeffb7fd7ffffbfff7f3ffbfef7ff7db7ff7bfffb77bffb6fbfffdfbfffbfb7ff7ffffefff7f9ffbffb7ff7f37ff7efffb7dbffb7bbffff7bfffefb7ff5fffffbff7fb7fbffe7ff7f97ff7fbffb7f3ffb7ebffffdbffffbb7ff77ffffeff7fbdfbfff3ff7fb7ff7feffb7f9ffb7fbfffff3ffffeb7ff7dfffffbf7fbf7bfff6ff7fb5ff7ffbfb7fb7fb7fafffff9fffffb7ff7f7ffffef7fbfdbfff7bf7fb77f7ffefb7fbdfb7fbbffffb7ffffa7ff7fdfffffb7fbff3fff7ef7fb7df7fffbb7fbf7b7fbeffffbdffffb3ff7ff7ffffe7fbff9fff7fb7fb7f77fffeb7fbfdb7fbfbfffbf7fffb6ff7ffdfffff3fbffb7ff7fe7fb7fd7ffffb7fbff37fbfefffbfdfffb7bf7fff7ffff6fbffbdff7ff3fb7ff7ffffa7fbff97fbffbffbff7ffb7ef7fffdffff7bbffbf7f7ff6fb7ff5ffffb3fbffb7fbffeffbffdffb7fb7ffff7fff7ebffbfdf7ff7bb7ff77fffb6fbffb5fbfffbfbfff7fb7fe7ffffdfff7fbffbff77ff7eb7ff7dfffb7bbffb77bfffefbfffdfb7ff3fffff7ff7faffbffd7ff7fb7ff7f7ffb7ebffb7dbffffbbffff7b7ff6fffffdff7fbbfbfff7ff7fa7ff7fdffb7fbffb7f3ffffebffffdb7ff7bfffff7f7fbefbfff5ff7fb3ff7ff7fb7faffb7f9fffffbfffff37ff7efffffdf7fbfbbfff77f7fb6ff7ffdfb7fbbfb7fb7ffffafffff97ff7fbfffff77fbfebfff7df7fb7bf7fff7b7fbefb7fbdffffbbffffb7ff7fefffffd7fbffbfff7f77fb7ef7fffdb7fbfbb7fbf7fffbeffffb5ff7ffbfffff7fbffafff7fd7fb7fb7ffff37fbfeb7fbfdfffbfbfffb77f7ffefffff5fbffbbff7ff7fb7fe7ffff97fbffb7fbff7ffbfefffb7df7fffbffff77bffbeff7ff5fb7ff3ffffb7fbffa7fbffdffbffbffb7f77fffeffff7dbffbfbf7ff77b7ff6ffffb5fbffb3fbfff7fbffeffb7fd7ffffbfff7f3ffbfef7ff7db7ff7bfffb77bffb6fbfffdfbfffbfb7ff7ffffefff7f9ffbffb7ff7f37ff7efffb7dbffb7bbffff7bfffefb7ff5fffffbff7fb7fbffe7ff7f97ff7fbffb7f3ffb7ebffffdbffffbb7ff77ffffeff7fbdfbfff3ff7fb7ff7fe
+private theorem detFortySixShiftWord19FastAllBuild : detFortySixShiftWord19FastAllDoubled = (detFortySixShiftWord19FastAllGateWord &&& (detFortySixShiftWord19FastAllTwelveWord ||| detFortySixShiftWord19FastAllPrimeWord)) := by decide +kernel
+theorem detFortySixShiftWord19FastAllValues (j : Fin 10488) : detFortySixShiftWord19FastAllDoubled.testBit j.val = detFortySixShiftWord19.unitGood (j.val : ℤ) := by
+  rw [detFortySixShiftWord19FastAllBuild,Nat.testBit_and,Nat.testBit_or,detFortySixShiftWord19FastAllTwelveValid j,detFortySixShiftWord19FastAllPrimeValid j,detFortySixShiftWord19FastAllGateValid j] <;> rfl
+def detFortySixShiftWord19FastAllRequired : ℕ := 0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+def detFortySixShiftWord19FastAllGuard (r : ℕ) : Bool := decide (r%4≠0)
+private def detFortySixShiftWord19FastAllGuard4Word := repeatResidueWord 4 0xe 1311
+private theorem detFortySixShiftWord19FastAllGuard4Valid (r : Fin 5244) : detFortySixShiftWord19FastAllGuard4Word.testBit r.val = decide (r.val%4≠0) := by
+  rw [show detFortySixShiftWord19FastAllGuard4Word = repeatResidueWord 4 0xe 1311 from rfl,repeatResidueWord_testBit (by decide) r.isLt]
+  have h : ∀ i : Fin 4, (0xe:ℕ).testBit i.val = decide (i.val≠0) := by decide +kernel
+  exact h ⟨r.val%4,Nat.mod_lt _ (by decide)⟩
+theorem detFortySixShiftWord19FastAllGuardValid (r : Fin 5244) : detFortySixShiftWord19FastAllRequired.testBit r.val = detFortySixShiftWord19FastAllGuard r.val := by
+  rw [show detFortySixShiftWord19FastAllRequired = detFortySixShiftWord19FastAllGuard4Word by decide +kernel,detFortySixShiftWord19FastAllGuard4Valid r] <;> rfl
+
+end Freely290

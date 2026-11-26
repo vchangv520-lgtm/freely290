@@ -1,0 +1,1884 @@
+module
+
+public import Freely290.Candidate27KernelGrouped17794Genus1Classes
+public import Freely290.Candidate27KernelGrouped17794Genus1FrameData
+public import Freely290.GroupedFrameKernels
+public import Freely290.CompactGroupedCosetTransfer
+public import Freely290.GroupedKernelLabelPlanes
+public import Freely290.TiledFiniteBool
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+def candidate27KernelGrouped17794Genus1Q31N (i : Fin 33) : Fin 3 → ℤ :=
+  (#[
+![0, 1, 9],
+![1, 0, 10],
+![1, 23, 2],
+![1, 24, 6],
+![1, 30, 7],
+![1, 14, 30],
+![1, 25, 6],
+![1, 11, 10],
+![1, 25, 7],
+![1, 16, 12],
+![0, 0, 0],
+![1, 0, 20],
+![1, 5, 17],
+![0, 1, 30],
+![1, 11, 15],
+![1, 17, 17],
+![1, 20, 16],
+![1, 22, 25],
+![1, 23, 26],
+![1, 2, 13],
+![1, 5, 22],
+![1, 14, 19],
+![1, 2, 2],
+![1, 22, 26],
+![1, 27, 16],
+![1, 7, 12],
+![1, 17, 25],
+![1, 24, 30],
+![1, 30, 15],
+![1, 20, 19],
+![1, 27, 13],
+![1, 9, 20],
+![1, 16, 22]] : Array (Fin 3 → ℤ)).getD i.val 0
+
+def candidate27KernelGrouped17794Genus1Q31W (i : Fin 328) : Fin 3 → ℤ :=
+  (#[
+![4, 23, 16],
+![1, 17, 6],
+![5, 17, 17],
+![17, 13, 15],
+![17, 20, 23],
+![2, 27, 8],
+![25, 2, 18],
+![1, 17, 10],
+![15, 18, 27],
+![16, 18, 15],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![17, 28, 6],
+![8, 12, 17],
+![4, 21, 2],
+![29, 21, 2],
+![2, 13, 13],
+![3, 10, 27],
+![1, 15, 5],
+![28, 1, 9],
+![24, 18, 28],
+![8, 6, 10],
+![1, 22, 26],
+![4, 18, 28],
+![2, 27, 8],
+![5, 20, 20],
+![14, 27, 7],
+![25, 4, 23],
+![23, 7, 22],
+![12, 20, 28],
+![21, 5, 12],
+![11, 8, 5],
+![24, 4, 12],
+![16, 12, 29],
+![28, 23, 21],
+![2, 27, 8],
+![1, 19, 10],
+![2, 8, 8],
+![11, 19, 21],
+![5, 27, 11],
+![2, 18, 16],
+![16, 22, 12],
+![17, 29, 22],
+![15, 11, 27],
+![1, 22, 22],
+![10, 7, 1],
+![20, 14, 2],
+![5, 21, 20],
+![19, 15, 29],
+![17, 8, 24],
+![11, 1, 17],
+![28, 4, 18],
+![24, 2, 12],
+![11, 6, 26],
+![26, 20, 17],
+![23, 7, 22],
+![10, 23, 22],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![22, 18, 26],
+![30, 27, 27],
+![29, 4, 23],
+![11, 13, 13],
+![17, 20, 23],
+![30, 2, 27],
+![24, 3, 3],
+![4, 26, 26],
+![14, 21, 16],
+![30, 16, 26],
+![13, 7, 28],
+![10, 19, 21],
+![8, 28, 18],
+![21, 1, 12],
+![19, 13, 21],
+![21, 16, 2],
+![2, 26, 17],
+![22, 1, 5],
+![2, 7, 20],
+![22, 4, 17],
+![30, 22, 6],
+![22, 2, 8],
+![26, 16, 6],
+![22, 2, 3],
+![5, 20, 20],
+![16, 22, 12],
+![21, 28, 28],
+![10, 3, 12],
+![30, 14, 25],
+![24, 23, 7],
+![13, 30, 6],
+![13, 7, 7],
+![26, 17, 22],
+![11, 8, 5],
+![6, 27, 11],
+![30, 12, 21],
+![4, 6, 24],
+![0, 0, 0],
+![0, 0, 0],
+![9, 28, 4],
+![8, 21, 21],
+![14, 21, 16],
+![21, 24, 30],
+![19, 22, 17],
+![9, 17, 20],
+![30, 18, 15],
+![26, 10, 11],
+![0, 0, 0],
+![0, 0, 0],
+![6, 23, 17],
+![0, 0, 0],
+![9, 19, 10],
+![18, 24, 3],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![14, 26, 2],
+![1, 24, 27],
+![29, 10, 30],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![17, 2, 2],
+![7, 17, 28],
+![16, 30, 2],
+![0, 0, 0],
+![23, 9, 27],
+![24, 19, 27],
+![12, 9, 14],
+![25, 10, 2],
+![7, 17, 28],
+![19, 4, 12],
+![30, 14, 25],
+![13, 12, 29],
+![5, 11, 14],
+![25, 4, 23],
+![15, 26, 16],
+![23, 7, 22],
+![14, 21, 16],
+![7, 13, 1],
+![29, 10, 30],
+![17, 2, 2],
+![24, 14, 3],
+![9, 16, 28],
+![19, 22, 17],
+![3, 20, 18],
+![22, 2, 3],
+![23, 1, 21],
+![9, 27, 14],
+![18, 26, 10],
+![5, 21, 20],
+![30, 27, 27],
+![6, 28, 30],
+![17, 10, 15],
+![28, 21, 12],
+![10, 6, 5],
+![28, 22, 16],
+![29, 1, 21],
+![30, 14, 21],
+![29, 10, 30],
+![22, 18, 26],
+![10, 30, 19],
+![29, 28, 11],
+![4, 6, 9],
+![19, 15, 29],
+![16, 22, 12],
+![17, 7, 23],
+![27, 13, 5],
+![26, 14, 14],
+![21, 1, 12],
+![24, 2, 12],
+![29, 5, 30],
+![24, 23, 21],
+![7, 21, 4],
+![16, 5, 15],
+![21, 1, 12],
+![24, 2, 12],
+![1, 17, 6],
+![6, 27, 11],
+![27, 13, 3],
+![19, 26, 2],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![2, 7, 20],
+![20, 14, 11],
+![8, 11, 4],
+![3, 30, 28],
+![19, 26, 2],
+![18, 19, 24],
+![10, 11, 9],
+![4, 15, 5],
+![25, 12, 7],
+![26, 28, 13],
+![25, 12, 7],
+![27, 19, 11],
+![23, 20, 27],
+![2, 7, 20],
+![18, 17, 9],
+![21, 5, 12],
+![21, 20, 22],
+![28, 5, 1],
+![0, 0, 0],
+![17, 29, 22],
+![20, 23, 26],
+![14, 6, 2],
+![26, 17, 22],
+![7, 21, 4],
+![24, 23, 21],
+![16, 5, 15],
+![17, 7, 23],
+![27, 13, 3],
+![20, 21, 7],
+![29, 5, 30],
+![19, 26, 2],
+![26, 24, 14],
+![20, 21, 7],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![29, 28, 19],
+![18, 17, 9],
+![25, 7, 7],
+![5, 3, 18],
+![27, 19, 11],
+![6, 19, 24],
+![27, 28, 26],
+![11, 17, 29],
+![21, 24, 10],
+![3, 30, 28],
+![12, 5, 29],
+![2, 3, 20],
+![20, 14, 11],
+![28, 5, 1],
+![10, 30, 19],
+![13, 14, 2],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0],
+![0, 0, 0]] : Array (Fin 3 → ℤ)).getD i.val 0
+
+def candidate27KernelGrouped17794Genus1Q31LabelsPart0 : Array ℕ := #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 12, 13, 13, 11, 12, 12, 11, 13, 11, 12, 13, 13, 11, 12, 13, 11, 12]
+def candidate27KernelGrouped17794Genus1Q31LabelsPart1 : Array ℕ := #[14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 5, 6, 25, 26, 8, 13, 11, 12, 27, 28, 22, 25, 26, 29, 30, 24, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 31, 32, 31, 32, 27, 32, 23, 31, 29, 23, 27, 31, 32, 23, 27, 29, 23, 27, 32, 23, 27, 31, 31]
+def candidate27KernelGrouped17794Genus1Q31LabelsPart2 : Array ℕ := #[32, 29, 31, 29, 32, 32, 27, 31, 23, 8, 13, 30, 1, 4, 10, 10, 26, 8, 26, 22, 24, 13, 12, 11, 10, 10, 23, 10, 31, 27, 10, 10, 10, 10, 10, 32, 23, 31, 10, 10, 10, 10, 10, 10, 10, 10, 29, 25, 25, 10, 25, 24, 22, 29, 25, 22, 25, 27, 29, 24, 12, 11, 24, 11]
+def candidate27KernelGrouped17794Genus1Q31LabelsPart3 : Array ℕ := #[22, 25, 29, 25, 22, 32, 27, 11, 12, 24, 11, 22, 25, 29, 12, 27, 24, 25, 29, 22, 27, 24, 32, 11, 12, 22, 26, 9, 18, 14, 16, 31, 15, 17, 11, 12, 24, 32, 29, 25, 27, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 2]
+def candidate27KernelGrouped17794Genus1Q31LabelsPart4 : Array ℕ := #[3, 0, 3, 0, 2, 2, 0, 3, 0, 2, 3, 0, 2, 3, 3, 2, 0, 10, 23, 13, 1, 17, 8, 28, 9, 4, 31, 15, 25, 2, 3, 28, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 27, 18, 27, 0, 18, 18, 0, 27, 27, 18, 0, 27, 18, 0, 18]
+def candidate27KernelGrouped17794Genus1Q31LabelsPart5 : Array ℕ := #[27, 10, 10, 10, 10, 10, 10, 10]
+
+def candidate27KernelGrouped17794Genus1Q31Labels (j : ℕ) : ℕ :=
+  let part := match j/64 with
+    | 0 => candidate27KernelGrouped17794Genus1Q31LabelsPart0
+    | 1 => candidate27KernelGrouped17794Genus1Q31LabelsPart1
+    | 2 => candidate27KernelGrouped17794Genus1Q31LabelsPart2
+    | 3 => candidate27KernelGrouped17794Genus1Q31LabelsPart3
+    | 4 => candidate27KernelGrouped17794Genus1Q31LabelsPart4
+    | 5 => candidate27KernelGrouped17794Genus1Q31LabelsPart5
+    | _ => #[]
+  part.getD (j%64) 0
+
+def candidate27KernelGrouped17794Genus1Q31Kind (i : Fin 328) : Fin 33 := ⟨candidate27KernelGrouped17794Genus1Q31Labels i.val%33,Nat.mod_lt _ (by decide)⟩
+
+def candidate27KernelGrouped17794Genus1Q31Cols (i : Fin 33) : ℕ :=
+  (#[
+0x489000000001094a0000000000000000000000000000000000000000000000000000000000000001,
+0x1000000000000000000000000000000000100000000000000000000000000000000002,
+0x200092308000000000000000000000000000000000000000000000000000000000000004,
+0x400064850000000000000000000000000000000000000000000000000000000000000008,
+0x20000000000000000000000000000000000200000000000000000000000000000000010,
+0x8000000000000000020,
+0x10000000000000000040,
+0x80,
+0x4000000000000000000000000000000002020000000000000080000000000000000100,
+0x10000000000000008000000000000000000000000000000000000000000000000000200,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc00,
+0x400800480a000000000800000000000000002000048a4400000000000,
+0x801004100100000000040000000000000000400009118800000000000,
+0x800000000000000000000000000000020040000000000000100002643000000000000,
+0x20000000000000000000000000000000000000010000000000000000,
+0x80000000000000100000000000000000000000000000000000000020000000000000000,
+0x40000000000000000000000000000000000000040000000000000000,
+0x2000000000000200000000000000000000000000000000000000080000000000000000,
+0xa4640000000000000000000010000000000000000000000000000000000000100000000000000000,
+0x200000000000000000,
+0x400000000000000000,
+0x800000000000000000,
+0x2080811009000000008000000000000002001000000000000000000,
+0x400000000000000000000000000100400010012448000000002000000000000000000,
+0x1000210200480800000010000000000000040004000000000000000000,
+0x10000000000000800002100a014580000000000000000000004020000000000000000000,
+0x4000000000000000005000000000000008040000000000000000000,
+0x1130a0000000000000000010000108040020000002000004024882000000800000000000000000000,
+0x808000000000000000000000000000000000000000000000001000000000000000000000,
+0x4000042004042040000000000a01020000010000000000000000000000,
+0x80000000000020000000000000000000000,
+0x400000000000000800000000000002010000084c0110a00000000000000000000000000,
+0x2000400020000000080000003108205400000000000000000000000000] : Array (ℕ)).getD i.val 0
+
+def candidate27KernelGrouped17794Genus1Q31TagPlanes : BitPlane.Words := [0x1130a00005d3c6485000001c78896b4cea765c03034a015cef7dfaa00014b2aaa6ee74000000002aa,0xffb76fffff6c06f6b5ffffff05b6988cd1a2923ff7ff8dc9c4f6ddabfffaaa533348a47ffffffffccc,0x8e8c000000000049a30c691514b0403014682d8ed3578a0003351bc3b75b8000000000f0,0xff130bffff9dca00007fffffddadb7f7ceff6fffe7fbf7cecee59b2bffffdfe403ffffffffffffff00,0x1b76e000094a40000000001d2d63fba5f4ffdc030341d09cef7dfaa0007f867fc0000000000000000,0x2000400020000000080000003108205400000000000000000000000000]
+
+def candidate27KernelGrouped17794Genus1Q31FactorCheck (i : Fin 328) : Bool :=
+  decide (∀ a b : Fin 3, candidate27KernelGrouped17794Genus1Frames i a b % (31:ℤ) = (candidate27KernelGrouped17794Genus1Q31W i a * candidate27KernelGrouped17794Genus1Q31N (candidate27KernelGrouped17794Genus1Q31Kind i) b) % (31:ℤ))
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile0 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 0 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile1 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 8 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile2 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 16 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile3 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 24 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile4 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 32 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile5 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 40 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile6 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 48 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile7 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 56 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile8 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 64 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile9 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 72 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile10 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 80 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile11 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 88 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile12 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 96 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile13 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 104 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile14 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 112 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile15 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 120 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile16 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 128 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile17 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 136 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile18 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 144 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile19 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 152 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile20 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 160 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile21 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 168 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile22 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 176 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile23 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 184 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile24 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 192 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile25 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 200 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile26 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 208 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile27 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 216 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile28 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 224 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile29 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 232 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile30 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 240 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile31 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 248 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile32 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 256 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile33 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 264 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile34 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 272 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile35 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 280 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile36 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 288 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile37 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 296 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile38 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 304 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile39 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 312 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31FactorTile40 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31FactorCheck 3 320 = true := by decide +kernel
+theorem candidate27KernelGrouped17794Genus1Q31FactorAll (i : Fin 328) : candidate27KernelGrouped17794Genus1Q31FactorCheck i = true := by
+  apply forall_fin_of_bool_tiles (p := candidate27KernelGrouped17794Genus1Q31FactorCheck) (depth := 3) (count := 41) (by decide)
+  intro t
+  fin_cases t
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile0
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile1
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile2
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile3
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile4
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile5
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile6
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile7
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile8
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile9
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile10
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile11
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile12
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile13
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile14
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile15
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile16
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile17
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile18
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile19
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile20
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile21
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile22
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile23
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile24
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile25
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile26
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile27
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile28
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile29
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile30
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile31
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile32
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile33
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile34
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile35
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile36
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile37
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile38
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile39
+  · exact candidate27KernelGrouped17794Genus1Q31FactorTile40
+
+def candidate27KernelGrouped17794Genus1Q31K : GroupedFrameKernels 31 33 candidate27KernelGrouped17794Genus1Frames where
+  normal := candidate27KernelGrouped17794Genus1Q31N
+  weight := candidate27KernelGrouped17794Genus1Q31W
+  kind := candidate27KernelGrouped17794Genus1Q31Kind
+  column := candidate27KernelGrouped17794Genus1Q31Cols
+  member := groupedKernelMembers_of_label_planes candidate27KernelGrouped17794Genus1Q31TagPlanes candidate27KernelGrouped17794Genus1Q31Kind candidate27KernelGrouped17794Genus1Q31Cols (by decide +kernel) (by decide +kernel)
+  factor i a b := of_decide_eq_true (candidate27KernelGrouped17794Genus1Q31FactorAll i) a b
+
+def candidate27KernelGrouped17794Genus1Q31ValPart000 : Array (ℕ) := #[
+0x0,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc80,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800002000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800002000003ffffffffc80,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800004000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800004000003ffffffffc80,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800006000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800008000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800008000003ffffffffc80,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff80000a000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff80000c000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800080000003ffffffffc20,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800080000003ffffffffca0,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800082000003ffffffffc20,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800084000003ffffffffc20,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800088000003ffffffffc20,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800100000003ffffffffc40,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800100000003ffffffffcc0,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800102000003ffffffffc40,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800104000003ffffffffc40,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800108000003ffffffffc40,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c000000001fff800180000003ffffffffc60,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c800000001fffa00000000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c800000001fffa00000000003ffffffffc80,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c800000001fffa00002000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c800000001fffa00004000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c800000001fffa00008000003ffffffffc00,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c800000001fffa00080000003ffffffffc20,
+0xfe0001ffff000200007ffffe000000000000023fc7cb00c800000001fffa00100000003ffffffffc40,
+0xfe0001ffff000200007ffffe000208081100923fc7cb08c000000001fff820010000003ffffffffc00,
+0xfe0001ffff000200007ffffe000208081100923fc7cb08c000000001fff820010000003ffffffffc80,
+0xfe0001ffff000200007ffffe000208081100923fc7cb08c000000001fff820012000003ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart001 : Array (ℕ) := #[
+0xfe0001ffff000200007ffffe000208081100923fc7cb08c000000001fff820014000003ffffffffc00,
+0xfe0001ffff000200007ffffe000208081100923fc7cb08c000000001fff820018000003ffffffffc00,
+0xfe0001ffff000200007ffffe000208081100923fc7cb08c000000001fff820090000003ffffffffc20,
+0xfe0001ffff000200007ffffe000208081100923fc7cb08c000000001fff820110000003ffffffffc40,
+0xfe0001ffff000200007ffffe000208081100923fc7cb08c800000001fffa20010000003ffffffffc00,
+0xfe0001ffff000200007ffffe000400000000023fc7cb05c000000001fff880400000003ffffffffc00,
+0xfe0001ffff000200007ffffe000400000000023fc7cb05c000000001fff880400000003ffffffffc80,
+0xfe0001ffff000200007ffffe000400000000023fc7cb05c000000001fff880402000003ffffffffc00,
+0xfe0001ffff000200007ffffe000400000000023fc7cb05c000000001fff880404000003ffffffffc00,
+0xfe0001ffff000200007ffffe000400000000023fc7cb05c000000001fff880408000003ffffffffc00,
+0xfe0001ffff000200007ffffe000400000000023fc7cb05c000000001fff880480000003ffffffffc20,
+0xfe0001ffff000200007ffffe000400000000023fc7cb05c000000001fff880500000003ffffffffc40,
+0xfe0001ffff000200007ffffe000400000000023fc7cb05c800000001fffa80400000003ffffffffc00,
+0xfe0001ffff000200007ffffe000608081100923fc7cb0dc000000001fff8a0410000003ffffffffc00,
+0xfe0001ffff000200007ffffe002000000000023fc7cb00c000000001fff800000100003ffffffffc00,
+0xfe0001ffff000200007ffffe002000000000023fc7cb00c000000001fff800000100003ffffffffc80,
+0xfe0001ffff000200007ffffe002000000000023fc7cb00c000000001fff800002100003ffffffffc00,
+0xfe0001ffff000200007ffffe002000000000023fc7cb00c000000001fff800004100003ffffffffc00,
+0xfe0001ffff000200007ffffe002000000000023fc7cb00c000000001fff800008100003ffffffffc00,
+0xfe0001ffff000200007ffffe002000000000023fc7cb00c000000001fff800080100003ffffffffc20,
+0xfe0001ffff000200007ffffe002000000000023fc7cb00c000000001fff800100100003ffffffffc40,
+0xfe0001ffff000200007ffffe002000000000023fc7cb00c800000001fffa00000100003ffffffffc00,
+0xfe0001ffff000200007ffffe002208081100923fc7cb08c000000001fff820010100003ffffffffc00,
+0xfe0001ffff000200007ffffe002400000000023fc7cb05c000000001fff880400100003ffffffffc00,
+0xfe0001ffff000200007ffffe004000000000023fc7cb00c000000001fff800000400003ffffffffc00,
+0xfe0001ffff000200007ffffe004000000000023fc7cb00c000000001fff800000400003ffffffffc80,
+0xfe0001ffff000200007ffffe004000000000023fc7cb00c000000001fff800002400003ffffffffc00,
+0xfe0001ffff000200007ffffe004000000000023fc7cb00c000000001fff800004400003ffffffffc00,
+0xfe0001ffff000200007ffffe004000000000023fc7cb00c000000001fff800008400003ffffffffc00,
+0xfe0001ffff000200007ffffe004000000000023fc7cb00c000000001fff800080400003ffffffffc20,
+0xfe0001ffff000200007ffffe004000000000023fc7cb00c000000001fff800100400003ffffffffc40,
+0xfe0001ffff000200007ffffe004000000000023fc7cb00c800000001fffa00000400003ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart002 : Array (ℕ) := #[
+0xfe0001ffff000200007ffffe004208081100923fc7cb08c000000001fff820010400003ffffffffc00,
+0xfe0001ffff000200007ffffe004400000000023fc7cb05c000000001fff880400400003ffffffffc00,
+0xfe0001ffff000200007ffffe006000000000023fc7cb00c000000001fff800000500003ffffffffc00,
+0xfe0001ffff000200007ffffe0400800480a0023fc7cb80c000000001fff802000048a47ffffffffc00,
+0xfe0001ffff000200007ffffe0400800480a0023fc7cb80c000000001fff802000048a47ffffffffc80,
+0xfe0001ffff000200007ffffe0400800480a0023fc7cb80c000000001fff802002048a47ffffffffc00,
+0xfe0001ffff000200007ffffe0400800480a0023fc7cb80c000000001fff802004048a47ffffffffc00,
+0xfe0001ffff000200007ffffe0400800480a0023fc7cb80c000000001fff802008048a47ffffffffc00,
+0xfe0001ffff000200007ffffe0400800480a0023fc7cb80c000000001fff802080048a47ffffffffc20,
+0xfe0001ffff000200007ffffe0400800480a0023fc7cb80c000000001fff802100048a47ffffffffc40,
+0xfe0001ffff000200007ffffe0400800480a0023fc7cb80c800000001fffa02000048a47ffffffffc00,
+0xfe0001ffff000200007ffffe0402880c91a0923fc7cb88c000000001fff822010048a47ffffffffc00,
+0xfe0001ffff000200007ffffe0404800480a0023fc7cb85c000000001fff882400048a47ffffffffc00,
+0xfe0001ffff000200007ffffe0420800480a0023fc7cb80c000000001fff802000148a47ffffffffc00,
+0xfe0001ffff000200007ffffe0440800480a0023fc7cb80c000000001fff802000448a47ffffffffc00,
+0xfe0001ffff000200007ffffe080100410010023fc7cb40c000000001fff80400009118bffffffffc00,
+0xfe0001ffff000200007ffffe080100410010023fc7cb40c000000001fff80400009118bffffffffc80,
+0xfe0001ffff000200007ffffe080100410010023fc7cb40c000000001fff80400209118bffffffffc00,
+0xfe0001ffff000200007ffffe080100410010023fc7cb40c000000001fff80400409118bffffffffc00,
+0xfe0001ffff000200007ffffe080100410010023fc7cb40c000000001fff80400809118bffffffffc00,
+0xfe0001ffff000200007ffffe080100410010023fc7cb40c000000001fff80408009118bffffffffc20,
+0xfe0001ffff000200007ffffe080100410010023fc7cb40c000000001fff80410009118bffffffffc40,
+0xfe0001ffff000200007ffffe080100410010023fc7cb40c800000001fffa0400009118bffffffffc00,
+0xfe0001ffff000200007ffffe080308491110923fc7cb48c000000001fff82401009118bffffffffc00,
+0xfe0001ffff000200007ffffe080500410010023fc7cb45c000000001fff88440009118bffffffffc00,
+0xfe0001ffff000200007ffffe082100410010023fc7cb40c000000001fff80400019118bffffffffc00,
+0xfe0001ffff000200007ffffe084100410010023fc7cb40c000000001fff80400049118bffffffffc00,
+0xfe0001ffff000200007ffffe0c01804580b0023fc7cbc0c000000001fff8060000d9bcfffffffffc00,
+0xfe0001ffff000200007ffffe1000210200480a3fc7cb10c000000001fffc00040000003ffffffffc00,
+0xfe0001ffff000200007ffffe1000210200480a3fc7cb10c000000001fffc00040000003ffffffffc80,
+0xfe0001ffff000200007ffffe1000210200480a3fc7cb10c000000001fffc00042000003ffffffffc00,
+0xfe0001ffff000200007ffffe1000210200480a3fc7cb10c000000001fffc00044000003ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart003 : Array (ℕ) := #[
+0xfe0001ffff000200007ffffe1000210200480a3fc7cb10c000000001fffc00048000003ffffffffc00,
+0xfe0001ffff000200007ffffe1000210200480a3fc7cb10c000000001fffc000c0000003ffffffffc20,
+0xfe0001ffff000200007ffffe1000210200480a3fc7cb10c000000001fffc00140000003ffffffffc40,
+0xfe0001ffff000200007ffffe1000210200480a3fc7cb10c800000001fffe00040000003ffffffffc00,
+0xfe0001ffff000200007ffffe1002290a11489a3fc7cb18c000000001fffc20050000003ffffffffc00,
+0xfe0001ffff000200007ffffe1004210200480a3fc7cb15c000000001fffc80440000003ffffffffc00,
+0xfe0001ffff000200007ffffe1020210200480a3fc7cb10c000000001fffc00040100003ffffffffc00,
+0xfe0001ffff000200007ffffe1040210200480a3fc7cb10c000000001fffc00040400003ffffffffc00,
+0xfe0001ffff000200007ffffe1400a10680e80a3fc7cb90c000000001fffc02040048a47ffffffffc00,
+0xfe0001ffff000200007ffffe1801214300580a3fc7cb50c000000001fffc0404009118bffffffffc00,
+0xfe0001ffff000200007ffffe200040002000023fcfcb00c031082055fff800000000003ffffffffc00,
+0xfe0001ffff000200007ffffe200040002000023fcfcb00c031082055fff800000000003ffffffffc80,
+0xfe0001ffff000200007ffffe200040002000023fcfcb00c031082055fff800002000003ffffffffc00,
+0xfe0001ffff000200007ffffe200040002000023fcfcb00c031082055fff800004000003ffffffffc00,
+0xfe0001ffff000200007ffffe200040002000023fcfcb00c031082055fff800008000003ffffffffc00,
+0xfe0001ffff000200007ffffe200040002000023fcfcb00c031082055fff800080000003ffffffffc20,
+0xfe0001ffff000200007ffffe200040002000023fcfcb00c031082055fff800100000003ffffffffc40,
+0xfe0001ffff000200007ffffe200040002000023fcfcb00c831082055fffa00000000003ffffffffc00,
+0xfe0001ffff000200007ffffe200248083100923fcfcb08c031082055fff820010000003ffffffffc00,
+0xfe0001ffff000200007ffffe200440002000023fcfcb05c031082055fff880400000003ffffffffc00,
+0xfe0001ffff000200007ffffe202040002000023fcfcb00c031082055fff800000100003ffffffffc00,
+0xfe0001ffff000200007ffffe204040002000023fcfcb00c031082055fff800000400003ffffffffc00,
+0xfe0001ffff000200007ffffe2400c004a0a0023fcfcb80c031082055fff802000048a47ffffffffc00,
+0xfe0001ffff000200007ffffe280140412010023fcfcb40c031082055fff80400009118bffffffffc00,
+0xfe0001ffff000200007ffffe3000610220480a3fcfcb10c031082055fffc00040000003ffffffffc00,
+0xfe0001ffff000200007ffffe400004200404227fc7cb00c00a010201fff900000000003ffffffffc00,
+0xfe0001ffff000200007ffffe400004200404227fc7cb00c00a010201fff900000000003ffffffffc80,
+0xfe0001ffff000200007ffffe400004200404227fc7cb00c00a010201fff900002000003ffffffffc00,
+0xfe0001ffff000200007ffffe400004200404227fc7cb00c00a010201fff900004000003ffffffffc00,
+0xfe0001ffff000200007ffffe400004200404227fc7cb00c00a010201fff900008000003ffffffffc00,
+0xfe0001ffff000200007ffffe400004200404227fc7cb00c00a010201fff900080000003ffffffffc20,
+0xfe0001ffff000200007ffffe400004200404227fc7cb00c00a010201fff900100000003ffffffffc40]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart004 : Array (ℕ) := #[
+0xfe0001ffff000200007ffffe400004200404227fc7cb00c80a010201fffb00000000003ffffffffc00,
+0xfe0001ffff000200007ffffe40020c281504b27fc7cb08c00a010201fff920010000003ffffffffc00,
+0xfe0001ffff000200007ffffe400404200404227fc7cb05c00a010201fff980400000003ffffffffc00,
+0xfe0001ffff000200007ffffe402004200404227fc7cb00c00a010201fff900000100003ffffffffc00,
+0xfe0001ffff000200007ffffe404004200404227fc7cb00c00a010201fff900000400003ffffffffc00,
+0xfe0001ffff000200007ffffe4400842484a4227fc7cb80c00a010201fff902000048a47ffffffffc00,
+0xfe0001ffff000200007ffffe480104610414227fc7cb40c00a010201fff90400009118bffffffffc00,
+0xfe0001ffff000200007ffffe50002522044c2a7fc7cb10c00a010201fffd00040000003ffffffffc00,
+0xfe0001ffff000200007ffffe600044202404227fcfcb00c03b092255fff900000000003ffffffffc00,
+0xfe0001ffff000600007ffffe000000000000023fd7cf00c100124481fff800020000003ffffffffc00,
+0xfe0001ffff000600007ffffe000000000000023fd7cf00c100124481fff800020000003ffffffffc80,
+0xfe0001ffff000600007ffffe000000000000023fd7cf00c100124481fff800022000003ffffffffc00,
+0xfe0001ffff000600007ffffe000000000000023fd7cf00c100124481fff800024000003ffffffffc00,
+0xfe0001ffff000600007ffffe000000000000023fd7cf00c100124481fff800028000003ffffffffc00,
+0xfe0001ffff000600007ffffe000000000000023fd7cf00c100124481fff8000a0000003ffffffffc20,
+0xfe0001ffff000600007ffffe000000000000023fd7cf00c100124481fff800120000003ffffffffc40,
+0xfe0001ffff000600007ffffe000000000000023fd7cf00c900124481fffa00020000003ffffffffc00,
+0xfe0001ffff000600007ffffe000208081100923fd7cf08c100124481fff820030000003ffffffffc00,
+0xfe0001ffff000600007ffffe000400000000023fd7cf05c100124481fff880420000003ffffffffc00,
+0xfe0001ffff000600007ffffe002000000000023fd7cf00c100124481fff800020100003ffffffffc00,
+0xfe0001ffff000600007ffffe004000000000023fd7cf00c100124481fff800020400003ffffffffc00,
+0xfe0001ffff000600007ffffe0400800480a0023fd7cf80c100124481fff802020048a47ffffffffc00,
+0xfe0001ffff000600007ffffe080100410010023fd7cf40c100124481fff80402009118bffffffffc00,
+0xfe0001ffff000600007ffffe1000210200480a3fd7cf10c100124481fffc00060000003ffffffffc00,
+0xfe0001ffff000600007ffffe200040002000023fdfcf00c1311a64d5fff800020000003ffffffffc00,
+0xfe0001ffff000600007ffffe400004200404227fd7cf00c10a134681fff900020000003ffffffffc00,
+0xfe0001ffff000a00007ffffe000000000000023fc7cb20c400000001fff801000026433ffffffffc00,
+0xfe0001ffff000a00007ffffe000000000000023fc7cb20c400000001fff801000026433ffffffffc80,
+0xfe0001ffff000a00007ffffe000000000000023fc7cb20c400000001fff801002026433ffffffffc00,
+0xfe0001ffff000a00007ffffe000000000000023fc7cb20c400000001fff801004026433ffffffffc00,
+0xfe0001ffff000a00007ffffe000000000000023fc7cb20c400000001fff801008026433ffffffffc00,
+0xfe0001ffff000a00007ffffe000000000000023fc7cb20c400000001fff801080026433ffffffffc20]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart005 : Array (ℕ) := #[
+0xfe0001ffff000a00007ffffe000000000000023fc7cb20c400000001fff801100026433ffffffffc40,
+0xfe0001ffff000a00007ffffe000000000000023fc7cb20cc00000001fffa01000026433ffffffffc00,
+0xfe0001ffff000a00007ffffe000208081100923fc7cb28c400000001fff821010026433ffffffffc00,
+0xfe0001ffff000a00007ffffe000400000000023fc7cb25c400000001fff881400026433ffffffffc00,
+0xfe0001ffff000a00007ffffe002000000000023fc7cb20c400000001fff801000126433ffffffffc00,
+0xfe0001ffff000a00007ffffe004000000000023fc7cb20c400000001fff801000426433ffffffffc00,
+0xfe0001ffff000a00007ffffe0400800480a0023fc7cba0c400000001fff80300006ee77ffffffffc00,
+0xfe0001ffff000a00007ffffe080100410010023fc7cb60c400000001fff8050000b75bbffffffffc00,
+0xfe0001ffff000a00007ffffe1000210200480a3fc7cb30c400000001fffc01040026433ffffffffc00,
+0xfe0001ffff000a00007ffffe200040002000023fcfcb20c431082055fff801000026433ffffffffc00,
+0xfe0001ffff000a00007ffffe400004200404227fc7cb20c40a010201fff901000026433ffffffffc00,
+0xfe0001ffff000e00007ffffe000000000000023fd7cf20c500124481fff801020026433ffffffffc00,
+0xfe0001ffff001200007ffffe000000000000023fc7cb00d000000001fff800000000003ffffffffc02,
+0xfe0001ffff001200007ffffe000000000000023fc7cb00d000000001fff800000000003ffffffffc82,
+0xfe0001ffff001200007ffffe000000000000023fc7cb00d000000001fff800002000003ffffffffc02,
+0xfe0001ffff001200007ffffe000000000000023fc7cb00d000000001fff800004000003ffffffffc02,
+0xfe0001ffff001200007ffffe000000000000023fc7cb00d000000001fff800008000003ffffffffc02,
+0xfe0001ffff001200007ffffe000000000000023fc7cb00d000000001fff800080000003ffffffffc22,
+0xfe0001ffff001200007ffffe000000000000023fc7cb00d000000001fff800100000003ffffffffc42,
+0xfe0001ffff001200007ffffe000000000000023fc7cb00d800000001fffa00000000003ffffffffc02,
+0xfe0001ffff001200007ffffe000208081100923fc7cb08d000000001fff820010000003ffffffffc02,
+0xfe0001ffff001200007ffffe000400000000023fc7cb05d000000001fff880400000003ffffffffc02,
+0xfe0001ffff001200007ffffe002000000000023fc7cb00d000000001fff800000100003ffffffffc02,
+0xfe0001ffff001200007ffffe004000000000023fc7cb00d000000001fff800000400003ffffffffc02,
+0xfe0001ffff001200007ffffe0400800480a0023fc7cb80d000000001fff802000048a47ffffffffc02,
+0xfe0001ffff001200007ffffe080100410010023fc7cb40d000000001fff80400009118bffffffffc02,
+0xfe0001ffff001200007ffffe1000210200480a3fc7cb10d000000001fffc00040000003ffffffffc02,
+0xfe0001ffff001200007ffffe200040002000023fcfcb00d031082055fff800000000003ffffffffc02,
+0xfe0001ffff001200007ffffe400004200404227fc7cb00d00a010201fff900000000003ffffffffc02,
+0xfe0001ffff001600007ffffe000000000000023fd7cf00d100124481fff800020000003ffffffffc02,
+0xfe0001ffff001a00007ffffe000000000000023fc7cb20d400000001fff801000026433ffffffffc02,
+0xfe0001ffff002200007ffffe020000000000023fc7cb00c000000001fff800000800003ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart006 : Array (ℕ) := #[
+0xfe0001ffff002200007ffffe020000000000023fc7cb00c000000001fff800000800003ffffffffc80,
+0xfe0001ffff002200007ffffe020000000000023fc7cb00c000000001fff800002800003ffffffffc00,
+0xfe0001ffff002200007ffffe020000000000023fc7cb00c000000001fff800004800003ffffffffc00,
+0xfe0001ffff002200007ffffe020000000000023fc7cb00c000000001fff800008800003ffffffffc00,
+0xfe0001ffff002200007ffffe020000000000023fc7cb00c000000001fff800080800003ffffffffc20,
+0xfe0001ffff002200007ffffe020000000000023fc7cb00c000000001fff800100800003ffffffffc40,
+0xfe0001ffff002200007ffffe020000000000023fc7cb00c800000001fffa00000800003ffffffffc00,
+0xfe0001ffff002200007ffffe020208081100923fc7cb08c000000001fff820010800003ffffffffc00,
+0xfe0001ffff002200007ffffe020400000000023fc7cb05c000000001fff880400800003ffffffffc00,
+0xfe0001ffff002200007ffffe022000000000023fc7cb00c000000001fff800000900003ffffffffc00,
+0xfe0001ffff002200007ffffe024000000000023fc7cb00c000000001fff800000c00003ffffffffc00,
+0xfe0001ffff002200007ffffe0600800480a0023fc7cb80c000000001fff802000848a47ffffffffc00,
+0xfe0001ffff002200007ffffe0a0100410010023fc7cb40c000000001fff80400089118bffffffffc00,
+0xfe0001ffff002200007ffffe1200210200480a3fc7cb10c000000001fffc00040800003ffffffffc00,
+0xfe0001ffff002200007ffffe220040002000023fcfcb00c031082055fff800000800003ffffffffc00,
+0xfe0001ffff002200007ffffe420004200404227fc7cb00c00a010201fff900000800003ffffffffc00,
+0xfe0001ffff002600007ffffe020000000000023fd7cf00c100124481fff800020800003ffffffffc00,
+0xfe0001ffff002a00007ffffe020000000000023fc7cb20c400000001fff801000826433ffffffffc00,
+0xfe0001ffff003200007ffffe020000000000023fc7cb00d000000001fff800000800003ffffffffc02,
+0xfe0001ffff004200007ffffe000000000000023fc7cb02c200000001fff800800000003ffffffffd00,
+0xfe0001ffff004200007ffffe000000000000023fc7cb02c200000001fff800800000003ffffffffd80,
+0xfe0001ffff004200007ffffe000000000000023fc7cb02c200000001fff800802000003ffffffffd00,
+0xfe0001ffff004200007ffffe000000000000023fc7cb02c200000001fff800804000003ffffffffd00,
+0xfe0001ffff004200007ffffe000000000000023fc7cb02c200000001fff800808000003ffffffffd00,
+0xfe0001ffff004200007ffffe000000000000023fc7cb02c200000001fff800880000003ffffffffd20,
+0xfe0001ffff004200007ffffe000000000000023fc7cb02c200000001fff800900000003ffffffffd40,
+0xfe0001ffff004200007ffffe000000000000023fc7cb02ca00000001fffa00800000003ffffffffd00,
+0xfe0001ffff004200007ffffe000208081100923fc7cb0ac200000001fff820810000003ffffffffd00,
+0xfe0001ffff004200007ffffe000400000000023fc7cb07c200000001fff880c00000003ffffffffd00,
+0xfe0001ffff004200007ffffe002000000000023fc7cb02c200000001fff800800100003ffffffffd00,
+0xfe0001ffff004200007ffffe004000000000023fc7cb02c200000001fff800800400003ffffffffd00,
+0xfe0001ffff004200007ffffe0400800480a0023fc7cb82c200000001fff802800048a47ffffffffd00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart007 : Array (ℕ) := #[
+0xfe0001ffff004200007ffffe080100410010023fc7cb42c200000001fff80480009118bffffffffd00,
+0xfe0001ffff004200007ffffe1000210200480a3fc7cb12c200000001fffc00840000003ffffffffd00,
+0xfe0001ffff004200007ffffe200040002000023fcfcb02c231082055fff800800000003ffffffffd00,
+0xfe0001ffff004200007ffffe400004200404227fc7cb02c20a010201fff900800000003ffffffffd00,
+0xfe0001ffff004600007ffffe000000000000023fd7cf02c300124481fff800820000003ffffffffd00,
+0xfe0001ffff004a00007ffffe000000000000023fc7cb22c600000001fff801800026433ffffffffd00,
+0xfe0001ffff005200007ffffe000000000000023fc7cb02d200000001fff800800000003ffffffffd02,
+0xfe0001ffff006200007ffffe020000000000023fc7cb02c200000001fff800800800003ffffffffd00,
+0xfe0001ffff010200007ffffe000800000000023fc7cb00c000000001fff800000000003ffffffffe00,
+0xfe0001ffff010200007ffffe000800000000023fc7cb00c000000001fff800000000003ffffffffe80,
+0xfe0001ffff010200007ffffe000800000000023fc7cb00c000000001fff800002000003ffffffffe00,
+0xfe0001ffff010200007ffffe000800000000023fc7cb00c000000001fff800004000003ffffffffe00,
+0xfe0001ffff010200007ffffe000800000000023fc7cb00c000000001fff800008000003ffffffffe00,
+0xfe0001ffff010200007ffffe000800000000023fc7cb00c000000001fff800080000003ffffffffe20,
+0xfe0001ffff010200007ffffe000800000000023fc7cb00c000000001fff800100000003ffffffffe40,
+0xfe0001ffff010200007ffffe000800000000023fc7cb00c800000001fffa00000000003ffffffffe00,
+0xfe0001ffff010200007ffffe000a08081100923fc7cb08c000000001fff820010000003ffffffffe00,
+0xfe0001ffff010200007ffffe000c00000000023fc7cb05c000000001fff880400000003ffffffffe00,
+0xfe0001ffff010200007ffffe002800000000023fc7cb00c000000001fff800000100003ffffffffe00,
+0xfe0001ffff010200007ffffe004800000000023fc7cb00c000000001fff800000400003ffffffffe00,
+0xfe0001ffff010200007ffffe0408800480a0023fc7cb80c000000001fff802000048a47ffffffffe00,
+0xfe0001ffff010200007ffffe080900410010023fc7cb40c000000001fff80400009118bffffffffe00,
+0xfe0001ffff010200007ffffe1008210200480a3fc7cb10c000000001fffc00040000003ffffffffe00,
+0xfe0001ffff010200007ffffe200840002000023fcfcb00c031082055fff800000000003ffffffffe00,
+0xfe0001ffff010200007ffffe400804200404227fc7cb00c00a010201fff900000000003ffffffffe00,
+0xfe0001ffff010600007ffffe000800000000023fd7cf00c100124481fff800020000003ffffffffe00,
+0xfe0001ffff010a00007ffffe000800000000023fc7cb20c400000001fff801000026433ffffffffe00,
+0xfe0001ffff011200007ffffe000800000000023fc7cb00d000000001fff800000000003ffffffffe02,
+0xfe0001ffff012200007ffffe020800000000023fc7cb00c000000001fff800000800003ffffffffe00,
+0xfe0001ffff014200007ffffe000800000000023fc7cb02c200000001fff800800000003fffffffff00,
+0xfe0001ffff020200007ffffe000000000000023fc7cb00e000000001fff800000000003ffffffffc10,
+0xfe0001ffff020200007ffffe000000000000023fc7cb00e000000001fff800000000003ffffffffc90]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart008 : Array (ℕ) := #[
+0xfe0001ffff020200007ffffe000000000000023fc7cb00e000000001fff800002000003ffffffffc10,
+0xfe0001ffff020200007ffffe000000000000023fc7cb00e000000001fff800004000003ffffffffc10,
+0xfe0001ffff020200007ffffe000000000000023fc7cb00e000000001fff800008000003ffffffffc10,
+0xfe0001ffff020200007ffffe000000000000023fc7cb00e000000001fff800080000003ffffffffc30,
+0xfe0001ffff020200007ffffe000000000000023fc7cb00e000000001fff800100000003ffffffffc50,
+0xfe0001ffff020200007ffffe000000000000023fc7cb00e800000001fffa00000000003ffffffffc10,
+0xfe0001ffff020200007ffffe000208081100923fc7cb08e000000001fff820010000003ffffffffc10,
+0xfe0001ffff020200007ffffe000400000000023fc7cb05e000000001fff880400000003ffffffffc10,
+0xfe0001ffff020200007ffffe002000000000023fc7cb00e000000001fff800000100003ffffffffc10,
+0xfe0001ffff020200007ffffe004000000000023fc7cb00e000000001fff800000400003ffffffffc10,
+0xfe0001ffff020200007ffffe0400800480a0023fc7cb80e000000001fff802000048a47ffffffffc10,
+0xfe0001ffff020200007ffffe080100410010023fc7cb40e000000001fff80400009118bffffffffc10,
+0xfe0001ffff020200007ffffe1000210200480a3fc7cb10e000000001fffc00040000003ffffffffc10,
+0xfe0001ffff020200007ffffe200040002000023fcfcb00e031082055fff800000000003ffffffffc10,
+0xfe0001ffff020200007ffffe400004200404227fc7cb00e00a010201fff900000000003ffffffffc10,
+0xfe0001ffff020600007ffffe000000000000023fd7cf00e100124481fff800020000003ffffffffc10,
+0xfe0001ffff020a00007ffffe000000000000023fc7cb20e400000001fff801000026433ffffffffc10,
+0xfe0001ffff021200007ffffe000000000000023fc7cb00f000000001fff800000000003ffffffffc12,
+0xfe0001ffff022200007ffffe020000000000023fc7cb00e000000001fff800000800003ffffffffc10,
+0xfe0001ffff024200007ffffe000000000000023fc7cb02e200000001fff800800000003ffffffffd10,
+0xfe0001ffff030200007ffffe000800000000023fc7cb00e000000001fff800000000003ffffffffe10,
+0xfe0001ffff040200007ffffe008000000000023fe7db00c084c0110bfff800000000003ffffffffc00,
+0xfe0001ffff040200007ffffe008000000000023fe7db00c084c0110bfff800000000003ffffffffc80,
+0xfe0001ffff040200007ffffe008000000000023fe7db00c084c0110bfff800002000003ffffffffc00,
+0xfe0001ffff040200007ffffe008000000000023fe7db00c084c0110bfff800004000003ffffffffc00,
+0xfe0001ffff040200007ffffe008000000000023fe7db00c084c0110bfff800008000003ffffffffc00,
+0xfe0001ffff040200007ffffe008000000000023fe7db00c084c0110bfff800080000003ffffffffc20,
+0xfe0001ffff040200007ffffe008000000000023fe7db00c084c0110bfff800100000003ffffffffc40,
+0xfe0001ffff040200007ffffe008000000000023fe7db00c884c0110bfffa00000000003ffffffffc00,
+0xfe0001ffff040200007ffffe008208081100923fe7db08c084c0110bfff820010000003ffffffffc00,
+0xfe0001ffff040200007ffffe008400000000023fe7db05c084c0110bfff880400000003ffffffffc00,
+0xfe0001ffff040200007ffffe00a000000000023fe7db00c084c0110bfff800000100003ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart009 : Array (ℕ) := #[
+0xfe0001ffff040200007ffffe00c000000000023fe7db00c084c0110bfff800000400003ffffffffc00,
+0xfe0001ffff040200007ffffe0480800480a0023fe7db80c084c0110bfff802000048a47ffffffffc00,
+0xfe0001ffff040200007ffffe088100410010023fe7db40c084c0110bfff80400009118bffffffffc00,
+0xfe0001ffff040200007ffffe1080210200480a3fe7db10c084c0110bfffc00040000003ffffffffc00,
+0xfe0001ffff040200007ffffe208040002000023fefdb00c0b5c8315ffff800000000003ffffffffc00,
+0xfe0001ffff040200007ffffe408004200404227fe7db00c08ec1130bfff900000000003ffffffffc00,
+0xfe0001ffff040600007ffffe008000000000023ff7df00c184d2558bfff800020000003ffffffffc00,
+0xfe0001ffff040a00007ffffe008000000000023fe7db20c484c0110bfff801000026433ffffffffc00,
+0xfe0001ffff041200007ffffe008000000000023fe7db00d084c0110bfff800000000003ffffffffc02,
+0xfe0001ffff042200007ffffe028000000000023fe7db00c084c0110bfff800000800003ffffffffc00,
+0xfe0001ffff044200007ffffe008000000000023fe7db02c284c0110bfff800800000003ffffffffd00,
+0xfe0001ffff050200007ffffe008800000000023fe7db00c084c0110bfff800000000003ffffffffe00,
+0xfe0001ffff060200007ffffe008000000000023fe7db00e084c0110bfff800000000003ffffffffc10,
+0xfe0001ffff080200007ffffe010000000000023fc7cb00c000000001fff800000200003ffffffffc00,
+0xfe0001ffff080200007ffffe010000000000023fc7cb00c000000001fff800000200003ffffffffc80,
+0xfe0001ffff080200007ffffe010000000000023fc7cb00c000000001fff800002200003ffffffffc00,
+0xfe0001ffff080200007ffffe010000000000023fc7cb00c000000001fff800004200003ffffffffc00,
+0xfe0001ffff080200007ffffe010000000000023fc7cb00c000000001fff800008200003ffffffffc00,
+0xfe0001ffff080200007ffffe010000000000023fc7cb00c000000001fff800080200003ffffffffc20,
+0xfe0001ffff080200007ffffe010000000000023fc7cb00c000000001fff800100200003ffffffffc40,
+0xfe0001ffff080200007ffffe010000000000023fc7cb00c800000001fffa00000200003ffffffffc00,
+0xfe0001ffff080200007ffffe010208081100923fc7cb08c000000001fff820010200003ffffffffc00,
+0xfe0001ffff080200007ffffe010400000000023fc7cb05c000000001fff880400200003ffffffffc00,
+0xfe0001ffff080200007ffffe012000000000023fc7cb00c000000001fff800000300003ffffffffc00,
+0xfe0001ffff080200007ffffe014000000000023fc7cb00c000000001fff800000600003ffffffffc00,
+0xfe0001ffff080200007ffffe0500800480a0023fc7cb80c000000001fff802000248a47ffffffffc00,
+0xfe0001ffff080200007ffffe090100410010023fc7cb40c000000001fff80400029118bffffffffc00,
+0xfe0001ffff080200007ffffe1100210200480a3fc7cb10c000000001fffc00040200003ffffffffc00,
+0xfe0001ffff080200007ffffe210040002000023fcfcb00c031082055fff800000200003ffffffffc00,
+0xfe0001ffff080200007ffffe410004200404227fc7cb00c00a010201fff900000200003ffffffffc00,
+0xfe0001ffff080600007ffffe010000000000023fd7cf00c100124481fff800020200003ffffffffc00,
+0xfe0001ffff080a00007ffffe010000000000023fc7cb20c400000001fff801000226433ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart010 : Array (ℕ) := #[
+0xfe0001ffff081200007ffffe010000000000023fc7cb00d000000001fff800000200003ffffffffc02,
+0xfe0001ffff082200007ffffe030000000000023fc7cb00c000000001fff800000a00003ffffffffc00,
+0xfe0001ffff084200007ffffe010000000000023fc7cb02c200000001fff800800200003ffffffffd00,
+0xfe0001ffff090200007ffffe010800000000023fc7cb00c000000001fff800000200003ffffffffe00,
+0xfe0001ffff0a0200007ffffe010000000000023fc7cb00e000000001fff800000200003ffffffffc10,
+0xfe0001ffff0c0200007ffffe018000000000023fe7db00c084c0110bfff800000200003ffffffffc00,
+0xfe0001ffff100200007ffffe800002100a0147bfc7cb00c000000001fff840200000003ffffffffc00,
+0xfe0001ffff100200007ffffe800002100a0147bfc7cb00c000000001fff840200000003ffffffffc80,
+0xfe0001ffff100200007ffffe800002100a0147bfc7cb00c000000001fff840202000003ffffffffc00,
+0xfe0001ffff100200007ffffe800002100a0147bfc7cb00c000000001fff840204000003ffffffffc00,
+0xfe0001ffff100200007ffffe800002100a0147bfc7cb00c000000001fff840208000003ffffffffc00,
+0xfe0001ffff100200007ffffe800002100a0147bfc7cb00c000000001fff840280000003ffffffffc20,
+0xfe0001ffff100200007ffffe800002100a0147bfc7cb00c000000001fff840300000003ffffffffc40,
+0xfe0001ffff100200007ffffe800002100a0147bfc7cb00c800000001fffa40200000003ffffffffc00,
+0xfe0001ffff100200007ffffe80020a181b01d7bfc7cb08c000000001fff860210000003ffffffffc00,
+0xfe0001ffff100200007ffffe800402100a0147bfc7cb05c000000001fff8c0600000003ffffffffc00,
+0xfe0001ffff100200007ffffe802002100a0147bfc7cb00c000000001fff840200100003ffffffffc00,
+0xfe0001ffff100200007ffffe804002100a0147bfc7cb00c000000001fff840200400003ffffffffc00,
+0xfe0001ffff100200007ffffe840082148aa147bfc7cb80c000000001fff842200048a47ffffffffc00,
+0xfe0001ffff100200007ffffe880102510a1147bfc7cb40c000000001fff84420009118bffffffffc00,
+0xfe0001ffff100200007ffffe900023120a494fbfc7cb10c000000001fffc40240000003ffffffffc00,
+0xfe0001ffff100200007ffffea00042102a0147bfcfcb00c031082055fff840200000003ffffffffc00,
+0xfe0001ffff100200007ffffec00006300e0567ffc7cb00c00a010201fff940200000003ffffffffc00,
+0xfe0001ffff100600007ffffe800002100a0147bfd7cf00c100124481fff840220000003ffffffffc00,
+0xfe0001ffff100a00007ffffe800002100a0147bfc7cb20c400000001fff841200026433ffffffffc00,
+0xfe0001ffff101200007ffffe800002100a0147bfc7cb00d000000001fff840200000003ffffffffc02,
+0xfe0001ffff102200007ffffe820002100a0147bfc7cb00c000000001fff840200800003ffffffffc00,
+0xfe0001ffff104200007ffffe800002100a0147bfc7cb02c200000001fff840a00000003ffffffffd00,
+0xfe0001ffff110200007ffffe800802100a0147bfc7cb00c000000001fff840200000003ffffffffe00,
+0xfe0001ffff120200007ffffe800002100a0147bfc7cb00e000000001fff840200000003ffffffffc10,
+0xfe0001ffff140200007ffffe808002100a0147bfe7db00c084c0110bfff840200000003ffffffffc00,
+0xfe0001ffff180200007ffffe810002100a0147bfc7cb00c000000001fff840200200003ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart011 : Array (ℕ) := #[
+0xfe0001ffff20029230fffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc04,
+0xfe0001ffff20029230fffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc84,
+0xfe0001ffff20029230fffffe000000000000023fc7cb00c000000001fff800002000003ffffffffc04,
+0xfe0001ffff20029230fffffe000000000000023fc7cb00c000000001fff800004000003ffffffffc04,
+0xfe0001ffff20029230fffffe000000000000023fc7cb00c000000001fff800008000003ffffffffc04,
+0xfe0001ffff20029230fffffe000000000000023fc7cb00c000000001fff800080000003ffffffffc24,
+0xfe0001ffff20029230fffffe000000000000023fc7cb00c000000001fff800100000003ffffffffc44,
+0xfe0001ffff20029230fffffe000000000000023fc7cb00c800000001fffa00000000003ffffffffc04,
+0xfe0001ffff20029230fffffe000208081100923fc7cb08c000000001fff820010000003ffffffffc04,
+0xfe0001ffff20029230fffffe000400000000023fc7cb05c000000001fff880400000003ffffffffc04,
+0xfe0001ffff20029230fffffe002000000000023fc7cb00c000000001fff800000100003ffffffffc04,
+0xfe0001ffff20029230fffffe004000000000023fc7cb00c000000001fff800000400003ffffffffc04,
+0xfe0001ffff20029230fffffe0400800480a0023fc7cb80c000000001fff802000048a47ffffffffc04,
+0xfe0001ffff20029230fffffe080100410010023fc7cb40c000000001fff80400009118bffffffffc04,
+0xfe0001ffff20029230fffffe1000210200480a3fc7cb10c000000001fffc00040000003ffffffffc04,
+0xfe0001ffff20029230fffffe200040002000023fcfcb00c031082055fff800000000003ffffffffc04,
+0xfe0001ffff20029230fffffe400004200404227fc7cb00c00a010201fff900000000003ffffffffc04,
+0xfe0001ffff20069230fffffe000000000000023fd7cf00c100124481fff800020000003ffffffffc04,
+0xfe0001ffff200a9230fffffe000000000000023fc7cb20c400000001fff801000026433ffffffffc04,
+0xfe0001ffff20129230fffffe000000000000023fc7cb00d000000001fff800000000003ffffffffc06,
+0xfe0001ffff20229230fffffe020000000000023fc7cb00c000000001fff800000800003ffffffffc04,
+0xfe0001ffff20429230fffffe000000000000023fc7cb02c200000001fff800800000003ffffffffd04,
+0xfe0001ffff21029230fffffe000800000000023fc7cb00c000000001fff800000000003ffffffffe04,
+0xfe0001ffff22029230fffffe000000000000023fc7cb00e000000001fff800000000003ffffffffc14,
+0xfe0001ffff24029230fffffe008000000000023fe7db00c084c0110bfff800000000003ffffffffc04,
+0xfe0001ffff28029230fffffe010000000000023fc7cb00c000000001fff800000200003ffffffffc04,
+0xfe0001ffff30029230fffffe800002100a0147bfc7cb00c000000001fff840200000003ffffffffc04,
+0xfe0001ffff400264857ffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc08,
+0xfe0001ffff400264857ffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc88,
+0xfe0001ffff400264857ffffe000000000000023fc7cb00c000000001fff800002000003ffffffffc08,
+0xfe0001ffff400264857ffffe000000000000023fc7cb00c000000001fff800004000003ffffffffc08,
+0xfe0001ffff400264857ffffe000000000000023fc7cb00c000000001fff800008000003ffffffffc08]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart012 : Array (ℕ) := #[
+0xfe0001ffff400264857ffffe000000000000023fc7cb00c000000001fff800080000003ffffffffc28,
+0xfe0001ffff400264857ffffe000000000000023fc7cb00c000000001fff800100000003ffffffffc48,
+0xfe0001ffff400264857ffffe000000000000023fc7cb00c800000001fffa00000000003ffffffffc08,
+0xfe0001ffff400264857ffffe000208081100923fc7cb08c000000001fff820010000003ffffffffc08,
+0xfe0001ffff400264857ffffe000400000000023fc7cb05c000000001fff880400000003ffffffffc08,
+0xfe0001ffff400264857ffffe002000000000023fc7cb00c000000001fff800000100003ffffffffc08,
+0xfe0001ffff400264857ffffe004000000000023fc7cb00c000000001fff800000400003ffffffffc08,
+0xfe0001ffff400264857ffffe0400800480a0023fc7cb80c000000001fff802000048a47ffffffffc08,
+0xfe0001ffff400264857ffffe080100410010023fc7cb40c000000001fff80400009118bffffffffc08,
+0xfe0001ffff400264857ffffe1000210200480a3fc7cb10c000000001fffc00040000003ffffffffc08,
+0xfe0001ffff400264857ffffe200040002000023fcfcb00c031082055fff800000000003ffffffffc08,
+0xfe0001ffff400264857ffffe400004200404227fc7cb00c00a010201fff900000000003ffffffffc08,
+0xfe0001ffff400664857ffffe000000000000023fd7cf00c100124481fff800020000003ffffffffc08,
+0xfe0001ffff400a64857ffffe000000000000023fc7cb20c400000001fff801000026433ffffffffc08,
+0xfe0001ffff401264857ffffe000000000000023fc7cb00d000000001fff800000000003ffffffffc0a,
+0xfe0001ffff402264857ffffe020000000000023fc7cb00c000000001fff800000800003ffffffffc08,
+0xfe0001ffff404264857ffffe000000000000023fc7cb02c200000001fff800800000003ffffffffd08,
+0xfe0001ffff410264857ffffe000800000000023fc7cb00c000000001fff800000000003ffffffffe08,
+0xfe0001ffff420264857ffffe000000000000023fc7cb00e000000001fff800000000003ffffffffc18,
+0xfe0001ffff440264857ffffe008000000000023fe7db00c084c0110bfff800000000003ffffffffc08,
+0xfe0001ffff480264857ffffe010000000000023fc7cb00c000000001fff800000200003ffffffffc08,
+0xfe0001ffff500264857ffffe800002100a0147bfc7cb00c000000001fff840200000003ffffffffc08,
+0xfe0001ffff6002f6b5fffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc0c,
+0xfe0001ffff808200007ffffe000000000000023fc7cb00c000000001fff810000000003ffffffffc00,
+0xfe0001ffff808200007ffffe000000000000023fc7cb00c000000001fff810000000003ffffffffc80,
+0xfe0001ffff808200007ffffe000000000000023fc7cb00c000000001fff810002000003ffffffffc00,
+0xfe0001ffff808200007ffffe000000000000023fc7cb00c000000001fff810004000003ffffffffc00,
+0xfe0001ffff808200007ffffe000000000000023fc7cb00c000000001fff810008000003ffffffffc00,
+0xfe0001ffff808200007ffffe000000000000023fc7cb00c000000001fff810080000003ffffffffc20,
+0xfe0001ffff808200007ffffe000000000000023fc7cb00c000000001fff810100000003ffffffffc40,
+0xfe0001ffff808200007ffffe000000000000023fc7cb00c800000001fffa10000000003ffffffffc00,
+0xfe0001ffff808200007ffffe000208081100923fc7cb08c000000001fff830010000003ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart013 : Array (ℕ) := #[
+0xfe0001ffff808200007ffffe000400000000023fc7cb05c000000001fff890400000003ffffffffc00,
+0xfe0001ffff808200007ffffe002000000000023fc7cb00c000000001fff810000100003ffffffffc00,
+0xfe0001ffff808200007ffffe004000000000023fc7cb00c000000001fff810000400003ffffffffc00,
+0xfe0001ffff808200007ffffe0400800480a0023fc7cb80c000000001fff812000048a47ffffffffc00,
+0xfe0001ffff808200007ffffe080100410010023fc7cb40c000000001fff81400009118bffffffffc00,
+0xfe0001ffff808200007ffffe1000210200480a3fc7cb10c000000001fffc10040000003ffffffffc00,
+0xfe0001ffff808200007ffffe200040002000023fcfcb00c031082055fff810000000003ffffffffc00,
+0xfe0001ffff808200007ffffe400004200404227fc7cb00c00a010201fff910000000003ffffffffc00,
+0xfe0001ffff808600007ffffe000000000000023fd7cf00c100124481fff810020000003ffffffffc00,
+0xfe0001ffff808a00007ffffe000000000000023fc7cb20c400000001fff811000026433ffffffffc00,
+0xfe0001ffff809200007ffffe000000000000023fc7cb00d000000001fff810000000003ffffffffc02,
+0xfe0001ffff80a200007ffffe020000000000023fc7cb00c000000001fff810000800003ffffffffc00,
+0xfe0001ffff80c200007ffffe000000000000023fc7cb02c200000001fff810800000003ffffffffd00,
+0xfe0001ffff818200007ffffe000800000000023fc7cb00c000000001fff810000000003ffffffffe00,
+0xfe0001ffff828200007ffffe000000000000023fc7cb00e000000001fff810000000003ffffffffc10,
+0xfe0001ffff848200007ffffe008000000000023fe7db00c084c0110bfff810000000003ffffffffc00,
+0xfe0001ffff888200007ffffe010000000000023fc7cb00c000000001fff810000200003ffffffffc00,
+0xfe0001ffff908200007ffffe800002100a0147bfc7cb00c000000001fff850200000003ffffffffc00,
+0xfe0001ffffa0829230fffffe000000000000023fc7cb00c000000001fff810000000003ffffffffc04,
+0xfe0001ffffc08264857ffffe000000000000023fc7cb00c000000001fff810000000003ffffffffc08,
+0xfe4891ffff0003094a7ffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc01,
+0xfe4891ffff0003094a7ffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc81,
+0xfe4891ffff0003094a7ffffe000000000000023fc7cb00c000000001fff800002000003ffffffffc01,
+0xfe4891ffff0003094a7ffffe000000000000023fc7cb00c000000001fff800004000003ffffffffc01,
+0xfe4891ffff0003094a7ffffe000000000000023fc7cb00c000000001fff800008000003ffffffffc01,
+0xfe4891ffff0003094a7ffffe000000000000023fc7cb00c000000001fff800080000003ffffffffc21,
+0xfe4891ffff0003094a7ffffe000000000000023fc7cb00c000000001fff800100000003ffffffffc41,
+0xfe4891ffff0003094a7ffffe000000000000023fc7cb00c800000001fffa00000000003ffffffffc01,
+0xfe4891ffff0003094a7ffffe000208081100923fc7cb08c000000001fff820010000003ffffffffc01,
+0xfe4891ffff0003094a7ffffe000400000000023fc7cb05c000000001fff880400000003ffffffffc01,
+0xfe4891ffff0003094a7ffffe002000000000023fc7cb00c000000001fff800000100003ffffffffc01,
+0xfe4891ffff0003094a7ffffe004000000000023fc7cb00c000000001fff800000400003ffffffffc01]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart014 : Array (ℕ) := #[
+0xfe4891ffff0003094a7ffffe0400800480a0023fc7cb80c000000001fff802000048a47ffffffffc01,
+0xfe4891ffff0003094a7ffffe080100410010023fc7cb40c000000001fff80400009118bffffffffc01,
+0xfe4891ffff0003094a7ffffe1000210200480a3fc7cb10c000000001fffc00040000003ffffffffc01,
+0xfe4891ffff0003094a7ffffe200040002000023fcfcb00c031082055fff800000000003ffffffffc01,
+0xfe4891ffff0003094a7ffffe400004200404227fc7cb00c00a010201fff900000000003ffffffffc01,
+0xfe4891ffff0007094a7ffffe000000000000023fd7cf00c100124481fff800020000003ffffffffc01,
+0xfe4891ffff000b094a7ffffe000000000000023fc7cb20c400000001fff801000026433ffffffffc01,
+0xfe4891ffff0013094a7ffffe000000000000023fc7cb00d000000001fff800000000003ffffffffc03,
+0xfe4891ffff0023094a7ffffe020000000000023fc7cb00c000000001fff800000800003ffffffffc01,
+0xfe4891ffff0043094a7ffffe000000000000023fc7cb02c200000001fff800800000003ffffffffd01,
+0xfe4891ffff0103094a7ffffe000800000000023fc7cb00c000000001fff800000000003ffffffffe01,
+0xfe4891ffff0203094a7ffffe000000000000023fc7cb00e000000001fff800000000003ffffffffc11,
+0xfe4891ffff0403094a7ffffe008000000000023fe7db00c084c0110bfff800000000003ffffffffc01,
+0xfe4891ffff0803094a7ffffe010000000000023fc7cb00c000000001fff800000200003ffffffffc01,
+0xfe4891ffff1003094a7ffffe800002100a0147bfc7cb00c000000001fff840200000003ffffffffc01,
+0xfe4891ffff20039b7afffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc05,
+0xfe4891ffff40036dcf7ffffe000000000000023fc7cb00c000000001fff800000000003ffffffffc09,
+0xfe4891ffff8083094a7ffffe000000000000023fc7cb00c000000001fff810000000003ffffffffc01,
+0xfea465ffff000200007ffffe001000000000023fc7cb00c000000001fff800001000003ffffffffc00,
+0xfea465ffff000200007ffffe001000000000023fc7cb00c000000001fff800001000003ffffffffc80,
+0xfea465ffff000200007ffffe001000000000023fc7cb00c000000001fff800003000003ffffffffc00,
+0xfea465ffff000200007ffffe001000000000023fc7cb00c000000001fff800005000003ffffffffc00,
+0xfea465ffff000200007ffffe001000000000023fc7cb00c000000001fff800009000003ffffffffc00,
+0xfea465ffff000200007ffffe001000000000023fc7cb00c000000001fff800081000003ffffffffc20,
+0xfea465ffff000200007ffffe001000000000023fc7cb00c000000001fff800101000003ffffffffc40,
+0xfea465ffff000200007ffffe001000000000023fc7cb00c800000001fffa00001000003ffffffffc00,
+0xfea465ffff000200007ffffe001208081100923fc7cb08c000000001fff820011000003ffffffffc00,
+0xfea465ffff000200007ffffe001400000000023fc7cb05c000000001fff880401000003ffffffffc00,
+0xfea465ffff000200007ffffe003000000000023fc7cb00c000000001fff800001100003ffffffffc00,
+0xfea465ffff000200007ffffe005000000000023fc7cb00c000000001fff800001400003ffffffffc00,
+0xfea465ffff000200007ffffe0410800480a0023fc7cb80c000000001fff802001048a47ffffffffc00,
+0xfea465ffff000200007ffffe081100410010023fc7cb40c000000001fff80400109118bffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart015 : Array (ℕ) := #[
+0xfea465ffff000200007ffffe1010210200480a3fc7cb10c000000001fffc00041000003ffffffffc00,
+0xfea465ffff000200007ffffe201040002000023fcfcb00c031082055fff800001000003ffffffffc00,
+0xfea465ffff000200007ffffe401004200404227fc7cb00c00a010201fff900001000003ffffffffc00,
+0xfea465ffff000600007ffffe001000000000023fd7cf00c100124481fff800021000003ffffffffc00,
+0xfea465ffff000a00007ffffe001000000000023fc7cb20c400000001fff801001026433ffffffffc00,
+0xfea465ffff001200007ffffe001000000000023fc7cb00d000000001fff800001000003ffffffffc02,
+0xfea465ffff002200007ffffe021000000000023fc7cb00c000000001fff800001800003ffffffffc00,
+0xfea465ffff004200007ffffe001000000000023fc7cb02c200000001fff800801000003ffffffffd00,
+0xfea465ffff010200007ffffe001800000000023fc7cb00c000000001fff800001000003ffffffffe00,
+0xfea465ffff020200007ffffe001000000000023fc7cb00e000000001fff800001000003ffffffffc10,
+0xfea465ffff040200007ffffe009000000000023fe7db00c084c0110bfff800001000003ffffffffc00,
+0xfea465ffff080200007ffffe011000000000023fc7cb00c000000001fff800001200003ffffffffc00,
+0xfea465ffff100200007ffffe801002100a0147bfc7cb00c000000001fff840201000003ffffffffc00,
+0xfea465ffff20029230fffffe001000000000023fc7cb00c000000001fff800001000003ffffffffc04,
+0xfea465ffff400264857ffffe001000000000023fc7cb00c000000001fff800001000003ffffffffc08,
+0xfea465ffff808200007ffffe001000000000023fc7cb00c000000001fff810001000003ffffffffc00,
+0xfeecf5ffff0003094a7ffffe001000000000023fc7cb00c000000001fff800001000003ffffffffc01,
+0xff130bffff000200007fffff000010804002023fc7eb00c040248821fff808000000003ffffffffc00,
+0xff130bffff000200007fffff000010804002023fc7eb00c040248821fff808000000003ffffffffc80,
+0xff130bffff000200007fffff000010804002023fc7eb00c040248821fff808002000003ffffffffc00,
+0xff130bffff000200007fffff000010804002023fc7eb00c040248821fff808004000003ffffffffc00,
+0xff130bffff000200007fffff000010804002023fc7eb00c040248821fff808008000003ffffffffc00,
+0xff130bffff000200007fffff000010804002023fc7eb00c040248821fff808080000003ffffffffc20,
+0xff130bffff000200007fffff000010804002023fc7eb00c040248821fff808100000003ffffffffc40,
+0xff130bffff000200007fffff000010804002023fc7eb00c840248821fffa08000000003ffffffffc00,
+0xff130bffff000200007fffff000218885102923fc7eb08c040248821fff828010000003ffffffffc00,
+0xff130bffff000200007fffff000410804002023fc7eb05c040248821fff888400000003ffffffffc00,
+0xff130bffff000200007fffff002010804002023fc7eb00c040248821fff808000100003ffffffffc00,
+0xff130bffff000200007fffff004010804002023fc7eb00c040248821fff808000400003ffffffffc00,
+0xff130bffff000200007fffff04009084c0a2023fc7eb80c040248821fff80a000048a47ffffffffc00,
+0xff130bffff000200007fffff080110c14012023fc7eb40c040248821fff80c00009118bffffffffc00,
+0xff130bffff000200007fffff10003182404a0a3fc7eb10c040248821fffc08040000003ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31ValPart016 : Array (ℕ) := #[
+0xff130bffff000200007fffff200050806002023fcfeb00c0712ca875fff808000000003ffffffffc00,
+0xff130bffff000200007fffff400014a04406227fc7eb00c04a258a21fff908000000003ffffffffc00,
+0xff130bffff000600007fffff000010804002023fd7ef00c14036cca1fff808020000003ffffffffc00,
+0xff130bffff000a00007fffff000010804002023fc7eb20c440248821fff809000026433ffffffffc00,
+0xff130bffff001200007fffff000010804002023fc7eb00d040248821fff808000000003ffffffffc02,
+0xff130bffff002200007fffff020010804002023fc7eb00c040248821fff808000800003ffffffffc00,
+0xff130bffff004200007fffff000010804002023fc7eb02c240248821fff808800000003ffffffffd00,
+0xff130bffff010200007fffff000810804002023fc7eb00c040248821fff808000000003ffffffffe00,
+0xff130bffff020200007fffff000010804002023fc7eb00e040248821fff808000000003ffffffffc10,
+0xff130bffff040200007fffff008010804002023fe7fb00c0c4e4992bfff808000000003ffffffffc00,
+0xff130bffff080200007fffff010010804002023fc7eb00c040248821fff808000200003ffffffffc00,
+0xff130bffff100200007fffff800012904a0347bfc7eb00c040248821fff848200000003ffffffffc00,
+0xff130bffff20029230ffffff000010804002023fc7eb00c040248821fff808000000003ffffffffc04,
+0xff130bffff400264857fffff000010804002023fc7eb00c040248821fff808000000003ffffffffc08,
+0xff130bffff808200007fffff000010804002023fc7eb00c040248821fff818000000003ffffffffc00,
+0xff5b9bffff0003094a7fffff000010804002023fc7eb00c040248821fff808000000003ffffffffc01,
+0xffb76fffff000200007fffff001010804002023fc7eb00c040248821fff808001000003ffffffffc00]
+
+def candidate27KernelGrouped17794Genus1Q31Val (i : Fin 529) : ℕ :=
+  let block : Array (ℕ) :=
+    if i.val < 256 then
+      if i.val < 128 then
+        if i.val < 64 then
+          if i.val < 32 then
+            candidate27KernelGrouped17794Genus1Q31ValPart000
+          else
+            candidate27KernelGrouped17794Genus1Q31ValPart001
+        else
+          if i.val < 96 then
+            candidate27KernelGrouped17794Genus1Q31ValPart002
+          else
+            candidate27KernelGrouped17794Genus1Q31ValPart003
+      else
+        if i.val < 192 then
+          if i.val < 160 then
+            candidate27KernelGrouped17794Genus1Q31ValPart004
+          else
+            candidate27KernelGrouped17794Genus1Q31ValPart005
+        else
+          if i.val < 224 then
+            candidate27KernelGrouped17794Genus1Q31ValPart006
+          else
+            candidate27KernelGrouped17794Genus1Q31ValPart007
+    else
+      if i.val < 384 then
+        if i.val < 320 then
+          if i.val < 288 then
+            candidate27KernelGrouped17794Genus1Q31ValPart008
+          else
+            candidate27KernelGrouped17794Genus1Q31ValPart009
+        else
+          if i.val < 352 then
+            candidate27KernelGrouped17794Genus1Q31ValPart010
+          else
+            candidate27KernelGrouped17794Genus1Q31ValPart011
+      else
+        if i.val < 448 then
+          if i.val < 416 then
+            candidate27KernelGrouped17794Genus1Q31ValPart012
+          else
+            candidate27KernelGrouped17794Genus1Q31ValPart013
+        else
+          if i.val < 480 then
+            candidate27KernelGrouped17794Genus1Q31ValPart014
+          else
+            if i.val < 512 then
+              candidate27KernelGrouped17794Genus1Q31ValPart015
+            else
+              candidate27KernelGrouped17794Genus1Q31ValPart016
+  block.getD (i.val%32) 0
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart000 : Array (List (Fin 33)) := #[
+[],
+[7, 10],
+[10, 19],
+[7, 10, 19],
+[10, 20],
+[7, 10, 20],
+[10, 19, 20],
+[10, 21],
+[7, 10, 21],
+[10, 19, 21],
+[10, 20, 21],
+[5, 10],
+[5, 7, 10],
+[5, 10, 19],
+[5, 10, 20],
+[5, 10, 21],
+[6, 10],
+[6, 7, 10],
+[6, 10, 19],
+[6, 10, 20],
+[6, 10, 21],
+[5, 6, 10],
+[10, 30],
+[7, 10, 30],
+[10, 19, 30],
+[10, 20, 30],
+[10, 21, 30],
+[5, 10, 30],
+[6, 10, 30],
+[10, 22],
+[7, 10, 22],
+[10, 19, 22]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart001 : Array (List (Fin 33)) := #[
+[10, 20, 22],
+[10, 21, 22],
+[5, 10, 22],
+[6, 10, 22],
+[10, 22, 30],
+[10, 26],
+[7, 10, 26],
+[10, 19, 26],
+[10, 20, 26],
+[10, 21, 26],
+[5, 10, 26],
+[6, 10, 26],
+[10, 26, 30],
+[10, 22, 26],
+[10, 14],
+[7, 10, 14],
+[10, 14, 19],
+[10, 14, 20],
+[10, 14, 21],
+[5, 10, 14],
+[6, 10, 14],
+[10, 14, 30],
+[10, 14, 22],
+[10, 14, 26],
+[10, 16],
+[7, 10, 16],
+[10, 16, 19],
+[10, 16, 20],
+[10, 16, 21],
+[5, 10, 16],
+[6, 10, 16],
+[10, 16, 30]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart002 : Array (List (Fin 33)) := #[
+[10, 16, 22],
+[10, 16, 26],
+[10, 14, 16],
+[10, 11],
+[7, 10, 11],
+[10, 11, 19],
+[10, 11, 20],
+[10, 11, 21],
+[5, 10, 11],
+[6, 10, 11],
+[10, 11, 30],
+[10, 11, 22],
+[10, 11, 26],
+[10, 11, 14],
+[10, 11, 16],
+[10, 12],
+[7, 10, 12],
+[10, 12, 19],
+[10, 12, 20],
+[10, 12, 21],
+[5, 10, 12],
+[6, 10, 12],
+[10, 12, 30],
+[10, 12, 22],
+[10, 12, 26],
+[10, 12, 14],
+[10, 12, 16],
+[10, 11, 12],
+[10, 24],
+[7, 10, 24],
+[10, 19, 24],
+[10, 20, 24]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart003 : Array (List (Fin 33)) := #[
+[10, 21, 24],
+[5, 10, 24],
+[6, 10, 24],
+[10, 24, 30],
+[10, 22, 24],
+[10, 24, 26],
+[10, 14, 24],
+[10, 16, 24],
+[10, 11, 24],
+[10, 12, 24],
+[10, 32],
+[7, 10, 32],
+[10, 19, 32],
+[10, 20, 32],
+[10, 21, 32],
+[5, 10, 32],
+[6, 10, 32],
+[10, 30, 32],
+[10, 22, 32],
+[10, 26, 32],
+[10, 14, 32],
+[10, 16, 32],
+[10, 11, 32],
+[10, 12, 32],
+[10, 24, 32],
+[10, 29],
+[7, 10, 29],
+[10, 19, 29],
+[10, 20, 29],
+[10, 21, 29],
+[5, 10, 29],
+[6, 10, 29]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart004 : Array (List (Fin 33)) := #[
+[10, 29, 30],
+[10, 22, 29],
+[10, 26, 29],
+[10, 14, 29],
+[10, 16, 29],
+[10, 11, 29],
+[10, 12, 29],
+[10, 24, 29],
+[10, 29, 32],
+[10, 23],
+[7, 10, 23],
+[10, 19, 23],
+[10, 20, 23],
+[10, 21, 23],
+[5, 10, 23],
+[6, 10, 23],
+[10, 23, 30],
+[10, 22, 23],
+[10, 23, 26],
+[10, 14, 23],
+[10, 16, 23],
+[10, 11, 23],
+[10, 12, 23],
+[10, 23, 24],
+[10, 23, 32],
+[10, 23, 29],
+[10, 13],
+[7, 10, 13],
+[10, 13, 19],
+[10, 13, 20],
+[10, 13, 21],
+[5, 10, 13]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart005 : Array (List (Fin 33)) := #[
+[6, 10, 13],
+[10, 13, 30],
+[10, 13, 22],
+[10, 13, 26],
+[10, 13, 14],
+[10, 13, 16],
+[10, 11, 13],
+[10, 12, 13],
+[10, 13, 24],
+[10, 13, 32],
+[10, 13, 29],
+[10, 13, 23],
+[1, 10],
+[1, 7, 10],
+[1, 10, 19],
+[1, 10, 20],
+[1, 10, 21],
+[1, 5, 10],
+[1, 6, 10],
+[1, 10, 30],
+[1, 10, 22],
+[1, 10, 26],
+[1, 10, 14],
+[1, 10, 16],
+[1, 10, 11],
+[1, 10, 12],
+[1, 10, 24],
+[1, 10, 32],
+[1, 10, 29],
+[1, 10, 23],
+[1, 10, 13],
+[10, 17]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart006 : Array (List (Fin 33)) := #[
+[7, 10, 17],
+[10, 17, 19],
+[10, 17, 20],
+[10, 17, 21],
+[5, 10, 17],
+[6, 10, 17],
+[10, 17, 30],
+[10, 17, 22],
+[10, 17, 26],
+[10, 14, 17],
+[10, 16, 17],
+[10, 11, 17],
+[10, 12, 17],
+[10, 17, 24],
+[10, 17, 32],
+[10, 17, 29],
+[10, 17, 23],
+[10, 13, 17],
+[1, 10, 17],
+[8, 10],
+[7, 8, 10],
+[8, 10, 19],
+[8, 10, 20],
+[8, 10, 21],
+[5, 8, 10],
+[6, 8, 10],
+[8, 10, 30],
+[8, 10, 22],
+[8, 10, 26],
+[8, 10, 14],
+[8, 10, 16],
+[8, 10, 11]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart007 : Array (List (Fin 33)) := #[
+[8, 10, 12],
+[8, 10, 24],
+[8, 10, 32],
+[8, 10, 29],
+[8, 10, 23],
+[8, 10, 13],
+[1, 8, 10],
+[8, 10, 17],
+[9, 10],
+[7, 9, 10],
+[9, 10, 19],
+[9, 10, 20],
+[9, 10, 21],
+[5, 9, 10],
+[6, 9, 10],
+[9, 10, 30],
+[9, 10, 22],
+[9, 10, 26],
+[9, 10, 14],
+[9, 10, 16],
+[9, 10, 11],
+[9, 10, 12],
+[9, 10, 24],
+[9, 10, 32],
+[9, 10, 29],
+[9, 10, 23],
+[9, 10, 13],
+[1, 9, 10],
+[9, 10, 17],
+[8, 9, 10],
+[4, 10],
+[4, 7, 10]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart008 : Array (List (Fin 33)) := #[
+[4, 10, 19],
+[4, 10, 20],
+[4, 10, 21],
+[4, 5, 10],
+[4, 6, 10],
+[4, 10, 30],
+[4, 10, 22],
+[4, 10, 26],
+[4, 10, 14],
+[4, 10, 16],
+[4, 10, 11],
+[4, 10, 12],
+[4, 10, 24],
+[4, 10, 32],
+[4, 10, 29],
+[4, 10, 23],
+[4, 10, 13],
+[1, 4, 10],
+[4, 10, 17],
+[4, 8, 10],
+[4, 9, 10],
+[10, 31],
+[7, 10, 31],
+[10, 19, 31],
+[10, 20, 31],
+[10, 21, 31],
+[5, 10, 31],
+[6, 10, 31],
+[10, 30, 31],
+[10, 22, 31],
+[10, 26, 31],
+[10, 14, 31]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart009 : Array (List (Fin 33)) := #[
+[10, 16, 31],
+[10, 11, 31],
+[10, 12, 31],
+[10, 24, 31],
+[10, 31, 32],
+[10, 29, 31],
+[10, 23, 31],
+[10, 13, 31],
+[1, 10, 31],
+[10, 17, 31],
+[8, 10, 31],
+[9, 10, 31],
+[4, 10, 31],
+[10, 15],
+[7, 10, 15],
+[10, 15, 19],
+[10, 15, 20],
+[10, 15, 21],
+[5, 10, 15],
+[6, 10, 15],
+[10, 15, 30],
+[10, 15, 22],
+[10, 15, 26],
+[10, 14, 15],
+[10, 15, 16],
+[10, 11, 15],
+[10, 12, 15],
+[10, 15, 24],
+[10, 15, 32],
+[10, 15, 29],
+[10, 15, 23],
+[10, 13, 15]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart010 : Array (List (Fin 33)) := #[
+[1, 10, 15],
+[10, 15, 17],
+[8, 10, 15],
+[9, 10, 15],
+[4, 10, 15],
+[10, 15, 31],
+[10, 25],
+[7, 10, 25],
+[10, 19, 25],
+[10, 20, 25],
+[10, 21, 25],
+[5, 10, 25],
+[6, 10, 25],
+[10, 25, 30],
+[10, 22, 25],
+[10, 25, 26],
+[10, 14, 25],
+[10, 16, 25],
+[10, 11, 25],
+[10, 12, 25],
+[10, 24, 25],
+[10, 25, 32],
+[10, 25, 29],
+[10, 23, 25],
+[10, 13, 25],
+[1, 10, 25],
+[10, 17, 25],
+[8, 10, 25],
+[9, 10, 25],
+[4, 10, 25],
+[10, 25, 31],
+[10, 15, 25]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart011 : Array (List (Fin 33)) := #[
+[2, 10],
+[2, 7, 10],
+[2, 10, 19],
+[2, 10, 20],
+[2, 10, 21],
+[2, 5, 10],
+[2, 6, 10],
+[2, 10, 30],
+[2, 10, 22],
+[2, 10, 26],
+[2, 10, 14],
+[2, 10, 16],
+[2, 10, 11],
+[2, 10, 12],
+[2, 10, 24],
+[2, 10, 32],
+[2, 10, 29],
+[2, 10, 23],
+[2, 10, 13],
+[1, 2, 10],
+[2, 10, 17],
+[2, 8, 10],
+[2, 9, 10],
+[2, 4, 10],
+[2, 10, 31],
+[2, 10, 15],
+[2, 10, 25],
+[3, 10],
+[3, 7, 10],
+[3, 10, 19],
+[3, 10, 20],
+[3, 10, 21]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart012 : Array (List (Fin 33)) := #[
+[3, 5, 10],
+[3, 6, 10],
+[3, 10, 30],
+[3, 10, 22],
+[3, 10, 26],
+[3, 10, 14],
+[3, 10, 16],
+[3, 10, 11],
+[3, 10, 12],
+[3, 10, 24],
+[3, 10, 32],
+[3, 10, 29],
+[3, 10, 23],
+[3, 10, 13],
+[1, 3, 10],
+[3, 10, 17],
+[3, 8, 10],
+[3, 9, 10],
+[3, 4, 10],
+[3, 10, 31],
+[3, 10, 15],
+[3, 10, 25],
+[2, 3, 10],
+[10, 28],
+[7, 10, 28],
+[10, 19, 28],
+[10, 20, 28],
+[10, 21, 28],
+[5, 10, 28],
+[6, 10, 28],
+[10, 28, 30],
+[10, 22, 28]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart013 : Array (List (Fin 33)) := #[
+[10, 26, 28],
+[10, 14, 28],
+[10, 16, 28],
+[10, 11, 28],
+[10, 12, 28],
+[10, 24, 28],
+[10, 28, 32],
+[10, 28, 29],
+[10, 23, 28],
+[10, 13, 28],
+[1, 10, 28],
+[10, 17, 28],
+[8, 10, 28],
+[9, 10, 28],
+[4, 10, 28],
+[10, 28, 31],
+[10, 15, 28],
+[10, 25, 28],
+[2, 10, 28],
+[3, 10, 28],
+[0, 10],
+[0, 7, 10],
+[0, 10, 19],
+[0, 10, 20],
+[0, 10, 21],
+[0, 5, 10],
+[0, 6, 10],
+[0, 10, 30],
+[0, 10, 22],
+[0, 10, 26],
+[0, 10, 14],
+[0, 10, 16]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart014 : Array (List (Fin 33)) := #[
+[0, 10, 11],
+[0, 10, 12],
+[0, 10, 24],
+[0, 10, 32],
+[0, 10, 29],
+[0, 10, 23],
+[0, 10, 13],
+[0, 1, 10],
+[0, 10, 17],
+[0, 8, 10],
+[0, 9, 10],
+[0, 4, 10],
+[0, 10, 31],
+[0, 10, 15],
+[0, 10, 25],
+[0, 2, 10],
+[0, 3, 10],
+[0, 10, 28],
+[10, 18],
+[7, 10, 18],
+[10, 18, 19],
+[10, 18, 20],
+[10, 18, 21],
+[5, 10, 18],
+[6, 10, 18],
+[10, 18, 30],
+[10, 18, 22],
+[10, 18, 26],
+[10, 14, 18],
+[10, 16, 18],
+[10, 11, 18],
+[10, 12, 18]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart015 : Array (List (Fin 33)) := #[
+[10, 18, 24],
+[10, 18, 32],
+[10, 18, 29],
+[10, 18, 23],
+[10, 13, 18],
+[1, 10, 18],
+[10, 17, 18],
+[8, 10, 18],
+[9, 10, 18],
+[4, 10, 18],
+[10, 18, 31],
+[10, 15, 18],
+[10, 18, 25],
+[2, 10, 18],
+[3, 10, 18],
+[10, 18, 28],
+[0, 10, 18],
+[10, 27],
+[7, 10, 27],
+[10, 19, 27],
+[10, 20, 27],
+[10, 21, 27],
+[5, 10, 27],
+[6, 10, 27],
+[10, 27, 30],
+[10, 22, 27],
+[10, 26, 27],
+[10, 14, 27],
+[10, 16, 27],
+[10, 11, 27],
+[10, 12, 27],
+[10, 24, 27]]
+
+def candidate27KernelGrouped17794Genus1Q31ActivePart016 : Array (List (Fin 33)) := #[
+[10, 27, 32],
+[10, 27, 29],
+[10, 23, 27],
+[10, 13, 27],
+[1, 10, 27],
+[10, 17, 27],
+[8, 10, 27],
+[9, 10, 27],
+[4, 10, 27],
+[10, 27, 31],
+[10, 15, 27],
+[10, 25, 27],
+[2, 10, 27],
+[3, 10, 27],
+[10, 27, 28],
+[0, 10, 27],
+[10, 18, 27]]
+
+def candidate27KernelGrouped17794Genus1Q31Active (i : Fin 529) : List (Fin 33) :=
+  let block : Array (List (Fin 33)) :=
+    if i.val < 256 then
+      if i.val < 128 then
+        if i.val < 64 then
+          if i.val < 32 then
+            candidate27KernelGrouped17794Genus1Q31ActivePart000
+          else
+            candidate27KernelGrouped17794Genus1Q31ActivePart001
+        else
+          if i.val < 96 then
+            candidate27KernelGrouped17794Genus1Q31ActivePart002
+          else
+            candidate27KernelGrouped17794Genus1Q31ActivePart003
+      else
+        if i.val < 192 then
+          if i.val < 160 then
+            candidate27KernelGrouped17794Genus1Q31ActivePart004
+          else
+            candidate27KernelGrouped17794Genus1Q31ActivePart005
+        else
+          if i.val < 224 then
+            candidate27KernelGrouped17794Genus1Q31ActivePart006
+          else
+            candidate27KernelGrouped17794Genus1Q31ActivePart007
+    else
+      if i.val < 384 then
+        if i.val < 320 then
+          if i.val < 288 then
+            candidate27KernelGrouped17794Genus1Q31ActivePart008
+          else
+            candidate27KernelGrouped17794Genus1Q31ActivePart009
+        else
+          if i.val < 352 then
+            candidate27KernelGrouped17794Genus1Q31ActivePart010
+          else
+            candidate27KernelGrouped17794Genus1Q31ActivePart011
+      else
+        if i.val < 448 then
+          if i.val < 416 then
+            candidate27KernelGrouped17794Genus1Q31ActivePart012
+          else
+            candidate27KernelGrouped17794Genus1Q31ActivePart013
+        else
+          if i.val < 480 then
+            candidate27KernelGrouped17794Genus1Q31ActivePart014
+          else
+            if i.val < 512 then
+              candidate27KernelGrouped17794Genus1Q31ActivePart015
+            else
+              candidate27KernelGrouped17794Genus1Q31ActivePart016
+  block.getD (i.val%32) []
+
+def candidate27KernelGrouped17794Genus1Q31CoverageCheck (i : Fin 529) : Bool :=
+  (candidate27KernelGrouped17794Genus1Q31Val i &&& groupedKernelUnion candidate27KernelGrouped17794Genus1Q31Cols (candidate27KernelGrouped17794Genus1Q31Active i)) == candidate27KernelGrouped17794Genus1Q31Val i
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile0 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 0 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile1 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 16 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile2 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 32 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile3 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 48 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile4 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 64 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile5 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 80 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile6 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 96 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile7 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 112 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile8 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 128 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile9 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 144 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile10 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 160 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile11 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 176 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile12 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 192 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile13 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 208 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile14 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 224 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile15 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 240 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile16 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 256 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile17 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 272 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile18 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 288 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile19 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 304 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile20 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 320 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile21 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 336 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile22 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 352 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile23 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 368 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile24 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 384 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile25 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 400 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile26 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 416 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile27 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 432 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile28 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 448 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile29 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 464 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile30 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 480 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile31 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 496 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile32 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 512 = true := by decide +kernel
+private theorem candidate27KernelGrouped17794Genus1Q31CoverageTile33 : finiteBoolTile candidate27KernelGrouped17794Genus1Q31CoverageCheck 4 528 = true := by decide +kernel
+theorem candidate27KernelGrouped17794Genus1Q31CoverageAll (i : Fin 529) : candidate27KernelGrouped17794Genus1Q31CoverageCheck i = true := by
+  apply forall_fin_of_bool_tiles (p := candidate27KernelGrouped17794Genus1Q31CoverageCheck) (depth := 4) (count := 34) (by decide)
+  intro t
+  fin_cases t
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile0
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile1
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile2
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile3
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile4
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile5
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile6
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile7
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile8
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile9
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile10
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile11
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile12
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile13
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile14
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile15
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile16
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile17
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile18
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile19
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile20
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile21
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile22
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile23
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile24
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile25
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile26
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile27
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile28
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile29
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile30
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile31
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile32
+  · exact candidate27KernelGrouped17794Genus1Q31CoverageTile33
+
+def candidate27KernelGrouped17794Genus1Q31M : GroupedKernelMasks candidate27KernelGrouped17794Genus1Q31K 529 where
+  mask := candidate27KernelGrouped17794Genus1Q31Val
+  active := candidate27KernelGrouped17794Genus1Q31Active
+  covered i := beq_iff_eq.mp (candidate27KernelGrouped17794Genus1Q31CoverageAll i)
+
+def candidate27KernelGrouped17794Genus1Q31Words (j : ℕ) : ℕ := (#[896947885996774685746372556875974234087176859941455473819034462880405499255030805452264280938950, 454101296122956406119013899374094917822171482804638361009016030385465150931992973, 244340428326127807469593569307715544002293843861140131179369990794398087497645402871197167969436, 949095803051499912096338723913248191125867943817051207540186890654027203023216737644928007405758, 753446645161441139779825774312504209692203470603797323157482324284020192461485335443612033352195, 621606567057499885102296502652956744835777347693408486778029796468427131058881353193453951910160, 27117270164320553008571418926657612963891445132930554779476695731202178703393035029655608885413, 1054402414692417406578387518601982532128968268312116964024328710144639030547105152942779081821351, 200249262698686680438526618812047313564484190966775429062977058060779724694367310061648576774301, 1005416455095042826933123777481295464779625738710401953161155922742446790000919878133427521987738, 714999627693404773992527132904516330598178911070094262435382710521349522667224424792021219647, 708145927277855990755309523695822124849388107471209362439942184499700529482696354133200146006441, 515370300165652550476367025501431095819984946311321150555213401346462924839893302536341291492, 763889172197827677988483482969264374171834757405965766578118062243526900222443961268200792, 747592203314756394358424670473375227659649230683154528881834664610242585407263919435904692387, 1009432615219908439481348596396634172089535545038269381148455380767921184468760823890706590, 525814540747997368630791359342205930897646602348844891778249807025341906341138608299142022541607, 146014826312546113619485551011078689684822111968506311556436674760929753829365419992951348527270, 156851770178129668675564995323018836711380874244967392711033745070617846648934380378156695720, 786740510235422169894163915070107167887315684919885028701774898565831803494138962410691625119, 258395831867028461327535601214928144507499411745718763607042912631042671123924988723371, 111383299043384723985108871690177180629736429810141881742694271537272800931975060641953121463546, 774156265866466379148674962574587133158562927972503912900052617998630382922514825385, 263322710132909674817774575588452491986733559422979607314250304594460914220755218559490289826, 702344740619721394675946347853470399199312802253027996433932599359457206163435010805203105, 842738079697387755045631808180294393943724546420007989674506333429071185783583524918795117595812, 288440849228751299661925375050110288329107466446926025980890599941051109201848850583460990185842, 523637604112233325124860930588811944837333996867647218016753015954494945853377176089031805098, 888839144674930890772765609733168772449480978584841682057171366477066682810523, 543513005364690964320843069113145666792433156151834800344763443867292881, 645428738737695099652230885020710063206654723400546840374529611732447805555958058613566326628581, 1024] : Array ℕ).getD j 0
+
+def candidate27KernelGrouped17794Genus1Q31At (n : ℕ) : Fin 529 := ⟨(((candidate27KernelGrouped17794Genus1Q31Words (n/32)) >>> (10*(n%32))) % 1024) % 529,Nat.mod_lt _ (by decide)⟩
+
+def candidate27KernelGrouped17794Genus1Q31Id : SplitPrimeChart 31 → Fin 529
+  | .inl (a,b) => candidate27KernelGrouped17794Genus1Q31At (31*a.val+b.val)
+  | .inr (.inl z) => candidate27KernelGrouped17794Genus1Q31At (961+z.val)
+  | .inr (.inr b) => candidate27KernelGrouped17794Genus1Q31At (if b then 992 else 993)
+
+def candidate27KernelGrouped17794Genus1Q31PositionPart0 : Array ℕ := #[0, 0, 1, 0, 2, 1, 2, 3, 3, 4, 5, 4, 6, 7, 8, 9, 5, 10, 11, 12, 13, 26, 6, 14, 15, 16, 17, 27, 28, 20, 163, 164, 165, 166, 197, 198, 199, 15, 90, 91, 92, 93, 113, 114, 115, 297, 7, 18, 19, 20, 21, 29, 30, 31, 200, 116, 8, 22, 23, 24, 25, 32, 33, 34]
+def candidate27KernelGrouped17794Genus1Q31PositionPart1 : Array ℕ := #[201, 117, 35, 30, 298, 299, 300, 301, 337, 338, 339, 458, 387, 340, 341, 28, 268, 269, 270, 271, 302, 303, 304, 447, 371, 305, 306, 480, 21, 167, 168, 169, 170, 202, 203, 204, 392, 307, 205, 206, 459, 448, 25, 221, 222, 223, 224, 272, 273, 274, 426, 359, 275, 276, 476, 469, 427, 26, 225, 226, 227, 228, 277, 278]
+def candidate27KernelGrouped17794Genus1Q31PositionPart2 : Array ℕ := #[279, 428, 360, 280, 281, 477, 470, 429, 460, 22, 171, 172, 173, 174, 207, 208, 209, 393, 308, 210, 211, 461, 449, 394, 430, 431, 23, 175, 176, 177, 178, 212, 213, 214, 395, 309, 215, 216, 462, 450, 396, 432, 433, 397, 9, 36, 37, 38, 39, 60, 61, 62, 229, 123, 63, 64, 361, 342, 230, 310, 311, 231, 232, 10]
+def candidate27KernelGrouped17794Genus1Q31PositionPart3 : Array ℕ := #[40, 41, 42, 43, 65, 66, 67, 233, 124, 68, 69, 362, 343, 234, 312, 313, 235, 236, 94, 16, 95, 96, 97, 98, 118, 119, 120, 314, 147, 121, 122, 388, 372, 315, 363, 364, 316, 317, 125, 126, 11, 44, 45, 46, 47, 70, 71, 72, 237, 127, 73, 74, 365, 344, 238, 318, 319, 239, 240, 99, 100, 128, 12, 48]
+def candidate27KernelGrouped17794Genus1Q31PositionPart4 : Array ℕ := #[49, 50, 51, 75, 76, 77, 241, 129, 78, 79, 366, 345, 242, 320, 321, 243, 244, 101, 102, 130, 103, 27, 245, 246, 247, 248, 282, 283, 284, 434, 367, 285, 286, 478, 471, 435, 463, 464, 436, 437, 322, 323, 368, 324, 325, 13, 52, 53, 54, 55, 80, 81, 82, 249, 131, 83, 84, 369, 346, 250, 326, 327, 251, 252]
+def candidate27KernelGrouped17794Genus1Q31PositionPart5 : Array ℕ := #[104, 105, 132, 106, 107, 328, 29, 287, 288, 289, 290, 329, 330, 331, 451, 373, 332, 333, 481, 479, 452, 472, 473, 453, 454, 347, 348, 374, 349, 350, 474, 351, 17, 135, 136, 137, 138, 148, 149, 150, 375, 253, 151, 152, 438, 411, 376, 398, 399, 377, 378, 179, 180, 254, 181, 182, 400, 183, 412, 18, 139, 140, 141, 142]
+def candidate27KernelGrouped17794Genus1Q31PositionPart6 : Array ℕ := #[153, 154, 155, 379, 255, 156, 157, 439, 413, 380, 401, 402, 381, 382, 184, 185, 256, 186, 187, 403, 188, 414, 352, 14, 56, 57, 58, 59, 85, 86, 87, 257, 133, 88, 89, 370, 353, 258, 334, 335, 259, 260, 108, 109, 134, 110, 111, 336, 112, 354, 189, 190, 24, 217, 218, 219, 220, 261, 262, 263, 415, 355, 264, 265]
+def candidate27KernelGrouped17794Genus1Q31PositionPart7 : Array ℕ := #[475, 465, 416, 455, 456, 417, 418, 291, 292, 356, 293, 294, 457, 295, 466, 389, 390, 296, 19, 143, 144, 145, 146, 158, 159, 160, 383, 266, 161, 162, 440, 419, 384, 404, 405, 385, 386, 191, 192, 267, 193, 194, 406, 195, 420, 357, 358, 196, 391, 31, 407, 408, 409, 410, 421, 422, 423, 485, 467, 424, 425, 495, 493, 486]
+def candidate27KernelGrouped17794Genus1Q31PositionPart8 : Array ℕ := #[490, 491, 487, 488, 441, 442, 468, 443, 444, 492, 445, 494, 482, 483, 446, 489, 484]
+
+def candidate27KernelGrouped17794Genus1Q31Position (j : ℕ) : ℕ :=
+  let part := match j/64 with
+    | 0 => candidate27KernelGrouped17794Genus1Q31PositionPart0
+    | 1 => candidate27KernelGrouped17794Genus1Q31PositionPart1
+    | 2 => candidate27KernelGrouped17794Genus1Q31PositionPart2
+    | 3 => candidate27KernelGrouped17794Genus1Q31PositionPart3
+    | 4 => candidate27KernelGrouped17794Genus1Q31PositionPart4
+    | 5 => candidate27KernelGrouped17794Genus1Q31PositionPart5
+    | 6 => candidate27KernelGrouped17794Genus1Q31PositionPart6
+    | 7 => candidate27KernelGrouped17794Genus1Q31PositionPart7
+    | 8 => candidate27KernelGrouped17794Genus1Q31PositionPart8
+    | _ => #[]
+  part.getD (j%64) 0
+
+
+end Freely290

@@ -1,0 +1,111 @@
+Copyright (c) 2021 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2021 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg, Asta Halkjær From
+
+Copyright (c) 2021-2024 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2022 Asta H. From. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Asta H. From
+
+Copyright (c) 2022 Asta H. From. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Asta H. From, Jannis Limperg
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Asta H. From, Jannis Limperg
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: David Renshaw, Jannis Limperg
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg, Asta H. From
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg, Asta Halkjær From
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg, Kaiyu Yang
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg, Kyle Miller
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jesse Vogel, Jannis Limperg
+
+Copyright (c) 2022 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Sebastian Ullrich, Jannis Limperg
+
+Copyright (c) 2022--2024 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2022-2023 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2022-2024 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2023 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2023 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jireh Loreaux, Jannis Limperg
+
+Copyright (c) 2024 Asei Inoue. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Asei Inoue, Jannis Limperg
+
+Copyright (c) 2024 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2024 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Son Ho, Jannis Limperg
+
+Copyright (c) 2024 Son Ho. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Son Ho, Jannis Limperg
+
+Copyright (c) 2024 Xavier Généreux. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Xavier Généreux, Jannis Limperg
+
+Copyright (c) 2025 Alex Best. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Alex Best, Jannis Limperg
+
+Copyright (c) 2025 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Artie Khovanov, Jannis Limperg
+
+Copyright (c) 2025 Jannis Limperg. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jannis Limperg
+
+Copyright (c) 2025 Xavier Généreux. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Xavier Généreux, Jannis Limperg

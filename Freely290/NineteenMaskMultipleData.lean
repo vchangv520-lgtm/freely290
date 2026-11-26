@@ -1,0 +1,26 @@
+module
+
+public import Freely290.NineteenMultipleNaturalTailCertificate
+public import Freely290.TiledFiniteBool
+public import Freely290.PeriodicShiftMaskRows
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+def nineteenMaskMultipleGood (z : ℤ) : Bool := decide (NineteenMultipleGood z)
+def nineteenMaskMultipleGuard (r : ℕ) : Bool := decide (r%4 ≠ 0 ∧ r%19 ≠ 0)
+def nineteenMaskMultipleDoubled : ℕ := 0x615e4c2bc9857910af2615e4c2b898179308b2615c4c2bc9857930af0215e4c2bc9853930ad2611e4c29c9857930ab2415c0c2bc9857930af2215e4c2bc9857930af2611e4c2989857930af2615e0c0bc9857930af2615a4c2bc9853930ad2615e482b89857930af2415e4c2bc9855930af2615e4c2bc9853910ad2615e4c2bc98179308f2415e4c0bc9857930af0615a4c2bc9857930af2615e482bc9857930ab2615c4c0bc9855930af2215a4c2bc9857910af2611e4829c98179308f2615e0c2bc9855930af0615e4c2bc9857910af2615e4c2b898179308b2615c4c2bc9857930af0215e4c2bc9853930ad2611e4c29c9857930ab2415c0c2bc9857930af2215e4c2bc9857930af2611e4c2989857930af2615e0c0bc9857930af2615a4c2bc9853930ad2615e482b89857930af2415e4c2bc9855930af2615e4c2bc9853910ad2615e4c2bc98179308f2415e4c0bc9857930af0615a4c2bc9857930af2615e482bc9857930ab2615c4c0bc9855930af2215a4c2bc9857910af2611e4829c98179308f2615e0c2bc9855930af0
+def nineteenMaskMultipleRequired : ℕ := 0xeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeeeeeeeceeeeaeeee6eeee
+
+def nineteenMaskMultipleTest (j : Fin 3192) : Bool :=
+  (nineteenMaskMultipleDoubled.testBit j.val == nineteenMaskMultipleGood (j.val : ℤ)) &&
+  (nineteenMaskMultipleRequired.testBit (j.val%1596) == nineteenMaskMultipleGuard (j.val%1596))
+
+theorem nineteenMaskMultipleMod (x y : ℤ) (h : x%1596=y%1596) : nineteenMaskMultipleGood x=nineteenMaskMultipleGood y := by
+  unfold nineteenMaskMultipleGood
+  exact decide_eq_decide.mpr ⟨nineteenMultipleGood_of_mod h.symm,nineteenMultipleGood_of_mod h⟩
+
+end Freely290

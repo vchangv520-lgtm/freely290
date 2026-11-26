@@ -1,0 +1,48 @@
+{
+  "export_metadata": {
+    "exporter": {
+      "name": "lean4export",
+      "version": "3.1.0"
+    },
+    "format": {
+      "version": "3.1.0"
+    },
+    "lean": {
+      "githash": "470d5ce1400764999581fd26d5d72b00d990b0f4",
+      "version": "4.35.0-rc3"
+    }
+  },
+  "declaration_counts": {
+    "axiom": 3,
+    "constructor": 1400,
+    "def": 114869,
+    "inductive": 1278,
+    "opaque": 50,
+    "quot": 4,
+    "recursor": 1280,
+    "thm": 255769
+  },
+  "closure_declarations": 374653,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "unsafe_declarations": [],
+  "partial_declarations": [],
+  "checked_theorems": [
+    "Freely290.strong290",
+    "Freely290.weak290"
+  ],
+  "source_files": 4803,
+  "full_290_theorem_proved": true,
+  "build": "PASS",
+  "standalone_kernel_replay": "PASS",
+  "proof_export_sha256": "756e6c9b8e42844c8ccb04074458ab55bf03c2a67173f90cdd2f49e7075e2261",
+  "proof_export_bytes": 1999280924,
+  "proof_archive": "proof-export.ndjson.gz",
+  "proof_archive_sha256": "076e02f482d7fbc353bc11b86013e740c72e24245e75b60b62f823daafb641e7",
+  "statement_sha256": "5905f492c4fc8f84e205c3a494d17d3d73bc6928ea4842954f49f83daf533ebf",
+  "toolchain": "Lean (version 4.35.0-rc3, arm64-apple-darwin24.6.0, commit 470d5ce1400764999581fd26d5d72b00d990b0f4, Release)",
+  "mathlib": "2a885768dae569d938bb9ff3474da6a8753bb90a"
+}

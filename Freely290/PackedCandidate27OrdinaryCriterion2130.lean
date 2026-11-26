@@ -1,0 +1,24 @@
+module
+
+public import Freely290.Candidate27OrdinaryCriterion2130
+public import Freely290.PackedNormResidue
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+def packedCandidate27OrdinaryCriterion2130Mask : ℕ := 0x44b48968125221a04340868124220a0414096812c020a04b0082110d221a44908869105220a4410086110c225a44940961125024804b4892910c024a4490896110c025a04140829124225a0410892012d225844140861104024a0494086912422084490092910402480434886810c225a04b0096110c224a4430086012c020844b00820105
+private theorem packedCandidate27OrdinaryCriterion2130Checked : packedCandidate27OrdinaryCriterion2130Mask = normResidueBits [0, 2, 8, 17, 23, 32, 33, 35, 38, 42, 47, 53, 62, 63, 65, 68, 77, 78, 83, 92, 93, 98, 102, 105, 107, 110, 113, 117, 122, 123, 128, 132, 137, 138, 140, 143, 152, 153, 155, 158, 165, 167, 168, 170, 173, 177, 182, 183, 188, 195, 197, 198, 203, 207, 210, 212, 213, 218, 227, 230, 233, 242, 248, 252, 255, 257, 260, 263, 272, 275, 278, 282, 287, 293, 297, 302, 305, 308, 312, 315, 317, 318, 323, 330, 332, 335, 338, 345, 347, 350, 353, 362, 368, 372, 377, 378, 383, 390, 392, 398, 402, 407, 408, 410, 413, 417, 420, 422, 423, 425, 428, 437, 440, 443, 447, 452, 458, 465, 467, 468, 470, 473, 477, 482, 485, 488, 492, 495, 497, 503, 510, 512, 518, 525, 527, 528, 530, 533, 542, 543, 548, 552, 557, 558, 560, 563, 567, 572, 575, 578, 582, 585, 587, 590, 593, 602, 603, 608, 612, 615, 617, 620, 623, 627, 630, 632, 633, 635, 638, 647, 650, 653, 660, 662, 665, 668, 672, 677, 678, 680, 683, 690, 692, 695, 698, 702, 705, 707, 708, 710, 713, 717, 722, 723, 728, 732, 737, 738, 743, 752, 758, 762, 765, 767, 773, 777, 780, 782, 788, 792, 795, 797, 798, 803, 807, 812, 815, 818, 822, 825, 827, 828, 833, 837, 840, 842, 843, 848, 852, 857, 863, 872, 873, 875, 878, 885, 887, 893, 902, 903, 905, 908, 915, 917, 918, 920, 923, 930, 932, 938, 945, 947, 953, 957, 962, 965, 968, 975, 977, 978, 983, 990, 992, 993, 998, 1005, 1007, 1008, 1013, 1017, 1020, 1022, 1025, 1028, 1035, 1037, 1038, 1040, 1043, 1047, 1050, 1052, 1053, 1055, 1058, 1062] := by decide +kernel
+
+def packedCandidate27OrdinaryCriterion2130 : DetSeventyFourLocalCriterion oneTwoFiveNeighborThirtySevenMatrix 1065 where
+  good := packedNormResidueGood packedCandidate27OrdinaryCriterion2130Mask 1065
+  congr x y h := by simp only [packedNormResidueGood,h]
+  family {n} hg h := by
+    apply candidate27OrdinaryCriterion2130.family ?_ h
+    change PrimeCosetLocalGood _ 1065 (n : ℤ) = true
+    rw [← packedNormResidueGood_eq _ packedCandidate27OrdinaryCriterion2130Checked 1065 (n : ℤ)]
+    exact hg
+
+end Freely290

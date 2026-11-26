@@ -1,0 +1,71 @@
+module
+
+public import Freely290.GeneratedCandidate12RegularRationalExample09Residues
+public import Freely290.GeneratedCandidate12RegularRationalExample09Initial
+
+@[expose] public section
+
+namespace Freely290
+
+set_option maxHeartbeats 8000000
+set_option maxRecDepth 30000
+
+def candidate12RegularRationalExample09InitialGroup00 : Fin 32 → Fin 32 → (Fin 4 → ℤ) :=
+  ![candidate12RegularRationalExample09InitialBlock000, candidate12RegularRationalExample09InitialBlock001, candidate12RegularRationalExample09InitialBlock002, candidate12RegularRationalExample09InitialBlock003, candidate12RegularRationalExample09InitialBlock004, candidate12RegularRationalExample09InitialBlock005, candidate12RegularRationalExample09InitialBlock006, candidate12RegularRationalExample09InitialBlock007, candidate12RegularRationalExample09InitialBlock008, candidate12RegularRationalExample09InitialBlock009, candidate12RegularRationalExample09InitialBlock010, candidate12RegularRationalExample09InitialBlock011, candidate12RegularRationalExample09InitialBlock012, candidate12RegularRationalExample09InitialBlock013, candidate12RegularRationalExample09InitialBlock014, candidate12RegularRationalExample09InitialBlock015, candidate12RegularRationalExample09InitialBlock016, candidate12RegularRationalExample09InitialBlock017, candidate12RegularRationalExample09InitialBlock018, candidate12RegularRationalExample09InitialBlock019, candidate12RegularRationalExample09InitialBlock020, candidate12RegularRationalExample09InitialBlock021, candidate12RegularRationalExample09InitialBlock022, candidate12RegularRationalExample09InitialBlock023, candidate12RegularRationalExample09InitialBlock024, candidate12RegularRationalExample09InitialBlock025, candidate12RegularRationalExample09InitialBlock026, candidate12RegularRationalExample09InitialBlock027, candidate12RegularRationalExample09InitialBlock028, candidate12RegularRationalExample09InitialBlock029, candidate12RegularRationalExample09InitialBlock030, candidate12RegularRationalExample09InitialBlock031]
+
+theorem candidate12RegularRationalExample09InitialGroup00_checked : ∀ j : Fin 32,
+    periodicTailInitialBlockCheck candidate12RegularRationalExample09Matrix 1008 (0 + j.val) (candidate12RegularRationalExample09InitialGroup00 j) = true := by
+  intro j
+  fin_cases j
+  · exact candidate12RegularRationalExample09InitialBlock000_checked
+  · exact candidate12RegularRationalExample09InitialBlock001_checked
+  · exact candidate12RegularRationalExample09InitialBlock002_checked
+  · exact candidate12RegularRationalExample09InitialBlock003_checked
+  · exact candidate12RegularRationalExample09InitialBlock004_checked
+  · exact candidate12RegularRationalExample09InitialBlock005_checked
+  · exact candidate12RegularRationalExample09InitialBlock006_checked
+  · exact candidate12RegularRationalExample09InitialBlock007_checked
+  · exact candidate12RegularRationalExample09InitialBlock008_checked
+  · exact candidate12RegularRationalExample09InitialBlock009_checked
+  · exact candidate12RegularRationalExample09InitialBlock010_checked
+  · exact candidate12RegularRationalExample09InitialBlock011_checked
+  · exact candidate12RegularRationalExample09InitialBlock012_checked
+  · exact candidate12RegularRationalExample09InitialBlock013_checked
+  · exact candidate12RegularRationalExample09InitialBlock014_checked
+  · exact candidate12RegularRationalExample09InitialBlock015_checked
+  · exact candidate12RegularRationalExample09InitialBlock016_checked
+  · exact candidate12RegularRationalExample09InitialBlock017_checked
+  · exact candidate12RegularRationalExample09InitialBlock018_checked
+  · exact candidate12RegularRationalExample09InitialBlock019_checked
+  · exact candidate12RegularRationalExample09InitialBlock020_checked
+  · exact candidate12RegularRationalExample09InitialBlock021_checked
+  · exact candidate12RegularRationalExample09InitialBlock022_checked
+  · exact candidate12RegularRationalExample09InitialBlock023_checked
+  · exact candidate12RegularRationalExample09InitialBlock024_checked
+  · exact candidate12RegularRationalExample09InitialBlock025_checked
+  · exact candidate12RegularRationalExample09InitialBlock026_checked
+  · exact candidate12RegularRationalExample09InitialBlock027_checked
+  · exact candidate12RegularRationalExample09InitialBlock028_checked
+  · exact candidate12RegularRationalExample09InitialBlock029_checked
+  · exact candidate12RegularRationalExample09InitialBlock030_checked
+  · exact candidate12RegularRationalExample09InitialBlock031_checked
+
+def candidate12RegularRationalExample09Witnesses (b : Fin 32) : Fin 32 → (Fin 4 → ℤ) :=
+  candidate12RegularRationalExample09InitialGroup00 b
+
+theorem candidate12RegularRationalExample09Witnesses_checked (b : Fin 32) :
+    periodicTailInitialBlockCheck candidate12RegularRationalExample09Matrix 1008 b.val (candidate12RegularRationalExample09Witnesses b) = true := by
+  have h := candidate12RegularRationalExample09InitialGroup00_checked b
+  rw [Nat.zero_add] at h
+  exact h
+
+def candidate12RegularRationalExample09Initial : PeriodicTailInitialRepresentationCertificate candidate12RegularRationalExample09Matrix 1008 where
+  blocks := 32
+  covers := by decide
+  witnesses := candidate12RegularRationalExample09Witnesses
+  checked := candidate12RegularRationalExample09Witnesses_checked
+
+theorem candidate12RegularRationalExample09_universal : Universal candidate12RegularRationalExample09Matrix.toQuadraticForm' :=
+  candidate12RegularRationalExample09Tail.universal_of_initial_checks candidate12RegularRationalExample09Initial.checks
+
+end Freely290

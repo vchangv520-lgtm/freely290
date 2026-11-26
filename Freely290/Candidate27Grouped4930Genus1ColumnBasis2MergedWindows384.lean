@@ -1,0 +1,169 @@
+module
+
+public import Freely290.Candidate27Grouped4930Genus1ColumnBasis2
+
+@[expose] public section
+namespace Freely290
+
+set_option maxRecDepth 30000
+set_option maxHeartbeats 4000000
+
+
+def candidate27Grouped4930Genus1ColumnBasis2MergedW384 : List ℕ := [0xf8001064202a03d8100280c044005ff830070000400083ff,0xf880106400320398400c08404408dfe008170180000083ff,0xf900306000a001982400006016801fe2c34f0000022003ff,0xf900906000a041982210146004901fe2804f0000020007ff,0xfc003860002001980c00005016021fe547070030002003ff,0xfc009860002041980a10145004121fe504070030000007ff,0x20fa001760202801d8100280c004001ff830070000400103ff,0x20fa80176000300198400c084004089fe008170180000103ff,0x641f8201062042011990120234005011fe000070000000213ff,0x1986f8201060046581980020004104051fe00007000000001bff,0xf8001060302801de104380c004401ff830070000400803ff,0xf802107020282dd8100280c804001ff830070040400003ff,0xf88010601030019e404d084004489fe008170180000803ff,0xf882107000302d98400c084804089fe0081701c0000003ff,0x8f900106000a001b8a000406004a03fe280ef0008020003ff,0x8fc001860002001b88800405004223fe504a70038000003ff]
+def candidate27Grouped4930Genus1ColumnBasis2MergedW384C (i : Fin 16) : ℕ :=
+  (#[
+0xf8001064202a03d8100280c044005ff830070000400083ff,
+0xf880106400320398400c08404408dfe008170180000083ff,
+0xf900306000a001982400006016801fe2c34f0000022003ff,
+0xf900906000a041982210146004901fe2804f0000020007ff,
+0xfc003860002001980c00005016021fe547070030002003ff,
+0xfc009860002041980a10145004121fe504070030000007ff,
+0x20fa001760202801d8100280c004001ff830070000400103ff,
+0x20fa80176000300198400c084004089fe008170180000103ff,
+0x641f8201062042011990120234005011fe000070000000213ff,
+0x1986f8201060046581980020004104051fe00007000000001bff,
+0xf8001060302801de104380c004401ff830070000400803ff,
+0xf802107020282dd8100280c804001ff830070040400003ff,
+0xf88010601030019e404d084004489fe008170180000803ff,
+0xf882107000302d98400c084804089fe0081701c0000003ff,
+0x8f900106000a001b8a000406004a03fe280ef0008020003ff,
+0x8fc001860002001b88800405004223fe504a70038000003ff] : Array (ℕ)).getD i.val 0
+
+def candidate27Grouped4930Genus1ColumnBasis2MergedW384Code (i : Fin 16) : ℕ :=
+  (#[
+170,
+178,
+345,
+15,
+356,
+26,
+200,
+208,
+67,
+32,
+290,
+627,
+298,
+838,
+475,
+776] : Array (ℕ)).getD i.val 0
+
+private def candidate27Grouped4930Genus1ColumnBasis2MergedW384L (i : Fin 16) : Fin 30 := ⟨(candidate27Grouped4930Genus1ColumnBasis2MergedW384Code i/30)%30,Nat.mod_lt _ (by decide)⟩
+private def candidate27Grouped4930Genus1ColumnBasis2MergedW384R (i : Fin 16) : Fin 30 := ⟨candidate27Grouped4930Genus1ColumnBasis2MergedW384Code i%30,Nat.mod_lt _ (by decide)⟩
+theorem candidate27Grouped4930Genus1ColumnBasis2MergedW384Common : candidate27Grouped4930Genus1ColumnBasis2MergedW384.all (fun c ↦ (candidate27Grouped4930Genus1ColumnBasis2Base &&& c) == candidate27Grouped4930Genus1ColumnBasis2Base) = true := by decide +kernel
+theorem candidate27Grouped4930Genus1ColumnBasis2MergedW384Enough : candidate27Grouped4930Genus1ColumnBasis2MergedW384.all (fun c ↦ decide (2≤groupedContainedColumns candidate27Grouped4930Genus1ColumnBasis2Cols c)) = true :=
+  groupedColumnCount_of_witnesses (by decide) candidate27Grouped4930Genus1ColumnBasis2MergedW384 candidate27Grouped4930Genus1ColumnBasis2Cols candidate27Grouped4930Genus1ColumnBasis2MergedW384C candidate27Grouped4930Genus1ColumnBasis2V
+    (by decide +kernel) candidate27Grouped4930Genus1ColumnBasis2Coords candidate27Grouped4930Genus1ColumnBasis2MergedW384L candidate27Grouped4930Genus1ColumnBasis2MergedW384R (by decide +kernel)
+def candidate27Grouped4930Genus1ColumnBasis2MergedW400 : List ℕ := [0x641f8001066002213990100234045005fe000070000000283ff,0x661fa001762002011990100234005001fe000070000000303ff,0x1986f8001064006783980000004144045fe00007000000008bff,0x19a6fa001760006581980000004104041fe00007000000010bff,0xf8003060202801d8140280c016001ff873070000402003ff,0xf8009060202841d8121294c004101ff830070000400007ff,0xf880306000300198440c084016089fe04b170180002003ff,0xf880906000304198421c1c4004189fe008170180000007ff,0xfd00186000a001982800007004821fe7844f0030020003ff,0x641f80010621020119f0141234005401fe000070000000a03ff,0x641f802107200203d990100234805001fe000070040000203ff,0x1986f80010601065819e0041004104441fe00007000000080bff,0x1986f80210700065ad980000004904041fe00007004000000bff,0x8f8001060202801f89002c0c004203ff830a70008400003ff,0x8f8801060003001b8c00c48400428bfe008b70188000003ff,0x641f8003062002011990500234017001fe043070000002203ff]
+def candidate27Grouped4930Genus1ColumnBasis2MergedW400C (i : Fin 16) : ℕ :=
+  (#[
+0x641f8001066002213990100234045005fe000070000000283ff,
+0x661fa001762002011990100234005001fe000070000000303ff,
+0x1986f8001064006783980000004144045fe00007000000008bff,
+0x19a6fa001760006581980000004104041fe00007000000010bff,
+0xf8003060202801d8140280c016001ff873070000402003ff,
+0xf8009060202841d8121294c004101ff830070000400007ff,
+0xf880306000300198440c084016089fe04b170180002003ff,
+0xf880906000304198421c1c4004189fe008170180000007ff,
+0xfd00186000a001982800007004821fe7844f0030020003ff,
+0x641f80010621020119f0141234005401fe000070000000a03ff,
+0x641f802107200203d990100234805001fe000070040000203ff,
+0x1986f80010601065819e0041004104441fe00007000000080bff,
+0x1986f80210700065ad980000004904041fe00007004000000bff,
+0x8f8001060202801f89002c0c004203ff830a70008400003ff,
+0x8f8801060003001b8c00c48400428bfe008b70188000003ff,
+0x641f8003062002011990500234017001fe043070000002203ff] : Array (ℕ)).getD i.val 0
+
+def candidate27Grouped4930Genus1ColumnBasis2MergedW400Code (i : Fin 16) : ℕ :=
+  (#[
+157,
+187,
+35,
+36,
+350,
+20,
+358,
+28,
+476,
+219,
+237,
+39,
+57,
+625,
+778,
+221] : Array (ℕ)).getD i.val 0
+
+private def candidate27Grouped4930Genus1ColumnBasis2MergedW400L (i : Fin 16) : Fin 30 := ⟨(candidate27Grouped4930Genus1ColumnBasis2MergedW400Code i/30)%30,Nat.mod_lt _ (by decide)⟩
+private def candidate27Grouped4930Genus1ColumnBasis2MergedW400R (i : Fin 16) : Fin 30 := ⟨candidate27Grouped4930Genus1ColumnBasis2MergedW400Code i%30,Nat.mod_lt _ (by decide)⟩
+theorem candidate27Grouped4930Genus1ColumnBasis2MergedW400Common : candidate27Grouped4930Genus1ColumnBasis2MergedW400.all (fun c ↦ (candidate27Grouped4930Genus1ColumnBasis2Base &&& c) == candidate27Grouped4930Genus1ColumnBasis2Base) = true := by decide +kernel
+theorem candidate27Grouped4930Genus1ColumnBasis2MergedW400Enough : candidate27Grouped4930Genus1ColumnBasis2MergedW400.all (fun c ↦ decide (2≤groupedContainedColumns candidate27Grouped4930Genus1ColumnBasis2Cols c)) = true :=
+  groupedColumnCount_of_witnesses (by decide) candidate27Grouped4930Genus1ColumnBasis2MergedW400 candidate27Grouped4930Genus1ColumnBasis2Cols candidate27Grouped4930Genus1ColumnBasis2MergedW400C candidate27Grouped4930Genus1ColumnBasis2V
+    (by decide +kernel) candidate27Grouped4930Genus1ColumnBasis2Coords candidate27Grouped4930Genus1ColumnBasis2MergedW400L candidate27Grouped4930Genus1ColumnBasis2MergedW400R (by decide +kernel)
+def candidate27Grouped4930Genus1ColumnBasis2MergedW416 : List ℕ := [0x641f8009062002051990310374005101fe000070000000207ff,0x1986f8003060006581980400004116041fe04307000000200bff,0x1986f80090600065c1980210144104141fe00007000000000fff,0xf900106020a801d8300280e004801ffab04f0000420003ff,0xf980106000b00198600c086004889fe2885f0180020003ff,0xfc001860202801d8180280d004021ffd34070030400003ff,0xfc80186000300198480c0850040a9fe50c1701b0000003ff,0x649f8001062002011b98100634005203fe000a70008000203ff,0x198ef8001060006581b88000404104243fe000a7000800000bff,0x641f900106200a011992100236005801fe2804f0000020203ff,0x641fc001862002011990900235005021fe504070030000203ff,0x1986f900106000e581982000006104841fe2804f000002000bff,0x1986fc001860006581980800005104061fe50407003000000bff,0xf8801060203801d8500e88c004089ff838170180400003ff,0x641f8001062202811d91102a3c005001ff830070000400203ff,0x641f880106200301199410c2b4005089fe008170180000203ff]
+def candidate27Grouped4930Genus1ColumnBasis2MergedW416C (i : Fin 16) : ℕ :=
+  (#[
+0x641f8009062002051990310374005101fe000070000000207ff,
+0x1986f8003060006581980400004116041fe04307000000200bff,
+0x1986f80090600065c1980210144104141fe00007000000000fff,
+0xf900106020a801d8300280e004801ffab04f0000420003ff,
+0xf980106000b00198600c086004889fe2885f0180020003ff,
+0xfc001860202801d8180280d004021ffd34070030400003ff,
+0xfc80186000300198480c0850040a9fe50c1701b0000003ff,
+0x649f8001062002011b98100634005203fe000a70008000203ff,
+0x198ef8001060006581b88000404104243fe000a7000800000bff,
+0x641f900106200a011992100236005801fe2804f0000020203ff,
+0x641fc001862002011990900235005021fe504070030000203ff,
+0x1986f900106000e581982000006104841fe2804f000002000bff,
+0x1986fc001860006581980800005104061fe50407003000000bff,
+0xf8801060203801d8500e88c004089ff838170180400003ff,
+0x641f8001062202811d91102a3c005001ff830070000400203ff,
+0x641f880106200301199410c2b4005089fe008170180000203ff] : Array (ℕ)).getD i.val 0
+
+def candidate27Grouped4930Genus1ColumnBasis2MergedW416Code (i : Fin 16) : ℕ :=
+  (#[
+7,
+41,
+1,
+470,
+478,
+626,
+808,
+235,
+55,
+225,
+236,
+45,
+56,
+628,
+230,
+238] : Array (ℕ)).getD i.val 0
+
+private def candidate27Grouped4930Genus1ColumnBasis2MergedW416L (i : Fin 16) : Fin 30 := ⟨(candidate27Grouped4930Genus1ColumnBasis2MergedW416Code i/30)%30,Nat.mod_lt _ (by decide)⟩
+private def candidate27Grouped4930Genus1ColumnBasis2MergedW416R (i : Fin 16) : Fin 30 := ⟨candidate27Grouped4930Genus1ColumnBasis2MergedW416Code i%30,Nat.mod_lt _ (by decide)⟩
+theorem candidate27Grouped4930Genus1ColumnBasis2MergedW416Common : candidate27Grouped4930Genus1ColumnBasis2MergedW416.all (fun c ↦ (candidate27Grouped4930Genus1ColumnBasis2Base &&& c) == candidate27Grouped4930Genus1ColumnBasis2Base) = true := by decide +kernel
+theorem candidate27Grouped4930Genus1ColumnBasis2MergedW416Enough : candidate27Grouped4930Genus1ColumnBasis2MergedW416.all (fun c ↦ decide (2≤groupedContainedColumns candidate27Grouped4930Genus1ColumnBasis2Cols c)) = true :=
+  groupedColumnCount_of_witnesses (by decide) candidate27Grouped4930Genus1ColumnBasis2MergedW416 candidate27Grouped4930Genus1ColumnBasis2Cols candidate27Grouped4930Genus1ColumnBasis2MergedW416C candidate27Grouped4930Genus1ColumnBasis2V
+    (by decide +kernel) candidate27Grouped4930Genus1ColumnBasis2Coords candidate27Grouped4930Genus1ColumnBasis2MergedW416L candidate27Grouped4930Genus1ColumnBasis2MergedW416R (by decide +kernel)
+
+
+def candidate27Grouped4930Genus1ColumnBasis2MergedW432 : List ℕ := [0x1986f8001060206d81d8100280c104041ff83007000040000bff,0x1986f880106000758198400c0841040c9fe00817018000000bff,0x1fc7f8001062006591990100234105041fe00007000000020bff]
+def candidate27Grouped4930Genus1ColumnBasis2MergedW432C (i : Fin 3) : ℕ :=
+  (#[
+0x1986f8001060206d81d8100280c104041ff83007000040000bff,
+0x1986f880106000758198400c0841040c9fe00817018000000bff,
+0x1fc7f8001062006591990100234105041fe00007000000020bff] : Array (ℕ)).getD i.val 0
+
+def candidate27Grouped4930Genus1ColumnBasis2MergedW432Code (i : Fin 3) : ℕ :=
+  (#[
+50,
+58,
+37] : Array (ℕ)).getD i.val 0
+
+private def candidate27Grouped4930Genus1ColumnBasis2MergedW432L (i : Fin 3) : Fin 30 := ⟨(candidate27Grouped4930Genus1ColumnBasis2MergedW432Code i/30)%30,Nat.mod_lt _ (by decide)⟩
+private def candidate27Grouped4930Genus1ColumnBasis2MergedW432R (i : Fin 3) : Fin 30 := ⟨candidate27Grouped4930Genus1ColumnBasis2MergedW432Code i%30,Nat.mod_lt _ (by decide)⟩
+theorem candidate27Grouped4930Genus1ColumnBasis2MergedW432Common : candidate27Grouped4930Genus1ColumnBasis2MergedW432.all (fun c ↦ (candidate27Grouped4930Genus1ColumnBasis2Base &&& c) == candidate27Grouped4930Genus1ColumnBasis2Base) = true := by decide +kernel
+theorem candidate27Grouped4930Genus1ColumnBasis2MergedW432Enough : candidate27Grouped4930Genus1ColumnBasis2MergedW432.all (fun c ↦ decide (2≤groupedContainedColumns candidate27Grouped4930Genus1ColumnBasis2Cols c)) = true :=
+  groupedColumnCount_of_witnesses (by decide) candidate27Grouped4930Genus1ColumnBasis2MergedW432 candidate27Grouped4930Genus1ColumnBasis2Cols candidate27Grouped4930Genus1ColumnBasis2MergedW432C candidate27Grouped4930Genus1ColumnBasis2V
+    (by decide +kernel) candidate27Grouped4930Genus1ColumnBasis2Coords candidate27Grouped4930Genus1ColumnBasis2MergedW432L candidate27Grouped4930Genus1ColumnBasis2MergedW432R (by decide +kernel)
+
+end Freely290
